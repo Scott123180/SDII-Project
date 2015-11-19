@@ -28,10 +28,11 @@ CREATE TABLE IF NOT EXISTS stuff (
 	status SET('found', 'lost', 'claimed') NOT NULL
 ) ;
 
+--Default value for lat and long are set to zero as mock values for now
 CREATE TABLE IF NOT EXISTS locations (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	create_date DATETIME NOT NULL DEFAULT NOW(),
-	update_date DATETIME NOT NULL DEFAULT NOW(),
+	latitude FLOAT(2,6) NOT NULL DEFAULT (00.000000),
+	longitude FLOAT(2,6) NOT NULL DEFAULT (00.000000),
 	name TEXT NOT NULL
 ) ;
 
