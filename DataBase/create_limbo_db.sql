@@ -7,14 +7,16 @@ DROP DATABASE IF EXISTS limbo_db ;
 CREATE DATABASE IF NOT EXISTS limbo_db ;
 USE limbo_db ;
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS admin (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	username TEXT,
-	password TEXT
+	username TEXT NOT NULL,
+	password TEXT NOT NULL,
+	superadmin SET ('no', 'yes')
 ) ;
 
-INSERT INTO users (username, password)
-VALUE ('admin', 'gaze11e') ;
+INSERT INTO users (username, password, superadmin)
+VALUE ('jaredfogle', 'gaze11e', 'no'),
+('thecreator', 'morganfreeman', 'yes') ;
 
 CREATE TABLE IF NOT EXISTS stuff (
 	id INT PRIMARY KEY AUTO_INCREMENT,
