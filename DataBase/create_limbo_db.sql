@@ -10,24 +10,35 @@ USE limbo_db ;
 CREATE TABLE IF NOT EXISTS admin (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	username TEXT NOT NULL,
+	salt TEXT NOT NULL, 
 	password TEXT NOT NULL,
 	superadmin SET ('no', 'yes')
 ) ;
 
-INSERT INTO users (username, password, superadmin)
-VALUE ('jaredfogle', 'gaze11e', 'no'),
-('thecreator', 'morganfreeman', 'yes') ;
+--Need to update this with standard password security
+INSERT INTO users (username, salt, password, superadmin)
+VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia' 'gaze11e', 'no'),
+('thecreator', 'wrl27iutoayl4zleS38yoetluho4phoe', 'morganfreeman', 'yes') ;
 
-CREATE TABLE IF NOT EXISTS stuff (
+CREATE TABLE IF NOT EXISTS item (
 	id INT PRIMARY KEY AUTO_INCREMENT,
+	finder_id INT,
+	owner_id INT,
 	location_id INT NOT NULL,
-	description TEXT NOT NULL,
 	create_date DATETIME NOT NULL,
 	update_date DATETIME NOT NULL,
+	item_lost_date DATETIME,
+	item_name nvarchar2(30) NOT NULL,
+	item_description nvarchar2(200) NOT NULL,
 	room TEXT,
-	owner TEXT,
-	finder TEXT,
-	status SET('found', 'lost', 'claimed') NOT NULL
+	status SET('found', 'lost', 'claimed') NOT NULL,
+	item_category SET('phone/computer', 'audio/headphones', 'clothing', 'notebook/books', 'bag/backpack', 'other'),
+	make TEXT,
+	model TEXT,
+	color TEXT,
+	reward TEXT,
+	item_image INT
+	
 ) ;
 
 --Default value for lat and long are set to zero as mock values for now
