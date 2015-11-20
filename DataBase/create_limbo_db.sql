@@ -3,13 +3,14 @@ Purpose: Create the database and all of the tables for the limbo lost & found sy
 Authors: Nicholas Burd and Scott Hansen
 Version: 0.2
 */
-DROP DATABASE IF EXISTS limbo_db ;
+--DROP DATABASE IF EXISTS limbo_db ;
 CREATE DATABASE IF NOT EXISTS limbo_db ;
 USE limbo_db ;
 
 CREATE TABLE IF NOT EXISTS admin (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	username TEXT NOT NULL,
+	id nvarchar2(30) PRIMARY KEY,
+	first_name nvarchar2(30),
+	last_name nvarchar2 (30),
 	salt TEXT NOT NULL, 
 	password TEXT NOT NULL,
 	superadmin SET ('no', 'yes')
@@ -86,3 +87,22 @@ VALUE
 ('lower townhouses'), 
 ('lower west cedar townhouses'), 
 ('upper west cedar townhouses') ;
+
+CREATE TABLE IF NOT EXISTS finder (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	email nvarchar2(254) NOT NULL,
+	phone int(10),
+	first_name nvarchar2(30) NOT NULL,
+	last_name nvarchar2(30) NOT NULL
+	
+) ;
+
+CREATE TABLE IF NOT EXISTS owner (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	email nvarchar2(254) NOT NULL,
+	phone int(10),
+	first_name nvarchar2(30) NOT NULL,
+	last_name nvarchar2(30) NOT NULL
+	
+) ;
+
