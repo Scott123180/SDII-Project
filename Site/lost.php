@@ -90,13 +90,13 @@
         }
 
         # Show the records
-        show_link_records($dbc);
+        show_records($dbc);
 
         # Close the connection
         mysqli_close( $dbc ) ;
         ?>
     <!-- Get inputs from the user. -->
-    <form action="linkypresidents.php" method="POST">
+    <form action="lost.php" method="POST">
         <table>
             <tr>
                 <td>President Number:</td><td><input type="text" name="num" value="<?php if (isset($_POST['num'])) echo $_POST['num']; ?>"></td>
