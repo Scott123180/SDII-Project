@@ -3,24 +3,28 @@ Purpose: Create the database and all of the tables for the limbo lost & found sy
 Authors: Nicholas Burd and Scott Hansen
 Version: 0.2
 */
---DROP DATABASE IF EXISTS limbo_db ;
+
+/* Create the database and drop it for testing purposes */
+DROP DATABASE IF EXISTS limbo_db ;
 CREATE DATABASE IF NOT EXISTS limbo_db ;
 USE limbo_db ;
 
+/*Limbo admin profile table*/
 CREATE TABLE IF NOT EXISTS admin (
-	id nvarchar2(30) PRIMARY KEY,
-	first_name nvarchar2(30),
-	last_name nvarchar2 (30),
-	salt TEXT NOT NULL, 
-	password TEXT NOT NULL,
+	username VARCHAR(30) PRIMARY KEY,
+	first_name VARCHAR(30),
+	last_name VARCHAR (30),
+	salt VARCHAR(32) NOT NULL, 
+	password VARCHAR(40) NOT NULL,
 	superadmin SET ('no', 'yes')
 ) ;
 
---Need to update this with standard password security
-INSERT INTO users (username, salt, password, superadmin)
-VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia' 'gaze11e', 'no'),
+/* Need to update this with standard password security */
+INSERT INTO admin (username, salt, password, superadmin)
+VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia', 'gaze11e', 'no'),
 ('thecreator', 'wrl27iutoayl4zleS38yoetluho4phoe', 'morganfreeman', 'yes') ;
 
+/*Lost and found items*/
 CREATE TABLE IF NOT EXISTS item (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	finder_id INT,
@@ -29,8 +33,8 @@ CREATE TABLE IF NOT EXISTS item (
 	create_date DATETIME NOT NULL,
 	update_date DATETIME NOT NULL,
 	item_lost_date DATETIME,
-	item_name nvarchar2(30) NOT NULL,
-	item_description nvarchar2(200) NOT NULL,
+	item_name VARCHAR(30) NOT NULL,
+	item_description VARCHAR(200) NOT NULL,
 	room TEXT,
 	status SET('found', 'lost', 'claimed') NOT NULL,
 	item_category SET('phone/computer', 'audio/headphones', 'clothing', 'notebook/books', 'bag/backpack', 'other'),
@@ -42,11 +46,11 @@ CREATE TABLE IF NOT EXISTS item (
 	
 ) ;
 
---Default value for lat and long are set to zero as mock values for now
+/*Default value for lat and long are set to zero as mock values for now */
 CREATE TABLE IF NOT EXISTS locations (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	latitude FLOAT(2,6) NOT NULL DEFAULT (00.000000),
-	longitude FLOAT(2,6) NOT NULL DEFAULT (00.000000),
+	latitude FLOAT(8,6),
+	longitude FLOAT(8,6),
 	name TEXT NOT NULL
 ) ;
 
@@ -90,19 +94,19 @@ VALUE
 
 CREATE TABLE IF NOT EXISTS finder (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	email nvarchar2(254) NOT NULL,
+	email VARCHAR(254) NOT NULL,
 	phone int(10),
-	first_name nvarchar2(30) NOT NULL,
-	last_name nvarchar2(30) NOT NULL
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL
 	
 ) ;
 
 CREATE TABLE IF NOT EXISTS owner (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	email nvarchar2(254) NOT NULL,
+	email VARCHAR(254) NOT NULL,
 	phone int(10),
-	first_name nvarchar2(30) NOT NULL,
-	last_name nvarchar2(30) NOT NULL
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL
 	
 ) ;
 
