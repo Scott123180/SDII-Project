@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/connect_db.php" afterPath="$PROJECT_DIR$/Site/php_includes/connect_db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/index.php" afterPath="$PROJECT_DIR$/Site/index.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,21 +26,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Site/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.214286">
-                  <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+                <state vertical-scroll-proportion="0.7818182">
+                  <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="lost.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Site/lost.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6363636">
-                  <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                <state vertical-scroll-proportion="-17.285715">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -86,8 +85,8 @@
           <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.25454545">
-                  <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                <state vertical-scroll-proportion="1.8363637">
+                  <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
                   <folding>
                     <marker date="1448051995361" expanded="true" signature="401:476" placeholder="SELECT item_..Item..." />
                     <marker date="1448051995361" expanded="true" signature="1446:1479" placeholder="SELECT num, ..presidents..." />
@@ -108,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Site/index.php" />
         <option value="$PROJECT_DIR$/Site/about.php" />
         <option value="$PROJECT_DIR$/Site/admin_landing.php" />
         <option value="$PROJECT_DIR$/Site/admin_logon.php" />
@@ -119,6 +117,7 @@
         <option value="$PROJECT_DIR$/Site/template.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/connect_db.php" />
         <option value="$PROJECT_DIR$/Site/lost.php" />
+        <option value="$PROJECT_DIR$/Site/index.php" />
       </list>
     </option>
   </component>
@@ -437,19 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25454545">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <marker date="1448051995361" expanded="true" signature="401:476" placeholder="SELECT item_..Item..." />
-            <marker date="1448051995361" expanded="true" signature="1446:1479" placeholder="SELECT num, ..presidents..." />
-            <marker date="1448051995361" expanded="true" signature="2442:2493" placeholder="SELECT num, ..presidents..." />
-            <marker date="1448051995361" expanded="true" signature="3440:3543" placeholder="INSERT INTO presidents..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/CreateFoundItemForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56363636">
@@ -490,21 +476,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.214286">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/lost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6363636">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.285715">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8363637">
+          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+          <folding>
+            <marker date="1448051995361" expanded="true" signature="401:476" placeholder="SELECT item_..Item..." />
+            <marker date="1448051995361" expanded="true" signature="1446:1479" placeholder="SELECT num, ..presidents..." />
+            <marker date="1448051995361" expanded="true" signature="2442:2493" placeholder="SELECT num, ..presidents..." />
+            <marker date="1448051995361" expanded="true" signature="3440:3543" placeholder="INSERT INTO presidents..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7818182">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

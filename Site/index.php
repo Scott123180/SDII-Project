@@ -45,19 +45,19 @@
             <!--NPHP: Need to code in PHP to make table-->
             <tbody>
                 <tr>
-                    <td>Sample Datetime</td>
-                    <td>Sample Status</td>
-                    <td>Sample Item</td>
+                    <td>11/10/15</td>
+                    <td>Lost</td>
+                    <td>Iphone 6s</td>
                 </tr>
                 <tr>
-                    <td>Sample Datetime</td>
-                    <td>Sample Status</td>
-                    <td>Sample Item</td>
+                    <td>11/15/15</td>
+                    <td>Lost</td>
+                    <td>Head tennis racket</td>
                 </tr>
                 <tr>
-                    <td>Sample Datetime</td>
-                    <td>Sample Status</td>
-                    <td>Sample Item</td>
+                    <td>11/15/15</td>
+                    <td>Found</td>
+                    <td>Granola Bar</td>
                 </tr>
             </tbody>
         </table>
