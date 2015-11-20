@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/index.php" afterPath="$PROJECT_DIR$/Site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,23 +27,30 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Site/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7818182">
-                  <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+                <state vertical-scroll-proportion="-15.714286">
+                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="62" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="lost.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Site/lost.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-17.285715">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.45454547">
+                  <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#1413#3012#0#PHP" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -85,13 +93,13 @@
           <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.8363637">
-                  <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.43813848">
+                  <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
                   <folding>
-                    <marker date="1448051995361" expanded="true" signature="401:476" placeholder="SELECT item_..Item..." />
-                    <marker date="1448051995361" expanded="true" signature="1446:1479" placeholder="SELECT num, ..presidents..." />
-                    <marker date="1448051995361" expanded="true" signature="2442:2493" placeholder="SELECT num, ..presidents..." />
-                    <marker date="1448051995361" expanded="true" signature="3440:3543" placeholder="INSERT INTO presidents..." />
+                    <marker date="1448054602106" expanded="true" signature="187:262" placeholder="SELECT item_..Item..." />
+                    <marker date="1448054602106" expanded="true" signature="1232:1265" placeholder="SELECT num, ..presidents..." />
+                    <marker date="1448054602106" expanded="true" signature="2228:2279" placeholder="SELECT num, ..presidents..." />
+                    <marker date="1448054602106" expanded="true" signature="3226:3329" placeholder="INSERT INTO presidents..." />
                   </folding>
                 </state>
               </provider>
@@ -116,8 +124,9 @@
         <option value="$PROJECT_DIR$/Site/superadmin_landing.php" />
         <option value="$PROJECT_DIR$/Site/template.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/connect_db.php" />
-        <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/index.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+        <option value="$PROJECT_DIR$/Site/lost.php" />
       </list>
     </option>
   </component>
@@ -137,7 +146,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-13" />
     <option name="y" value="-13" />
-    <option name="width" value="3866" />
+    <option name="width" value="3854" />
     <option name="height" value="2106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -283,10 +292,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <frame x="-13" y="-13" width="3854" height="2106" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10859375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10893417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -384,6 +393,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1413#3012#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,34 +492,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost.php">
+    <entry file="file://$PROJECT_DIR$/Site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.285715">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-15.714286">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="62" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8363637">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.43813848">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
           <folding>
-            <marker date="1448051995361" expanded="true" signature="401:476" placeholder="SELECT item_..Item..." />
-            <marker date="1448051995361" expanded="true" signature="1446:1479" placeholder="SELECT num, ..presidents..." />
-            <marker date="1448051995361" expanded="true" signature="2442:2493" placeholder="SELECT num, ..presidents..." />
-            <marker date="1448051995361" expanded="true" signature="3440:3543" placeholder="INSERT INTO presidents..." />
+            <marker date="1448054602106" expanded="true" signature="187:262" placeholder="SELECT item_..Item..." />
+            <marker date="1448054602106" expanded="true" signature="1232:1265" placeholder="SELECT num, ..presidents..." />
+            <marker date="1448054602106" expanded="true" signature="2228:2279" placeholder="SELECT num, ..presidents..." />
+            <marker date="1448054602106" expanded="true" signature="3226:3329" placeholder="INSERT INTO presidents..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/index.php">
+    <entry file="file://$PROJECT_DIR$/Site/lost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7818182">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.45454547">
+          <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1413#3012#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,8 +1,3 @@
-<!--
-=========================================================
-Unable to solve during office hours, problem is on line 77 linkypresidents and SQL query
-=========================================================
--->
 
 <?php
 $debug = true;
