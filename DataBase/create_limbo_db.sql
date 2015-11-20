@@ -1,7 +1,7 @@
 /*
 Purpose: Create the database and all of the tables for the limbo lost & found system
 Authors: Nicholas Burd and Scott Hansen
-Version: 0.1
+Version: 0.2
 */
 DROP DATABASE IF EXISTS limbo_db ;
 CREATE DATABASE IF NOT EXISTS limbo_db ;
