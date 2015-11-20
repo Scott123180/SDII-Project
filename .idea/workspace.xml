@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/CreateFoundItemForm.php" afterPath="$PROJECT_DIR$/Site/CreateFoundItemForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/CreateLostItemForm.php" afterPath="$PROJECT_DIR$/Site/CreateLostItemForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/about.php" afterPath="$PROJECT_DIR$/Site/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/admin_landing.php" afterPath="$PROJECT_DIR$/Site/admin_landing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/admin_logon.php" afterPath="$PROJECT_DIR$/Site/admin_logon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/found.php" afterPath="$PROJECT_DIR$/Site/found.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/index.php" afterPath="$PROJECT_DIR$/Site/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/superadmin_landing.php" afterPath="$PROJECT_DIR$/Site/superadmin_landing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/template.php" afterPath="$PROJECT_DIR$/Site/template.php" />
-    </list>
+    <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="" />
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -130,8 +119,8 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Site/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6181818">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.4181818">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -163,7 +152,11 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Limbo Root">
+    <include_path>
+      <path value="C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\SDII-Project\Site" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-13" />
     <option name="y" value="-13" />
@@ -252,7 +245,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../binaries/php/php_runningversion/php-win.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
@@ -296,6 +289,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10859375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -399,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6181818">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.4181818">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
         </state>
       </provider>
