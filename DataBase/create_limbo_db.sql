@@ -24,31 +24,6 @@ INSERT INTO admin (username, salt, password, superadmin)
 VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia', 'gaze11e', 'no'),
 ('thecreator', 'wrl27iutoayl4zleS38yoetluho4phoe', 'morganfreeman', 'yes') ;
 
-/*Lost and found items*/
-CREATE TABLE IF NOT EXISTS item (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	finder_id INT,
-	owner_id INT,
-	location_id INT NOT NULL,
-	create_date DATETIME NOT NULL DEFAULT NOW,
-	update_date DATETIME NOT NULL DEFAULT NOW,
-	item_lost_date DATETIME,
-	item_name VARCHAR(30) NOT NULL,
-	item_description VARCHAR(200) NOT NULL,
-	room TEXT,
-	status SET('found', 'lost', 'claimed') NOT NULL,
-	item_category SET('phone/computer', 'audio/headphones', 'clothing', 'notebook/books', 'bag/backpack', 'other'),
-	make TEXT,
-	model TEXT,
-	color TEXT,
-	reward INT,
-	item_image VARCHAR(254)
-) ;
-
-INSERT INTO item (finder_id, owner_id, location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
-VALUE (0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com'),
-(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com')
-(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com')
 
 /*Default value for lat and long are set to zero as mock values for now */
 CREATE TABLE IF NOT EXISTS locations (
@@ -94,6 +69,34 @@ VALUE
 ('lower townhouses', 41.722742, -73.935359), 
 ('lower west cedar townhouses', 41.720434, -73.929761), 
 ('upper west cedar townhouses', 41.720735, -73.926065) ;
+
+/*Lost and found items*/
+CREATE TABLE IF NOT EXISTS item (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	finder_id INT,
+	owner_id INT,
+	location_id INT NOT NULL,
+	create_date DATETIME NOT NULL DEFAULT NOW(),
+	update_date DATETIME NOT NULL DEFAULT NOW(),
+	item_lost_date DATETIME,
+	item_name VARCHAR(30) NOT NULL,
+	item_description VARCHAR(200) NOT NULL,
+	room TEXT,
+	status SET('found', 'lost', 'claimed') NOT NULL,
+	item_category SET('phone or computer', 'audio or headphones', 'clothing', 'notebook or books', 'bag or backpack', 'other'),
+	make TEXT,
+	model TEXT,
+	color TEXT,
+	reward INT,
+	item_image VARCHAR(254)
+) ;
+
+INSERT INTO item (finder_id, owner_id, location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
+VALUE (0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, 'pornhub.com'),
+(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, 'pornhub.com'),
+(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, 'pornhub.com') ;
+
+
 
 CREATE TABLE IF NOT EXISTS finder (
 	id INT PRIMARY KEY AUTO_INCREMENT,
