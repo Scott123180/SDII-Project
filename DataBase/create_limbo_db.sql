@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS item (
 	finder_id INT,
 	owner_id INT,
 	location_id INT NOT NULL,
-	create_date DATETIME NOT NULL,
-	update_date DATETIME NOT NULL,
+	create_date DATETIME NOT NULL DEFAULT NOW,
+	update_date DATETIME NOT NULL DEFAULT NOW,
 	item_lost_date DATETIME,
 	item_name VARCHAR(30) NOT NULL,
 	item_description VARCHAR(200) NOT NULL,
@@ -41,9 +41,14 @@ CREATE TABLE IF NOT EXISTS item (
 	make TEXT,
 	model TEXT,
 	color TEXT,
-	reward TEXT,
-	item_image INT
+	reward INT,
+	item_image VARCHAR(254)
 ) ;
+
+INSERT INTO item (finder_id, owner_id, location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
+VALUE (0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com'),
+(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com')
+(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone/computer', 'apple', '6', 'gold', 100, 'pornhub.com')
 
 /*Default value for lat and long are set to zero as mock values for now */
 CREATE TABLE IF NOT EXISTS locations (
@@ -53,7 +58,7 @@ CREATE TABLE IF NOT EXISTS locations (
 	name TEXT NOT NULL
 ) ;
 
-INSERT INTO locations (name)
+INSERT INTO locations (name, latitude, longitude)
 VALUE 
 ('byrne house', 41.720002, -73.936670), 
 ('james a. cannavino library', 41.721940, -73.934119), 
