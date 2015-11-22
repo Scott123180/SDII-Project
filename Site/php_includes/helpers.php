@@ -43,6 +43,45 @@ function show_records($dbc) {
   		mysqli_free_result( $results ) ;
 	}
 }
+function show_records2($dbc) {
+	# Create a query to get the name and price sorted by price
+	$query = 'SELECT item_name, item_status, item_category FROM Item WHERE item_category=\'lost\';' ;
+
+	# Execute the query
+	$results = mysqli_query( $dbc , $query ) ;
+	check_results($results) ;
+
+	# Show results
+	if( $results )
+	{
+  		# But...wait until we know the query succeed before
+  		# rendering the table start.
+  		echo '<H1>Lost Items</H1>' ;
+  		echo '<TABLE>';
+  		echo '<TR>';
+  		echo '<TH>Item Name</TH>';
+  		echo '<TH>Item Status</TH>';
+  		echo '<TH>Item Category</TH>';
+  		echo '</TR>';
+
+  		# For each row result, generate a table row
+  		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
+  		{
+    		echo '<TR>' ;
+    		echo '<TD>' . $row['item_name'] . '</TD>' ;
+    		echo '<TD>' . $row['item_status'] . '</TD>' ;
+    		echo '<TD>' . $row['item_category'] . '</TD>' ;
+    		echo '</TR>' ;
+  		}
+
+  		# End the table
+  		echo '</TABLE>';
+
+  		# Free up the results in memory
+  		mysqli_free_result( $results ) ;
+	}
+}
+
 
 function show_link_records($dbc) {
 	# Create a query to get the name and price sorted by price
