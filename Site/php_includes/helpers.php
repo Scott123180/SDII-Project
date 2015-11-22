@@ -7,7 +7,7 @@ $debug = true;
 # Shows the records in prints
 function show_records($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query = 'SELECT item_name, item_status, item_category FROM Item WHERE item_category=\'found\';' ;
+	$query = 'SELECT item_name, status, item_category FROM Item WHERE item_category=\'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -18,7 +18,7 @@ function show_records($dbc) {
 	{
   		# But...wait until we know the query succeed before
   		# rendering the table start.
-  		echo '<H1>Lost Items</H1>' ;
+  		echo '<H1>Found Items</H1>' ;
   		echo '<TABLE>';
   		echo '<TR>';
   		echo '<TH>Item Name</TH>';
@@ -31,7 +31,7 @@ function show_records($dbc) {
   		{
     		echo '<TR>' ;
     		echo '<TD>' . $row['item_name'] . '</TD>' ;
-    		echo '<TD>' . $row['item_status'] . '</TD>' ;
+    		echo '<TD>' . $row['status'] . '</TD>' ;
     		echo '<TD>' . $row['item_category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
@@ -45,7 +45,7 @@ function show_records($dbc) {
 }
 function show_records2($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query = 'SELECT item_name, item_status, item_category FROM Item WHERE item_category=\'lost\';' ;
+	$query = 'SELECT item_name, status, item_category FROM Item WHERE item_category=\'lost\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -69,7 +69,7 @@ function show_records2($dbc) {
   		{
     		echo '<TR>' ;
     		echo '<TD>' . $row['item_name'] . '</TD>' ;
-    		echo '<TD>' . $row['item_status'] . '</TD>' ;
+    		echo '<TD>' . $row['status'] . '</TD>' ;
     		echo '<TD>' . $row['item_category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
@@ -85,7 +85,7 @@ function show_records2($dbc) {
 
 function show_link_records($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query = 'SELECT num, lname FROM presidents ;' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -96,20 +96,24 @@ function show_link_records($dbc) {
 	{
   		# But...wait until we know the query succeed before
   		# rendering the table start.
-  		echo '<H1>Presidents</H1>' ;
+  		echo '<H1>Found Items</H1>' ;
   		echo '<TABLE>';
   		echo '<TR>';
-  		echo '<TH>Number</TH>';
-  		echo '<TH>Last Name</TH>';
+  		echo '<TH>Item ID</TH>';
+  		echo '<TH>Item Name</TH>';
+		echo '<TH>Item Status</TH>';
+		echo '<TH>Item Category</TH>';
   		echo '</TR>';
 
   		# For each row result, generate a table row
   		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
   		{
-			$alink = '<A HREF=linkypresidents.php?num=' . $row['num'] . '>' . $row['num'] . '</A>' ;
+			$alink = '<A HREF=lost.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
     		echo '<TR>' ;
     		echo '<TD ALIGN=right>'. $alink . '</TD>' ;
-    		echo '<TD>' . $row['lname'] . '</TD>' ;
+    		echo '<TD>' . $row['item_name'] . '</TD>' ;
+			echo '<TD>' . $row['status'] . '</TD>' ;
+			echo '<TD>' . $row['item_Category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
 		
@@ -122,11 +126,10 @@ function show_link_records($dbc) {
 	}
 }
 
-function show_record($dbc, $num) {
+function show_record($dbc, $id) {
 	# Create a query to get the name and price sorted by price
 	
-	
-	$query = 'SELECT num, fname, lname FROM presidents WHERE num=' . $num . ';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'found\' AND id=' . $id . ';' ;
 
 
 	# Execute the query
@@ -138,21 +141,23 @@ function show_record($dbc, $num) {
 	{
   		# But...wait until we know the query succeed before
   		# rendering the table start.
-  		echo '<H1>Presidents</H1>' ;
+  		echo '<H1>Found Items</H1>' ;
   		echo '<TABLE>';
   		echo '<TR>';
-  		echo '<TH>Number</TH>';
-  		echo '<TH>First Name</TH>';
-  		echo '<TH>Last Name</TH>';
+  		echo '<TH>Item ID</TH>';
+  		echo '<TH>Item Name</TH>';
+  		echo '<TH>Item Status</TH>';
+		echo '<TH>Item Category</TH>';
   		echo '</TR>';
 
   		# For each row result, generate a table row
   		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
   		{
     		echo '<TR>' ;
-    		echo '<TD>' . $row['num'] . '</TD>' ;
-    		echo '<TD>' . $row['fname'] . '</TD>' ;
-    		echo '<TD>' . $row['lname'] . '</TD>' ;
+    		echo '<TD>' . $row['id'] . '</TD>' ;
+    		echo '<TD>' . $row['item_name'] . '</TD>' ;
+    		echo '<TD>' . $row['status'] . '</TD>' ;
+			echo '<TD>' . $row['item_category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
 

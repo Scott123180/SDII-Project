@@ -30,75 +30,33 @@
     </div>
 
 
-<!--
+
         <?php
-        /*
+        
         # Connect to MySQL server and the database
         require( 'php_includes/connect_db.php' ) ;
 
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;
 
-        # Check form submitted.
 
-        if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' ){
-
-        # Initialize an error array.
-
-            $errors = array();
-
-
-        # Check for a number & first name & last name.
-
-        #num
-            if ( empty( $_POST[ 'num' ]) )   {
-                $errors[] = 'num' ; }
-
-            else { $num = trim( $_POST[ 'num' ] )  ; }
-
-        #first name
-            if ( empty( $_POST[ 'fname' ]) )   {
-                $errors[] = 'fname' ; }
-
-            else { $fname = trim( $_POST[ 'fname' ] )  ; }
-
-        #last name
-            if ( empty( $_POST[ 'lname' ] ) )  {
-                $errors[] = 'lname' ; }
-
-            else { $lname = trim( $_POST[ 'lname' ] )  ; }
-
-
-        # Report result.
-
-            if( !empty( $errors ) )
-            {
-
-                echo 'Error! Please enter your  ' ;
-
-                foreach ( $errors as $msg ) { echo " - $msg " ; }
-            }
-
-            else {
-                $result = insert_record($dbc, $num, $fname, $lname) ;
-                echo "Success! Thanks $fname " ; }
-        }
 
         #get link num and show specific record
-        else if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
-            if(isset($_GET['num']))
-                show_record($dbc, $_GET['num']) ;
+        if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
+            if(isset($_GET['id']))
+                show_record($dbc, $_GET['id']) ;
         }
 
         # Show the records
-        show_records($dbc);
+        show_link_records($dbc);
 
         # Close the connection
         mysqli_close( $dbc ) ;
-        */
+        
         ?>
--->
-    <!--Temporary data-->
+
+<!--
+    #Temporary data
     </div class="container">
     <table class="table table-striped">
         <thead>
@@ -108,7 +66,7 @@
             <th>Stuff</th>
         </tr>
         </thead>
-        <!--NPHP: Need to code in PHP to make table-->
+        #NPHP: Need to code in PHP to make table
         <tbody>
         <tr>
             <td>11/10/15</td>
@@ -166,7 +124,7 @@
 
 
 
-    <!-- Get inputs from the user. -->
+    #Get inputs from the user.
     <form action="lost.php" method="POST">
         <table>
             <tr>
@@ -179,11 +137,12 @@
                 <td>When Lost:</td><td><input type="text" name="lname" value="<?php if (isset($_POST['lname'])) echo $_POST['lname']; ?>"></td>
             </tr>
         </table>
-        <!--<p><input type="submit" ></p> -->
+        #<p><input type="submit" ></p>
     </form>
 
 
     </div>
+-->
 	<div class="container-fluid">
 
         <div class="row">
