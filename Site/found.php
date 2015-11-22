@@ -28,8 +28,40 @@
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php"><h4>About</h4></a></div>
         </div>
     </div>
-    <div class="container">
 
+	<?php
+        
+        # Connect to MySQL server and the database
+        require( 'php_includes/connect_db.php' ) ;
+
+        # Includes these helper functions
+        require( 'php_includes/helpers.php' ) ;
+
+
+
+        #get link num and show specific record
+        if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
+            if(isset($_GET['id']))
+                show_record2($dbc, $_GET['id']) ;
+        }
+
+        # Show the records
+        show_link_records2($dbc);
+
+        # Close the connection
+        mysqli_close( $dbc ) ;
+        
+        ?>
+
+	<div class="container-fluid">
+
+        <div class="row">
+			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
+			
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Coninue Submiting New Found Item</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
