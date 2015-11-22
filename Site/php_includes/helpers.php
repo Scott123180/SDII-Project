@@ -6,7 +6,7 @@ $debug = true;
 #these functions are used for lost.php
 function show_link_records($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'found\';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -34,7 +34,7 @@ function show_link_records($dbc) {
     		echo '<TD ALIGN=right>'. $alink . '</TD>' ;
     		echo '<TD>' . $row['item_name'] . '</TD>' ;
 			echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_Category'] . '</TD>' ;
+			echo '<TD>' . $row['item_category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
 		
@@ -50,7 +50,7 @@ function show_link_records($dbc) {
 function show_record($dbc, $id) {
 	# Create a query to get the name and price sorted by price
 	
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'found\' AND id=' . $id . ';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\' AND id=' . $id . ';' ;
 
 
 	# Execute the query
@@ -108,7 +108,7 @@ function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_de
 #These functions are used for found.php
 function show_link_records2($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'lost\';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'lost\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -152,7 +152,7 @@ function show_link_records2($dbc) {
 function show_record2($dbc, $id) {
 	# Create a query to get the name and price sorted by price
 	
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE item_category=\'lost\' AND id=' . $id . ';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'lost\' AND id=' . $id . ';' ;
 
 
 	# Execute the query
