@@ -7,7 +7,7 @@ $debug = true;
 # Shows the records in prints
 function show_records($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query = 'SELECT item_name, item_status, item_category FROM Item WHERE item_category='found';' ;
+	$query = 'SELECT item_name, item_status, item_category FROM Item WHERE item_category=\'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
