@@ -149,49 +149,6 @@ function show_link_records_found($dbc) {
 	}
 }
 
-#echo select drop down with every location
-function select_locations($dbc)
-{
-# Create a query to get the name and price sorted by price
-	$query = 'SELECT locations.name FROM locations ORDER BY locations.name;';
-
-# Execute the query
-	$results = mysqli_query($dbc, $query);
-	check_results($results);
-
-# Show results
-	if ($results) {
-		# rendering the table start.
-		echo '<H1>Lost Items</H1>';
-		echo '<table class="table table-striped">';
-		echo '<TR>';
-		echo '<TH>Item ID</TH>';
-		echo '<TH>Item Name</TH>';
-		echo '<TH>Item Status</TH>';
-		echo '<TH>Item Category</TH>';
-		echo '</TR>';
-
-		# For each row result, generate a table row
-		while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
-			$alink = '<A HREF=found.php?id=' . $row['id'] . '>' . $row['id'] . '</A>';
-			echo '<TR>';
-			echo '<TD>' . $alink . '</TD>';
-			echo '<TD>' . $row['item_name'] . '</TD>';
-			echo '<TD>' . $row['status'] . '</TD>';
-			echo '<TD>' . $row['item_category'] . '</TD>';
-			echo '</TR>';
-		}
-
-
-		# End the table
-		echo '</TABLE>';
-
-		# Free up the results in memory
-		mysqli_free_result($results);
-	}
-}
-#echo select drop down with every item category
-
 /*
  * ================================================
  * Valid input/error functions
