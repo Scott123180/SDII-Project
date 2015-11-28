@@ -32,15 +32,15 @@
     <!--select options-->
     <div class="container">
         <!--item category, how long ago lost, where lost-->
-        <h5>Item Category</h5>
+        <h4>Item Category</h4>
         <select class="form-control" id="itemCategory"></select>
         <script>makeOptions(itemCategories, "itemCategory");</script>
 
-        <h5>How long ago was it lost?</h5>
+        <h4>How long ago was it lost?</h4>
         <select class="form-control" id="timeLost"></select>
         <script>makeOptions(timeRanges, "timeLost")</script>
 
-        <h5>What building did you lose it in?</h5>
+        <h4>What building did you lose it in?</h4>
         <select class="form-control" id="campusLocations"></select>
         <script>makeOptions(campusLocations, "campusLocations")</script>
     </div>
