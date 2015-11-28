@@ -123,7 +123,7 @@ function show_link_records_found($dbc) {
 	{
   		# rendering the table start.
   		echo '<H1>Lost Items</H1>' ;
-  		echo '<TABLE>';
+  		echo '<table class="table table-striped">';
   		echo '<TR>';
   		echo '<TH>Item ID</TH>';
   		echo '<TH>Item Name</TH>';
@@ -136,10 +136,10 @@ function show_link_records_found($dbc) {
   		{
 			$alink = '<A HREF=found.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
     		echo '<TR>' ;
-    		echo '<TD ALIGN=right>'. $alink . '</TD>' ;
+    		echo '<TD>'. $alink . '</TD>' ;
     		echo '<TD>' . $row['item_name'] . '</TD>' ;
 			echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_Category'] . '</TD>' ;
+			echo '<TD>' . $row['item_category'] . '</TD>' ;
     		echo '</TR>' ;
   		}
 		
@@ -153,8 +153,11 @@ function show_link_records_found($dbc) {
 }
 
 /*
+ * ================================================
  * Valid input/error functions
+ * ================================================
  */
+#NEED TO EDIT
 function valid_number($num) {
  if(empty($num) || !is_numeric($num))
  return false ;
@@ -166,12 +169,12 @@ function valid_number($num) {
  return true ;
 }
 
+#NEED TO EDIT
 function valid_name($name) {
 	if (empty($name)) {
 		return false;
 	} else {return true;}
 }
-
 
 # Shows the query as a debugging aid
 function show_query($query) {
