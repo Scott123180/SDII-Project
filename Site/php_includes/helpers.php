@@ -1,15 +1,15 @@
 
 <?php
-#shows errors in queries; disable for final product
-$debug = true;
+#Authors: Scott Hansen and Nicholas Burd
 
-#Scott Hansen and Nicholas Burd
+#shows errors in queries; set to false for final product
+$debug = true;
 
 
 #show lost short links on lost.php
 function show_link_records_lost($dbc) {
-	# Create a query to get the name and price sorted by price
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\';' ;
+	# Create a query to show only found items
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status LIKE \'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -50,10 +50,11 @@ function show_link_records_lost($dbc) {
 	}
 }
 
+#show all the details from the selected record
 function show_record($dbc, $id) {
 	# Create a query to get the name and price sorted by price
 	
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\' AND id=' . $id . ';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE id=' . $id . ';' ;
 
 
 	# Execute the query
@@ -108,10 +109,10 @@ function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_de
 
 
 
-#These functions are used for found.php
+#show found short links on found.php
 function show_link_records_found($dbc) {
 	# Create a query to get the name and price sorted by price
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'lost\';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status LIKE \'lost\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -120,7 +121,6 @@ function show_link_records_found($dbc) {
 	# Show results
 	if( $results )
 	{
-  		# But...wait until we know the query succeed before
   		# rendering the table start.
   		echo '<H1>Lost Items</H1>' ;
   		echo '<TABLE>';
@@ -152,61 +152,9 @@ function show_link_records_found($dbc) {
 	}
 }
 
-function show_record2($dbc, $id) {
-	# Create a query to get the name and price sorted by price
-	
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'lost\' AND id=' . $id . ';' ;
-
-
-	# Execute the query
-	$results = mysqli_query( $dbc , $query ) ;
-	check_results($results) ;
-
-	# Show results
-	if( $results )
-	{
-  		# But...wait until we know the query succeed before
-  		# rendering the table start.
-  		echo '<H1>Lost Items</H1>' ;
-  		echo '<TABLE>';
-  		echo '<TR>';
-  		echo '<TH>Item ID</TH>';
-  		echo '<TH>Item Name</TH>';
-  		echo '<TH>Item Status</TH>';
-		echo '<TH>Item Category</TH>';
-  		echo '</TR>';
-
-  		# For each row result, generate a table row
-  		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-  		{
-    		echo '<TR>' ;
-    		echo '<TD>' . $row['id'] . '</TD>' ;
-    		echo '<TD>' . $row['item_name'] . '</TD>' ;
-    		echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_category'] . '</TD>' ;
-    		echo '</TR>' ;
-  		}
-
-  		# End the table
-  		echo '</TABLE>';
-
-  		# Free up the results in memory
-  		mysqli_free_result( $results ) ;
-	}
-}
-
-# Inserts a record into the prints table
-function insert_record2($dbc, $location_id, $item_name, $item_description, $room, $status, $item_category, $make, $model, $color) {
-  $query = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward) 
-			VALUES ("' . $location_id . '" , "' . $item_name . '", "' . $item_description . '", "' . $room . '", "' . $status . '", "' . $item_category . '", "' . $make . '", "' . $model . '", "' . $color . '")' ;
-  show_query($query);
-
-  $results = mysqli_query($dbc,$query) ;
-  check_results($results) ;
-
-  return $results ;
-}
-
+/*
+ * Valid input/error functions
+ */
 function valid_number($num) {
  if(empty($num) || !is_numeric($num))
  return false ;
@@ -223,6 +171,7 @@ function valid_name($name) {
 		return false;
 	} else {return true;}
 }
+
 
 # Shows the query as a debugging aid
 function show_query($query) {
