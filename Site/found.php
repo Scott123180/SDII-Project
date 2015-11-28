@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/helpers.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <title>Found Something</title>
@@ -59,9 +60,11 @@
 			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
 			
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Continue Submitting New Found Item</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onClick="grabFoundData()" style="margin-bottom:15px">Continue Submitting New Found Item</button>
+
             </div>
         </div>
     </div>
+
 </body>
 </html>
