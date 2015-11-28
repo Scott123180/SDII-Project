@@ -34,33 +34,15 @@
         <p>If you have lost or found something, you're in luck; this is the place to report it.</p>
         <!--Quick Lost and Found Table-->
         <h3>Recent Activity</h3> <!--Insert option menu here-->
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Date/time</th>
-                    <th>Status</th>
-                    <th>Stuff</th>
-                </tr>
-            </thead>
-            <!--NPHP: Need to code in PHP to make table-->
-            <tbody>
-                <tr>
-                    <td>11/10/15</td>
-                    <td>Lost</td>
-                    <td>Iphone 6s</td>
-                </tr>
-                <tr>
-                    <td>11/15/15</td>
-                    <td>Lost</td>
-                    <td>Head tennis racket</td>
-                </tr>
-                <tr>
-                    <td>11/15/15</td>
-                    <td>Found</td>
-                    <td>Granola Bar</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <?php
+        #connection to database
+        require( 'php_includes/connect_db.php' ) ;
+
+        # php table functions
+        require( 'php_includes/helpers.php' ) ;
+
+        ?>
     </div>
 </body>
 </html>

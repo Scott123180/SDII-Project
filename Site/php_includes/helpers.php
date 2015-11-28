@@ -1,9 +1,12 @@
 
 <?php
+#shows errors in queries; disable for final product
 $debug = true;
 
 #Scott Hansen and Nicholas Burd
-#these functions are used for lost.php
+
+
+#show lost short links on lost.php
 function show_link_records_lost($dbc) {
 	# Create a query to get the name and price sorted by price
 	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\';' ;
