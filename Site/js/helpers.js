@@ -16,7 +16,7 @@ function grabLostData() {
 
 function makeOptions(array, id) {
 
-    for (i = 0; i < array.length; i++) {
+    for (var i = 0; i < array.length; i++) {
         var tag = document.createElement('option');
         var content = document.createTextNode(array[i]);
         tag.appendChild(content);
