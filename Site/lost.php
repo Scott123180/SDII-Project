@@ -19,9 +19,8 @@
         </div>
     </div>
 
+    <!--header-->
     <div class="container-fluid">
-
-        <!--Header-->
         <div class="row">
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="lost.php" style="color:white;"><h4>Lost Something?</h4></a></div>
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="found.php" style="color:white;"><h4>Found Something?</h4></a></div>
@@ -29,8 +28,12 @@
         </div>
     </div>
 
-
-
+    <!--select options-->
+    <div class="container">
+        
+    </div>
+    <!--tables-->
+    <div class="container">
         <?php
         
         # Connect to MySQL server and the database
@@ -54,16 +57,7 @@
         mysqli_close( $dbc ) ;
         
         ?>
-
-	<div class="container-fluid">
-
-        <div class="row">
-			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
-			
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="grabLostData()" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
-            </div>
-        </div>
+        <button type="button" class="btn btn-primary btn-lg" onclick="grabLostData()" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
     </div>
 </body>
 </html>
