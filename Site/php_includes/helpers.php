@@ -18,7 +18,7 @@ function show_link_records_lost($dbc) {
   		# But...wait until we know the query succeed before
   		# rendering the table start.
   		echo '<H1>Found Items</H1>' ;
-  		echo '<TABLE>';
+  		echo '<table class="table table-striped">';
   		echo '<TR>';
   		echo '<TH>Item ID</TH>';
   		echo '<TH>Item Name</TH>';
@@ -31,7 +31,7 @@ function show_link_records_lost($dbc) {
   		{
 			$alink = '<A HREF=lost.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
     		echo '<TR>' ;
-    		echo '<TD ALIGN=right>'. $alink . '</TD>' ;
+    		echo '<TD>'. $alink . '</TD>' ;
     		echo '<TD>' . $row['item_name'] . '</TD>' ;
 			echo '<TD>' . $row['status'] . '</TD>' ;
 			echo '<TD>' . $row['item_category'] . '</TD>' ;
@@ -63,7 +63,7 @@ function show_record($dbc, $id) {
   		# But...wait until we know the query succeed before
   		# rendering the table start.
   		echo '<H1>Found Items</H1>' ;
-  		echo '<TABLE>';
+  		echo '<table class ="table table-striped">';
   		echo '<TR>';
   		echo '<TH>Item ID</TH>';
   		echo '<TH>Item Name</TH>';
