@@ -14,9 +14,16 @@ function grabLostData() {
     self.location='create_lost_item.php';
 }
 
-function makeSelect(optionsArray) {
-    for (i = 0; i < optionsArray.length; i++) {
+function makeOptions(array, id) {
 
+    for (i = 0; i < array.length; i++) {
+        var tag = document.createElement('option');
+        var content = document.createTextNode(array[i]);
+        tag.appendChild(content);
+
+        var element = document.getElementById(id);
+
+        element.appendChild(tag);
     }
 }
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/helpers.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <title>Lost Something</title>
@@ -32,23 +33,16 @@
     <div class="container">
         <!--item category, how long ago lost, where lost-->
         <h5>Item Category</h5>
-        <select class="form-control">
-            <option>phone or computer</option>
-            <option>audio or headphones</option>
-            <option>clothing</option>
-            <option>notebook or books</option>
-            <option>bag or backpack</option>
-            <option>other</option>
-        </select>
+        <select class="form-control" id="itemCategory"></select>
+        <script>makeOptions(itemCategories, "itemCategory");</script>
+
         <h5>How long ago was it lost?</h5>
-        <select class="form-control">
-            <option>today</option>
-            <option>yesterday</option>
-            <option>2 to 7 days</option>
-            <option>longer than a week</option>
-        </select>
+        <select class="form-control" id="timeLost"></select>
+        <script>makeOptions(timeRanges, "timeLost")</script>
+
         <h5>What building did you lose it in?</h5>
-        <select></select>
+        <select class="form-control" id="campusLocations"></select>
+        <script>makeOptions(campusLocations, "campusLocations")</script>
     </div>
     <!--tables-->
     <div class="container">
