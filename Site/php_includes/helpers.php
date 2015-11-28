@@ -106,9 +106,6 @@ function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_de
   return $results ;
 }
 
-
-
-
 #show found short links on found.php
 function show_link_records_found($dbc) {
 	# Create a query to get the name and price sorted by price
