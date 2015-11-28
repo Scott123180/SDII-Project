@@ -48,7 +48,7 @@
         }
 
         # Show the records
-        show_link_records($dbc);
+        show_link_records_lost($dbc);
 
         # Close the connection
         mysqli_close( $dbc ) ;
@@ -61,7 +61,7 @@
 			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
 			
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Coninue Submiting New Lost Item</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
             </div>
         </div>
     </div>

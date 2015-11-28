@@ -4,7 +4,7 @@ $debug = true;
 
 #Scott Hansen and Nicholas Burd
 #these functions are used for lost.php
-function show_link_records($dbc) {
+function show_link_records_lost($dbc) {
 	# Create a query to get the name and price sorted by price
 	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'found\';' ;
 
@@ -106,7 +106,7 @@ function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_de
 
 
 #These functions are used for found.php
-function show_link_records2($dbc) {
+function show_link_records_found($dbc) {
 	# Create a query to get the name and price sorted by price
 	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status=\'lost\';' ;
 

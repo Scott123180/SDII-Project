@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/index.php" afterPath="$PROJECT_DIR$/Site/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/superadmin_landing.php" afterPath="$PROJECT_DIR$/Site/superadmin_landing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/template.php" afterPath="$PROJECT_DIR$/Site/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.55344826">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lost.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Site/lost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.03275862">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -76,15 +73,15 @@
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-57.307693">
-              <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+            <state vertical-scroll-proportion="-4.6363635">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
-                <marker date="1448736706996" expanded="true" signature="199:275" placeholder="SELECT id, i..Item..." />
-                <marker date="1448736706996" expanded="true" signature="1384:1468" placeholder="SELECT id, i..Item..." />
-                <marker date="1448736706996" expanded="true" signature="2610:2991" placeholder="INSERT INTO Item..." />
-                <marker date="1448736706996" expanded="true" signature="3260:3335" placeholder="SELECT id, i..Item..." />
-                <marker date="1448736706996" expanded="true" signature="4445:4528" placeholder="SELECT id, i..Item..." />
-                <marker date="1448736706996" expanded="true" signature="5644:5978" placeholder="INSERT INTO Item..." />
+                <marker date="1448738276173" expanded="true" signature="204:280" placeholder="SELECT id, i..Item..." />
+                <marker date="1448738276173" expanded="true" signature="1389:1473" placeholder="SELECT id, i..Item..." />
+                <marker date="1448738276173" expanded="true" signature="2615:2996" placeholder="INSERT INTO Item..." />
+                <marker date="1448738276173" expanded="true" signature="3270:3345" placeholder="SELECT id, i..Item..." />
+                <marker date="1448738276173" expanded="true" signature="4455:4538" placeholder="SELECT id, i..Item..." />
+                <marker date="1448738276173" expanded="true" signature="5654:5988" placeholder="INSERT INTO Item..." />
               </folding>
             </state>
           </provider>
@@ -139,11 +136,11 @@
         <option value="$PROJECT_DIR$/Site/CreateLostItemForm.php" />
         <option value="$PROJECT_DIR$/Site/found.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/connect_db.php" />
-        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
-        <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/template.php" />
         <option value="$PROJECT_DIR$/Site/superadmin_landing.php" />
         <option value="$PROJECT_DIR$/Site/index.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+        <option value="$PROJECT_DIR$/Site/lost.php" />
       </list>
     </option>
   </component>
@@ -317,6 +314,7 @@
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -327,7 +325,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -422,12 +419,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448736706996" expanded="true" signature="199:275" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="1384:1468" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="2610:2991" placeholder="INSERT INTO Item..." />
-            <marker date="1448736706996" expanded="true" signature="3260:3335" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="4445:4528" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="5644:5978" placeholder="INSERT INTO Item..." />
+            <marker date="1448738276173" expanded="true" signature="204:280" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="1389:1473" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="2615:2996" placeholder="INSERT INTO Item..." />
+            <marker date="1448738276173" expanded="true" signature="3270:3345" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="4455:4538" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="5654:5988" placeholder="INSERT INTO Item..." />
           </folding>
         </state>
       </provider>
@@ -607,21 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.307693">
-          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-          <folding>
-            <marker date="1448736706996" expanded="true" signature="199:275" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="1384:1468" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="2610:2991" placeholder="INSERT INTO Item..." />
-            <marker date="1448736706996" expanded="true" signature="3260:3335" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="4445:4528" placeholder="SELECT id, i..Item..." />
-            <marker date="1448736706996" expanded="true" signature="5644:5978" placeholder="INSERT INTO Item..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/connect_db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
@@ -630,10 +612,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6363635">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <marker date="1448738276173" expanded="true" signature="204:280" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="1389:1473" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="2615:2996" placeholder="INSERT INTO Item..." />
+            <marker date="1448738276173" expanded="true" signature="3270:3345" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="4455:4538" placeholder="SELECT id, i..Item..." />
+            <marker date="1448738276173" expanded="true" signature="5654:5988" placeholder="INSERT INTO Item..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/lost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.03275862">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -642,21 +654,6 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.55344826">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
