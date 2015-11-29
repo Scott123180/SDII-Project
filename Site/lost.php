@@ -1,5 +1,10 @@
 ﻿<!DOCTYPE html>
-<!--Places that need PHP are designated by NPHP-->
+<!--
+Authors: Scott Hansen and Nicholas Burd
+Title: lost.php
+Description: page for if one has lost an item and wants to check
+if it has been found. If it hasn't, the user can add an entry to the database
+-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />

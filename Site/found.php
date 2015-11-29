@@ -1,5 +1,11 @@
 ﻿<!DOCTYPE html>
-<!--Places that need PHP are designated by NPHP-->
+<!--
+Authors: Scott Hansen and Nicholas Burd
+Title: found.php
+Description: page for user to look to see if another user has submitted
+a lost claim for an item. If item isn't submitted as lost, finder
+can add the item to the database.
+-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
