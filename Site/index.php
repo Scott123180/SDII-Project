@@ -1,5 +1,9 @@
 ﻿<!DOCTYPE html>
-<!--Places that need PHP are designated by NPHP-->
+<!--
+Authors: Scott Hansen and Nicholas Burd
+Title: index.php
+Description: landing page for the web application
+-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -14,7 +18,7 @@
     <div class="container-fluid" style="background-color:#aaaaaa">
         <div class="row">
             <div class="span4"></div>
-            <div class="span4"><a href="index.php"><img class="img-responsive center-block" src="images/limbocompressed.png" style="padding-bottom:20px; padding-top:10px" /></a></div>
+            <div class="span4"><a href="index.php"><img class="img-responsive center-block" src="images/LimboCompressed.png" style="padding-bottom:20px; padding-top:10px" /></a></div>
             <div class="span4"></div>
         </div>
     </div>

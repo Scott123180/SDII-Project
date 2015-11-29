@@ -15,7 +15,7 @@
     <div class="container-fluid" style="background-color:#aaaaaa">
         <div class="row">
             <div class="span4"></div>
-            <div class="span4"><a href="index.php"><img class="img-responsive center-block" src="images/limbocompressed.png" style="padding-bottom:20px; padding-top:10px" /></a></div>
+            <div class="span4"><a href="index.php"><img class="img-responsive center-block" src="images/LimboCompressed.png" style="padding-bottom:20px; padding-top:10px" /></a></div>
             <div class="span4"></div>
         </div>
     </div>

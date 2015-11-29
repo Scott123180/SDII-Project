@@ -14,6 +14,7 @@ function grabLostData() {
     self.location='create_lost_item.php';
 }
 
+//take in an array of strings and the ElementID and create a list of options
 function makeOptions(array, id) {
 
     for (var i = 0; i < array.length; i++) {

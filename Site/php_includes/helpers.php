@@ -1,10 +1,11 @@
 
 <?php
 #Authors: Scott Hansen and Nicholas Burd
+#Title: helpers.php
+#Description: contains the back-end functions for the limbo db application
 
 #shows errors in queries; set to false for final product
 $debug = true;
-
 
 #show lost short links on lost.php
 function show_link_records_lost($dbc) {

@@ -1,8 +1,7 @@
 <?php 
 # CONNECT TO MySQL DATABASE.
 
-
-# Connect  on 'localhost' for user 'mike' with password 'easysteps' to database 'site_db'.
+# Connect  on 'localhost' for user 'root' with password '' to database 'Limbo_DB'.
 
 # Otherwise fail gracefully and explain the error. 
 
