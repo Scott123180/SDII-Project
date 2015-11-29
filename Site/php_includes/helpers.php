@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head></head>
+<body></body>
 
 <?php
 #Authors: Scott Hansen and Nicholas Burd
@@ -8,9 +12,9 @@
 $debug = true;
 
 #show lost short links on lost.php
-function show_link_records_lost($dbc) {
+function show_link_records_lost($dbc, $category, $time, $location) {
 	# Create a query to show only found items
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status LIKE \'found\';' ;
+	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status = \'found\';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -19,42 +23,42 @@ function show_link_records_lost($dbc) {
 	# Show results
 	if( $results )
 	{
-  		# But...wait until we know the query succeed before
-  		# rendering the table start.
-  		echo '<H1>Found Items</H1>' ;
-  		echo '<table class="table table-striped">';
-  		echo '<TR>';
-  		echo '<TH>Item ID</TH>';
-  		echo '<TH>Item Name</TH>';
+		# But...wait until we know the query succeed before
+		# rendering the table start.
+		echo '<H1>Found Items</H1>' ;
+		echo '<table class="table table-striped">';
+		echo '<TR>';
+		echo '<TH>Item ID</TH>';
+		echo '<TH>Item Name</TH>';
 		echo '<TH>Item Status</TH>';
 		echo '<TH>Item Category</TH>';
-  		echo '</TR>';
+		echo '</TR>';
 
-  		# For each row result, generate a table row
-  		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-  		{
+		# For each row result, generate a table row
+		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
+		{
 			$alink = '<A HREF=lost.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
-    		echo '<TR>' ;
-    		echo '<TD>'. $alink . '</TD>' ;
-    		echo '<TD>' . $row['item_name'] . '</TD>' ;
+			echo '<TR>' ;
+			echo '<TD>'. $alink . '</TD>' ;
+			echo '<TD>' . $row['item_name'] . '</TD>' ;
 			echo '<TD>' . $row['status'] . '</TD>' ;
 			echo '<TD>' . $row['item_category'] . '</TD>' ;
-    		echo '</TR>' ;
-  		}
-		
+			echo '</TR>' ;
+		}
 
-  		# End the table
-  		echo '</TABLE>';
 
-  		# Free up the results in memory
-  		mysqli_free_result( $results ) ;
+		# End the table
+		echo '</TABLE>';
+
+		# Free up the results in memory
+		mysqli_free_result( $results ) ;
 	}
 }
 
 #show all the details from the selected record
 function show_record($dbc, $id) {
 	# Create a query to get the name and price sorted by price
-	
+
 	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE id=' . $id . ';' ;
 
 
@@ -65,46 +69,46 @@ function show_record($dbc, $id) {
 	# Show results
 	if( $results )
 	{
-  		# But...wait until we know the query succeed before
-  		# rendering the table start.
-  		echo '<H1>Found Items</H1>' ;
-  		echo '<table class ="table table-striped">';
-  		echo '<TR>';
-  		echo '<TH>Item ID</TH>';
-  		echo '<TH>Item Name</TH>';
-  		echo '<TH>Item Status</TH>';
+		# But...wait until we know the query succeed before
+		# rendering the table start.
+		echo '<H1>Found Items</H1>' ;
+		echo '<table class ="table table-striped">';
+		echo '<TR>';
+		echo '<TH>Item ID</TH>';
+		echo '<TH>Item Name</TH>';
+		echo '<TH>Item Status</TH>';
 		echo '<TH>Item Category</TH>';
-  		echo '</TR>';
+		echo '</TR>';
 
-  		# For each row result, generate a table row
-  		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-  		{
-    		echo '<TR>' ;
-    		echo '<TD>' . $row['id'] . '</TD>' ;
-    		echo '<TD>' . $row['item_name'] . '</TD>' ;
-    		echo '<TD>' . $row['status'] . '</TD>' ;
+		# For each row result, generate a table row
+		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
+		{
+			echo '<TR>' ;
+			echo '<TD>' . $row['id'] . '</TD>' ;
+			echo '<TD>' . $row['item_name'] . '</TD>' ;
+			echo '<TD>' . $row['status'] . '</TD>' ;
 			echo '<TD>' . $row['item_category'] . '</TD>' ;
-    		echo '</TR>' ;
-  		}
+			echo '</TR>' ;
+		}
 
-  		# End the table
-  		echo '</TABLE>';
+		# End the table
+		echo '</TABLE>';
 
-  		# Free up the results in memory
-  		mysqli_free_result( $results ) ;
+		# Free up the results in memory
+		mysqli_free_result( $results ) ;
 	}
 }
 
 # Inserts a record into the prints table
 function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward) {
-  $query = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward) 
+	$query = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward)
 			VALUES ("' . $location_id . '" , "' . $item_lost_date . '" , "' . $item_name . '", "' . $item_description . '", "' . $room . '", "' . $status . '", "' . $item_category . '", "' . $make . '", "' . $model . '", "' . $color . '", "' . $reward . '")' ;
-  show_query($query);
+	show_query($query);
 
-  $results = mysqli_query($dbc,$query) ;
-  check_results($results) ;
+	$results = mysqli_query($dbc,$query) ;
+	check_results($results) ;
 
-  return $results ;
+	return $results ;
 }
 
 #show found short links on found.php
@@ -119,34 +123,34 @@ function show_link_records_found($dbc) {
 	# Show results
 	if( $results )
 	{
-  		# rendering the table start.
-  		echo '<H1>Lost Items</H1>' ;
-  		echo '<table class="table table-striped">';
-  		echo '<TR>';
-  		echo '<TH>Item ID</TH>';
-  		echo '<TH>Item Name</TH>';
+		# rendering the table start.
+		echo '<H1>Lost Items</H1>' ;
+		echo '<table class="table table-striped">';
+		echo '<TR>';
+		echo '<TH>Item ID</TH>';
+		echo '<TH>Item Name</TH>';
 		echo '<TH>Item Status</TH>';
 		echo '<TH>Item Category</TH>';
-  		echo '</TR>';
+		echo '</TR>';
 
-  		# For each row result, generate a table row
-  		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-  		{
+		# For each row result, generate a table row
+		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
+		{
 			$alink = '<A HREF=found.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
-    		echo '<TR>' ;
-    		echo '<TD>'. $alink . '</TD>' ;
-    		echo '<TD>' . $row['item_name'] . '</TD>' ;
+			echo '<TR>' ;
+			echo '<TD>'. $alink . '</TD>' ;
+			echo '<TD>' . $row['item_name'] . '</TD>' ;
 			echo '<TD>' . $row['status'] . '</TD>' ;
 			echo '<TD>' . $row['item_category'] . '</TD>' ;
-    		echo '</TR>' ;
-  		}
-		
+			echo '</TR>' ;
+		}
 
-  		# End the table
-  		echo '</TABLE>';
 
-  		# Free up the results in memory
-  		mysqli_free_result( $results ) ;
+		# End the table
+		echo '</TABLE>';
+
+		# Free up the results in memory
+		mysqli_free_result( $results ) ;
 	}
 }
 
@@ -157,14 +161,14 @@ function show_link_records_found($dbc) {
  */
 #NEED TO EDIT
 function valid_number($num) {
- if(empty($num) || !is_numeric($num))
- return false ;
- else {
- $num = intval($num) ;
- if($num <= 0)
- return false ;
- }
- return true ;
+	if(empty($num) || !is_numeric($num))
+		return false ;
+	else {
+		$num = intval($num) ;
+		if($num <= 0)
+			return false ;
+	}
+	return true ;
 }
 
 #NEED TO EDIT
@@ -176,18 +180,18 @@ function valid_name($name) {
 
 # Shows the query as a debugging aid
 function show_query($query) {
-  global $debug;
+	global $debug;
 
-  if($debug)
-    echo "<p>Query = $query</p>" ;
+	if($debug)
+		echo "<p>Query = $query</p>" ;
 }
 
 # Checks the query results as a debugging aid
 function check_results($results) {
-  global $dbc;
+	global $dbc;
 
-  if($results != true)
-    echo '<p>SQL ERROR = ' . mysqli_error( $dbc ) . '</p>'  ;
+	if($results != true)
+		echo '<p>SQL ERROR = ' . mysqli_error( $dbc ) . '</p>'  ;
 }
 
 #prints a javascript console message for debugging
@@ -201,3 +205,6 @@ function js_console_debug($message) {
 	}
 }
 ?>
+</html>
+
+

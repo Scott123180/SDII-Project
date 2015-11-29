@@ -57,9 +57,10 @@ if it has been found. If it hasn't, the user can add an entry to the database
             <option>don't know</option>
         </select>
 
-        <button type="button" class="btn btn-primary btn-lg" onclick="" style="margin-top:15px;">submit</button>
+        <button type="button" class="btn btn-primary btn-lg" style="margin-top:15px;">submit</button>
 
     </div>
+
     <!--tables-->
     <div class="container">
         <?php
