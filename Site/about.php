@@ -1,5 +1,9 @@
 ﻿<!DOCTYPE html>
-<!--Places that need PHP are designated by NPHP-->
+<!--
+Authors: Scott Hansen and Nicholas Burd
+Title: about.php
+Description: Help page and page about the web app.
+-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />

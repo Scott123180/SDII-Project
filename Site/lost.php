@@ -36,18 +36,26 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <!--item category, how long ago lost, where lost-->
         <h4>Item Category</h4>
-        <select class="form-control" id="itemCategory"></select>
-        <script>makeOptions(itemCategories, "itemCategory");</script>
+        <select class="form-control" id="itemCategory">
+            <option>item category</option>
+            <script>makeOptions(itemCategories, "itemCategory");</script>
+        </select>
+
 
         <h4>How long ago was it lost?</h4>
-        <select class="form-control" id="timeLost"></select>
-        <script>makeOptions(timeRanges, "timeLost")</script>
+        <select class="form-control" id="timeLost">
+            <option>time lost</option>
+            <script>makeOptions(timeRanges, "timeLost")</script>
+            <option>don't know</option>
+        </select>
 
-        <h4>What building did you lose it in?</h4>
-        <select class="form-control" id="campusLocations"></select>
-        <script>makeOptions(campusLocations, "campusLocations")</script>
+        <h4>What location did you lose it at?</h4>
+        <select class="form-control" id="campusLocations">
+            <option>location</option>
+            <script>makeOptions(campusLocations, "campusLocations")</script>
+            <option>don't know</option>
+        </select>
 
         <button type="button" class="btn btn-primary btn-lg" onclick="" style="margin-top:15px;">submit</button>
 
