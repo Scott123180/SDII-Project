@@ -36,29 +36,29 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <h4>Item Category</h4>
-        <select class="form-control" id="itemCategory">
-            <option>item category</option>
-            <script>makeOptions(itemCategories, "itemCategory");</script>
-        </select>
+        <form id="lostOptions" method="get" action="lost.php">
+            <h4>Item Category</h4>
+            <select class="form-control" name="itemCategory" id="itCat">
+                <option>item category</option>
+                <script>makeOptions(itemCategories, "itemCategory");</script>
+            </select>
 
+            <h4>How long ago was it lost?</h4>
+            <select class="form-control" name="timeLost" id="tLost">
+                <option>time lost</option>
+                <script>makeOptions(timeRanges, "timeLost")</script>
+                <option>don't know</option>
+            </select>
 
-        <h4>How long ago was it lost?</h4>
-        <select class="form-control" id="timeLost">
-            <option>time lost</option>
-            <script>makeOptions(timeRanges, "timeLost")</script>
-            <option>don't know</option>
-        </select>
+            <h4>What location did you lose it at?</h4>
+            <select class="form-control" name="campusLocations" id="campLoc">
+                <option>location</option>
+                <script>makeOptions(campusLocations, "campusLocations")</script>
+                <option>don't know</option>
+            </select>
 
-        <h4>What location did you lose it at?</h4>
-        <select class="form-control" id="campusLocations">
-            <option>location</option>
-            <script>makeOptions(campusLocations, "campusLocations")</script>
-            <option>don't know</option>
-        </select>
-
-        <button type="button" class="btn btn-primary btn-lg" style="margin-top:15px;">submit</button>
-
+            <input type="submit" class="form-control" value="Submit" style="margin-top: 15px" />
+        </form>
     </div>
 
     <!--tables-->
@@ -71,15 +71,30 @@ if it has been found. If it hasn't, the user can add an entry to the database
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;
 
-
-        #get link num and show specific record
+        #if GET request
         if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
-            if(isset($_GET['id']))
-                show_record($dbc, $_GET['id']) ;
+            #if GET id in GET request, show the record of that item
+            if(isset($_GET['id'])) {
+                show_record($dbc, $_GET['id']) ; }
+            #if the filter submit button was clicked, check form inputs and return corresponding query
+            elseif (isset($_GET['itCat' && 'tLost' && 'campLoc'])) {
+                #error array
+                
+                #check to see if the id's are set to default values
+
+            }
+            else {
+                echo '<p style="color=red">Error, please try again.</p>' ;
+            }
         }
 
+
         # Show the records
-        show_link_records_lost($dbc);
+        function processForm() {
+
+            show_link_records_lost($dbc, $category, $time, $location);
+        }
+
 
         # Close the connection
         mysqli_close( $dbc ) ;
