@@ -13,22 +13,37 @@ $debug = true;
 
 #show lost short links on lost.php
 function show_link_records_lost($dbc, &$category, &$time, &$location) {
+	#need to sterilize inputs
+		#inCategory()
+		#inTime()
+		#inLocation()
+
 	#modify default and unspecified arguments from the user input in lost.php
-	if ($category == 'item category' || $category == 'other') { #no category specified
+	if ($category === 'item category' || $category === 'other') { #no category specified
 		#unset category argument
 		$category = NULL;
 	}
-	if ($time == 'time lost' || $time == 'don\'t know') { #no time specified
+	if ($time === 'time lost' || $time === 'don\'t know') { #no time specified
 		#unset time argument
 		$time = NULL;
 	}
-	if ($location == 'location' || $location == 'don\'t know') { #no location specified
+	if ($location === 'location' || $location === 'don\'t know') { #no location specified
 		#unset location argument
 		$location = NULL;
 	}
 
-	# Create a query to show only found items
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status = \'found\';' ;
+	# Create a base query
+	$query = 'SELECT id, item_name, status, item_category FROM Item WHERE status = \'found\' ' ;
+
+	if (isset($category)) { #category not null
+		#add to query
+		$query = $query . 'AND item_category = ' . $category . ' ' ;
+	}
+
+	if (isset($time)) { #time not null
+		#add to query
+		$query = $query . 'AND ' ;
+	}
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -167,6 +182,16 @@ function show_link_records_found($dbc) {
 		mysqli_free_result( $results ) ;
 	}
 }
+
+#length ago to SQL time
+/*
+function vTime2SQL(&$timeAgo) {
+	$timeAgo = NULL ;
+	var $currentTime = NULL ;
+	var $sqlTime = NULL ;
+	return $sqlTime ;
+}
+*/
 
 /*
  * ================================================
