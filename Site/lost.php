@@ -39,22 +39,22 @@ if it has been found. If it hasn't, the user can add an entry to the database
     <div class="container">
         <form id="lostOptions" method="get" action="lost.php">
             <h4>Item Category</h4>
-            <select class="form-control" name="itemCategory" id="itCat">
+            <select class="form-control" name="itemCategory" id="iCat">
                 <option>item category</option>
-                <script>makeOptions(itemCategories, "itemCategory");</script>
+                <script>makeOptions(itemCategories, "iCat");</script>
             </select>
 
             <h4>How long ago was it lost?</h4>
             <select class="form-control" name="timeLost" id="tLost">
                 <option>time lost</option>
-                <script>makeOptions(timeRanges, "timeLost")</script>
+                <script>makeOptions(timeRanges, "tLost")</script>
                 <option>don't know</option>
             </select>
 
             <h4>What location did you lose it at?</h4>
             <select class="form-control" name="campusLocations" id="campLoc">
                 <option>location</option>
-                <script>makeOptions(campusLocations, "campusLocations")</script>
+                <script>makeOptions(campusLocations, "campLoc")</script>
                 <option>don't know</option>
             </select>
 
@@ -72,7 +72,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
         require( 'php_includes/helpers.php' ) ;
 
         #if GET request
-        if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
+        if($_SERVER[ 'REQUEST_METHOD' ] === 'GET') {
             #if GET id in GET request, show the record of that item
             if(isset($_GET['id'])) {
                 show_record($dbc, $_GET['id']) ; }
@@ -82,10 +82,9 @@ if it has been found. If it hasn't, the user can add an entry to the database
                 show_link_records_lost($dbc, $_GET['itCat'], $_GET['tLost'], $_GET['campLoc']) ;
             }
             else {
-                echo '<p style="color=red">Error, please try again.</p>' ;
+                echo '<p style="color:red">Error, please try again.</p>' ;
             }
         }
-
 
         # Close the connection
         mysqli_close( $dbc ) ;

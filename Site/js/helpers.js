@@ -68,14 +68,12 @@ function grabLostData() {
 
 //take in an array of strings and the ElementID and create a list of options
 function makeOptions(array, id) {
-
     for (var i = 0; i < array.length; i++) {
         var tag = document.createElement('option');
         var content = document.createTextNode(array[i]);
         tag.appendChild(content);
 
         var element = document.getElementById(id);
-
         element.appendChild(tag);
     }
 }

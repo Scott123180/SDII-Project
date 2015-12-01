@@ -372,7 +372,7 @@ $timeRanges = array("today", "yesterday", "2 to 7 days", "more than a week") ;
 
 $itemCategories = array("phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other") ;
 
-
+/*
 #make JS Arrays
 for($x = 0; $x < count($campusLocations); $x++) {
     echo '<script>itemCategories.push(\'' . $campusLocations[$x] . '\');</script>' ;
@@ -385,6 +385,7 @@ for($x = 0; $x < count($timeRanges); $x++) {
 for($x = 0 ; $x < count($itemCategories); $x++) {
     echo '<script>itemCategories.push(\'' . $itemCategories[$x] . '\');</script>' ;
 }
+*/
 
 ?>
 
