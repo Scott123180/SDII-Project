@@ -37,10 +37,3 @@ function makeOptions(array, id) {
     }
 }
 
-//grab php array data for use in makeOptions()
-function populateJSArray (array) {
-
-}
-
-//
-

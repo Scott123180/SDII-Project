@@ -5,6 +5,13 @@ Title: lost.php
 Description: page for if one has lost an item and wants to check
 if it has been found. If it hasn't, the user can add an entry to the database
 -->
+<?php
+# Connect to MySQL server and the database
+require( 'php_includes/connect_db.php' ) ;
+
+# Includes these helper functions
+require( 'php_includes/helpers.php' ) ;
+?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -64,12 +71,6 @@ if it has been found. If it hasn't, the user can add an entry to the database
     <!--tables-->
     <div class="container">
         <?php
-        
-        # Connect to MySQL server and the database
-        require( 'php_includes/connect_db.php' ) ;
-
-        # Includes these helper functions
-        require( 'php_includes/helpers.php' ) ;
 
         #if GET request
         if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
