@@ -27,17 +27,17 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	#no category specified
 	if ($category === 'item category' || $category === 'other') {
 		#unset category argument
-		$category = NULL;
+		unset($category);
 	}
 	#no time specified
-	if ($time === 'time lost' || $time === 'don\'t know') {
+	if ($time === 'time lost' || $time === 'unknown') {
 		#unset time argument
-		$time = NULL;
+		unset($time);
 	}
 	#no location specified
-	if ($location === 'location' || $location === 'don\'t know') {
+	if ($location === 'location' || $location === 'unknown') {
 		#unset location argument
-		$location = NULL;
+		unset($location);
 	}
 
 	/*

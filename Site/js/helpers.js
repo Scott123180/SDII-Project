@@ -10,7 +10,7 @@ Description: simple file for js functions
  */
 
 //create php location array
-var itemCategories = [
+var campusLocations = [
     'byrne house',
     'james a. cannavino library',
     'champagnat hall',
@@ -54,7 +54,7 @@ var itemCategories = [
 var timeRanges = ["today", "yesterday", "2 to 7 days", "more than a week"] ;
 
 //array of campus locations
-var campusLocations = ["phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other"] ;
+var itemCategories = ["phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other"] ;
 
 //grab filtered data and put in the found item form
 function grabFoundData() {

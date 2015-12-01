@@ -48,14 +48,14 @@ if it has been found. If it hasn't, the user can add an entry to the database
             <select class="form-control" name="timeLost" id="tLost">
                 <option>time lost</option>
                 <script>makeOptions(timeRanges, "tLost")</script>
-                <option>don't know</option>
+                <option>unknown</option>
             </select>
 
             <h4>What location did you lose it at?</h4>
             <select class="form-control" name="campusLocations" id="campLoc">
                 <option>location</option>
                 <script>makeOptions(campusLocations, "campLoc")</script>
-                <option>don't know</option>
+                <option>unknown</option>
             </select>
 
             <input type="submit" class="form-control" value="Submit" style="margin-top: 15px" />
