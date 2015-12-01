@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<script src="../js/helpers.js"></script>
+	<script src="http://localhost/SDII-Project/Site/js/helpers.js"></script>
 </head>
 <body></body>
 
 <?php
 #get this for use in functions below
 
-#populate the js array
-makeJSArrays();
 #Authors: Scott Hansen and Nicholas Burd
 #Title: helpers.php
 #Description: contains the back-end functions for the limbo db application
@@ -334,60 +332,59 @@ function js_console_debug($message) {
 
 #create php location array
 $campusLocations = array(
-    "byrne house",
-    "james a. cannavino library",
-    "champagnat hall",
-    "our lady seat of wisdom chapel",
-    "cornell boathouse",
-    "donnelly hall",
-    "margaret m. and charles h. dyson center",
-    "fern tor",
-    "fontaine hall",
-    "foy townhouses",
-    "fulton street townhouses",
-    "lower fulton townhouses",
-    "gartland appartments",
-    "greystone hall",
-    "hancock center",
-    "kieran gatehouse",
-    "kirk house",
-    "leo hall",
-    "longview park",
-    "lowell thomas communications center",
-    "marian hall",
-    "marist boathouse",
-    "james j. mccann recreational center",
-    "mid-rise hall",
-    "st. ann's hermitage",
-    "st. peter's",
-    "sheahan hall",
-    "steel plant art sudios and gallery",
-    "student center/rotunda",
-    "tennis pavilion",
-    "tenney stadium",
-    "lower townhouses",
-    "lower west cedar townhouses",
-    "upper west cedar townhouses"
+    'byrne house',
+    'james a. cannavino library',
+    'champagnat hall',
+    'our lady seat of wisdom chapel',
+    'cornell boathouse',
+    'donnelly hall',
+    'margaret m. and charles h. dyson center',
+    'fern tor',
+    'fontaine hall',
+    'foy townhouses',
+    'fulton street townhouses',
+    'lower fulton townhouses',
+    'gartland appartments',
+    'greystone hall',
+    'hancock center',
+    'kieran gatehouse',
+    'kirk house',
+    'leo hall',
+    'longview park',
+    'lowell thomas communications center',
+    'marian hall',
+    'marist boathouse',
+    'james j. mccann recreational center',
+    'mid-rise hall',
+    'st. anns hermitage', #st. anns hermitage
+    'st. peters', #st. peter's
+    'sheahan hall',
+    'steel plant art sudios and gallery',
+    'student center/rotunda',
+    'tennis pavilion',
+    'tenney stadium',
+    'lower townhouses',
+    'lower west cedar townhouses',
+    'upper west cedar townhouses'
 );
 
 $timeRanges = array("today", "yesterday", "2 to 7 days", "more than a week") ;
 
 $itemCategories = array("phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other") ;
 
-function makeJSArrays() {
-
-    for($x = 0; $x < count($GLOBALS['campusLocations']); $x++) {
-        echo '<script>itemCategories.push(' . $GLOBALS['campusLocations[x]'] . ');</script>' ;
-    }
-
-    for($x = 0; $x < count($GLOBALS['timeRanges']); $x++) {
-        echo '<script>timeRanges.push(' . $GLOBALS['timeRanges[x]'] . ');</script>' ;
-    }
-
-    for($x = 0 ; $x < count($GLOBALS['itemCategories']); $x++) {
-        echo '<script>itemCategories.push(' . $GLOBALS['itemCategories[x]'] . ');</script>' ;
-    }
+#make JS Arrays
+for($x = 0; $x < count($campusLocations); $x++) {
+    echo '<script>itemCategories.push(\'' . $campusLocations[$x] . '\');</script>' ;
 }
+
+for($x = 0; $x < count($timeRanges); $x++) {
+    echo '<script>timeRanges.push(\'' . $timeRanges[$x] . '\');</script>' ;
+}
+
+for($x = 0 ; $x < count($itemCategories); $x++) {
+    echo '<script>itemCategories.push(\'' . $itemCategories[$x] . '\');</script>' ;
+}
+
 ?>
 
 </html>

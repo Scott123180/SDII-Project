@@ -5,13 +5,13 @@ Description: simple file for js functions
  */
 
 //array of categories of items
-var itemCategories ;
+var itemCategories = new Array();
 
 //array of time ranges for item
-var timeRanges ;
+var timeRanges = new Array() ;
 
 //array of campus locations
-var campusLocations ;
+var campusLocations = new Array();
 
 //grab filtered data and put in the found item form
 function grabFoundData() {
