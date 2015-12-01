@@ -19,18 +19,23 @@ function show_link_records_lost($dbc, &$category, &$time, &$location) {
 		#inLocation()
 
 	#modify default and unspecified arguments from the user input in lost.php
-	if ($category === 'item category' || $category === 'other') { #no category specified
+	#no category specified
+	if ($category === 'item category' || $category === 'other') {
 		#unset category argument
 		$category = NULL;
 	}
-	if ($time === 'time lost' || $time === 'don\'t know') { #no time specified
+	#no time specified
+	if ($time === 'time lost' || $time === 'don\'t know') {
 		#unset time argument
 		$time = NULL;
 	}
-	if ($location === 'location' || $location === 'don\'t know') { #no location specified
+	#no location specified
+	if ($location === 'location' || $location === 'don\'t know') {
 		#unset location argument
 		$location = NULL;
 	}
+
+
 
 	# Create a base query
 	$query = 'SELECT id, item_name, status, item_category FROM Item WHERE status = \'found\' ' ;
@@ -43,6 +48,10 @@ function show_link_records_lost($dbc, &$category, &$time, &$location) {
 	if (isset($time)) { #time not null
 		#add to query
 		$query = $query . 'AND ' ;
+		#today
+		#yesterday
+		#2 to 7 days
+
 	}
 
 	# Execute the query
@@ -183,16 +192,41 @@ function show_link_records_found($dbc) {
 	}
 }
 
-#length ago to SQL time
-/*
-function vTime2SQL(&$timeAgo) {
-	$timeAgo = NULL ;
-	var $currentTime = NULL ;
-	var $sqlTime = NULL ;
-	return $sqlTime ;
-}
-*/
 
+/*
+ * =======================================================================
+ */
+#how long ago -> php date -> MySQL datetime comparison
+function selectToMySQL(&$timeAgo) {
+	#get the current time in PHP format
+	if ($timeAgo === 'today') {
+		#convert current time into SQL date
+		$mySQLDate = date( 'Y-m-d H:i:s') ;
+		return $mySQLDate ;
+	}
+	elseif ($timeAgo === 'yesterday') {
+		$phpDate = (time() + strtotime("-1 day")) ; #subtract 1 day from current time
+		$mySQLDate = date( 'Y-m-d H:i:s', $phpDate) ; #convert to MySQL date
+		return $mySQLDate ;
+	}
+	elseif ($timeAgo === '2 to 7 days') {
+		$phpDate = (time() + strtotime("-2 days")); #subtract 2 days from current time
+		$mySQLDate1 = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
+
+		$phpDate = (time() + strtotime("-7 days")); #subtract 7 days from current time
+		$mySQLDate2 = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
+		#return range of dates
+		$timeRange = array($mySQLDate1, $mySQLDate2);
+		return $timeRange ;
+	}
+	elseif ($timeAgo === 'longer than a week') {
+		#subtract 8 days and convert to SQL date
+		$phpDate = (time() + strtotime("-8 days")); #subtract 8 days
+		$mySQLDate = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
+		return $mySQLDate;
+
+	}
+}
 /*
  * ================================================
  * Valid input/error functions

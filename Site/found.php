@@ -49,7 +49,7 @@ can add the item to the database.
         #get link num and show specific record
         if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
             if(isset($_GET['id']))
-                show_record2($dbc, $_GET['id']) ;
+                show_record($dbc, $_GET['id']) ;
         }
 
         # Show the records

@@ -28,11 +28,6 @@ function makeOptions(array, id) {
     }
 }
 
-function grabLostConstraints() {
-    var category = document.getElementByID("itemCategory").
-    $category, $time, $location
-}
-
 //array of categories of items
 var itemCategories = ["phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other"] ;
 
