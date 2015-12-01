@@ -62,7 +62,7 @@ VALUE
 ('st. anns hermitage', 41.728123, -73.934419),
 ('st. peters', 41.722517, -73.932738),
 ('sheahan hall', 41.719105, -73.935721), 
-('steel plant art sudios and gallery', 41.721449, -73.931003), 
+('steel plant art studios and gallery', 41.721449, -73.931003),
 ('student center/rotunda', 41.721449, -73.931003), 
 ('tennis pavilion', 41.722270, -73.927711), 
 ('tenney stadium', 41.719133, -73.932941), 

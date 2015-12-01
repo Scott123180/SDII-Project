@@ -356,10 +356,10 @@ $campusLocations = array(
     'marist boathouse',
     'james j. mccann recreational center',
     'mid-rise hall',
-    'st. anns hermitage', #st. anns hermitage
+    'st. anns hermitage', #st. ann's hermitage
     'st. peters', #st. peter's
     'sheahan hall',
-    'steel plant art sudios and gallery',
+    'steel plant art studios and gallery',
     'student center/rotunda',
     'tennis pavilion',
     'tenney stadium',
@@ -371,6 +371,7 @@ $campusLocations = array(
 $timeRanges = array("today", "yesterday", "2 to 7 days", "more than a week") ;
 
 $itemCategories = array("phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other") ;
+
 
 #make JS Arrays
 for($x = 0; $x < count($campusLocations); $x++) {
