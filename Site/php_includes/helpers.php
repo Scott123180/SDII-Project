@@ -11,8 +11,9 @@
 #shows errors in queries; set to false for final product
 $debug = true;
 
+
 #show lost short links on lost.php
-function show_link_records_lost($dbc, &$category, &$time, &$location) {
+function show_link_records_lost($dbc, $category, $time, $location) {
 	#need to sterilize inputs
 		#inCategory()
 		#inTime()
@@ -37,22 +38,52 @@ function show_link_records_lost($dbc, &$category, &$time, &$location) {
 
 
 
-	# Create a base query
-	$query = 'SELECT id, item_name, status, item_category FROM Item WHERE status = \'found\' ' ;
+	/*
+	 * =======================================
+	 * Query Building Section
+	 * =======================================
+	 */
 
-	if (isset($category)) { #category not null
+	# Create a base query
+	$query = 'SELECT id, item_name, status, item_category FROM item, locations WHERE status = \'found\' ' ;
+
+	#category not null
+	if (isset($category)) {
 		#add to query
 		$query = $query . 'AND item_category = ' . $category . ' ' ;
 	}
 
-	if (isset($time)) { #time not null
-		#add to query
-		$query = $query . 'AND ' ;
-		#today
-		#yesterday
-		#2 to 7 days
+	#time not null; compare item age
+	if (isset($time)) {
+		#Convert the user shorthand to DATETIME
+		$myDate = selectToMySQL($time) ;
 
+		#build query based on each option
+		#today
+		if($myDate[0] === 'today') {
+			$query = $query . 'AND item.create_date = ' . $myDate[1] . ' ' ;
+		}
+		#yesterday
+		elseif($myDate[0] === 'yesterday') {
+			$query = $query . 'AND item.create_date = ' . $myDate[1] . ' ' ;
+		}
+		#2 to 7 days
+		elseif($myDate[0] === '2 to 7 days') {
+			$query = $query . 'AND item.create_date BETWEEN ' . $myDate[1] . ' AND ' . $myDate[2] . ' ' ;
+		}
+		#longer than a week
+		elseif($myDate[0] === 'longer than a week') {
+			$query = $query . 'AND item.create_date > ' . $myDate[1] . ' ' ;
+		}
 	}
+	#location not null
+	if (isset($location)) {
+		$query = $query . 'AND item.location_id = location.id ' ; #link locations and item
+		$query = $query . 'AND location.name = ' . $location . ' ' ;
+	}
+
+	#add final semicolon to query
+	$query = $query . ';' ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;
@@ -194,20 +225,23 @@ function show_link_records_found($dbc) {
 
 
 /*
- * =======================================================================
+ * ==================================
+ * Convert vernacular search query to DATETIME
  */
 #how long ago -> php date -> MySQL datetime comparison
-function selectToMySQL(&$timeAgo) {
+function selectToMySQL($timeAgo) {
 	#get the current time in PHP format
 	if ($timeAgo === 'today') {
 		#convert current time into SQL date
-		$mySQLDate = date( 'Y-m-d H:i:s') ;
-		return $mySQLDate ;
+		$theDate = date( 'Y-m-d H:i:s') ;
+
+		return $returnDate ;
 	}
 	elseif ($timeAgo === 'yesterday') {
 		$phpDate = (time() + strtotime("-1 day")) ; #subtract 1 day from current time
-		$mySQLDate = date( 'Y-m-d H:i:s', $phpDate) ; #convert to MySQL date
-		return $mySQLDate ;
+		$theDate = date( 'Y-m-d H:i:s', $phpDate) ; #convert to MySQL date
+		$returnDate = array('yesterday', $theDate); #put it in an array for query building
+		return $returnDate ;
 	}
 	elseif ($timeAgo === '2 to 7 days') {
 		$phpDate = (time() + strtotime("-2 days")); #subtract 2 days from current time
@@ -216,14 +250,15 @@ function selectToMySQL(&$timeAgo) {
 		$phpDate = (time() + strtotime("-7 days")); #subtract 7 days from current time
 		$mySQLDate2 = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
 		#return range of dates
-		$timeRange = array($mySQLDate1, $mySQLDate2);
-		return $timeRange ;
+		$returnDate = array('2 to 7 days',$mySQLDate1, $mySQLDate2); #put in an array for query building
+		return $returnDate ;
 	}
 	elseif ($timeAgo === 'longer than a week') {
 		#subtract 8 days and convert to SQL date
 		$phpDate = (time() + strtotime("-8 days")); #subtract 8 days
-		$mySQLDate = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
-		return $mySQLDate;
+		$theDate = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
+		$returnDate = array('longer than a week', $theDate); #put in an array for query building
+		return $returnDate;
 
 	}
 }
