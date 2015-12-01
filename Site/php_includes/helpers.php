@@ -7,8 +7,7 @@
 
 <?php
 #get this for use in functions below
-
-require('miscData.php');
+require ' miscData.php ' ;
 #Authors: Scott Hansen and Nicholas Burd
 #Title: helpers.php
 #Description: contains the back-end functions for the limbo db application
@@ -231,11 +230,7 @@ function show_link_records_found($dbc) {
 /*
  * build the javascript array needed in makeOptions()
  */
-function makeJSArrays() {
-	for($i = 0; $i < $campusLocations); i++) {
 
-	}
-}
 
 
 /*
