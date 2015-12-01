@@ -40,8 +40,6 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 		$location = NULL;
 	}
 
-
-
 	/*
 	 * =======================================
 	 * Query Building Section
@@ -88,6 +86,8 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 
 	#add final semicolon to query
 	$query = $query . ';' ;
+
+    echo $query ;
 
 	# Execute the query
 	$results = mysqli_query( $dbc , $query ) ;

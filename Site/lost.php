@@ -78,12 +78,9 @@ if it has been found. If it hasn't, the user can add an entry to the database
             if(isset($_GET['id'])) {
                 show_record($dbc, $_GET['id']) ; }
             
-            #if the filter submit button was clicked, check form inputs and return corresponding query
-            elseif (isset($_GET['itCat']) && isset($_GET['tLost']) && isset($_GET['campLoc'])) {
-                show_link_records_lost($dbc, $_GET['itCat'], $_GET['tLost'], $_GET['campLoc']) ;
-            }
-            else {
-                echo '<p style="color:red">Error, please try again.</p>' ;
+            #if the filter submit button was clicked
+            else{
+                show_link_records_lost($dbc, $_GET['iCat'], $_GET['tLost'], $_GET['campLoc']) ;
             }
         }
 
