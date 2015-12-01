@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head></head>
+<head>
+	<script src="../js/helpers.js"></script>
+</head>
 <body></body>
 
 <?php
+#get this for use in functions below
+
+require('miscData.php');
 #Authors: Scott Hansen and Nicholas Burd
 #Title: helpers.php
 #Description: contains the back-end functions for the limbo db application
@@ -220,6 +225,15 @@ function show_link_records_found($dbc) {
 
 		# Free up the results in memory
 		mysqli_free_result( $results ) ;
+	}
+}
+
+/*
+ * build the javascript array needed in makeOptions()
+ */
+function makeJSArrays() {
+	for($i = 0; $i < $campusLocations); i++) {
+
 	}
 }
 
