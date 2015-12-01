@@ -230,7 +230,11 @@ function show_link_records_found($dbc) {
 /*
  * build the javascript array needed in makeOptions()
  */
-
+function makeJSArrays() {
+	for($i = 0; $i < $campusLocations); i++) {
+		return ;
+	}
+}
 
 
 /*

@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head></head>
-<body></body>
-
+<?php
 /*
  * Authors: Scott Hansen and Nicholas Burd
  */
-
-<?php
 
 /*
  * Arrays for use in converting to js arrays
@@ -49,8 +43,8 @@ $campusLocations = array(
         "upper west cedar townhouses"
 );
 
-$timeRanges = array('today', 'yesterday', '2 to 7 days', 'more than a week') ;
+$timeRanges = array("today", "yesterday", "2 to 7 days", "more than a week") ;
 
-$itemCategories = array('phone or computer', 'audio or headphones', 'clothing', 'notebook or books', 'bag or backpack', 'other') ;
+$itemCategories = array("phone or computer", "audio or headphones", "clothing", "notebook or books", "bag or backpack", "other") ;
 
 ?>
