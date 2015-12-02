@@ -113,9 +113,9 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 		# For each row result, generate a table row
 		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
 		{
-			//$alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>" ;
+			$alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>" ;
 			echo "<TR>" ;
-			//echo "<TD>". $alink . "</TD>" ;
+			echo "<TD>". $alink . "</TD>" ;
 			echo "<TD>" . $row['item.item_name'] . "</TD>" ;
 			echo "<TD>" . $row['item.status'] . "</TD>" ;
 			echo "<TD>" . $row['item.item_category'] . "</TD>" ;
