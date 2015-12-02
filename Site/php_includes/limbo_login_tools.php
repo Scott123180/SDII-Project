@@ -30,9 +30,6 @@ function load( $page = 'SDII-Project/Site/admin_landing.php', $username)
   exit() ;
 }
 
-# Validates the president name.
-# Returns -1 if validate fails, and >= 0 if it succeeds
-# which is the primary key id.
 function validate($username,$password)
 {
     global $dbc;
@@ -43,6 +40,8 @@ function validate($username,$password)
 
     # Execute the query
     $results = mysqli_query( $dbc, $query ) ;
+	
+	#checks if username and password are found in query
 	if (mysqli_num_rows( $results ) == 0 ){
 		return false;
 	}else{
