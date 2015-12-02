@@ -41,14 +41,20 @@
 
 				$username = $_POST['username'] ;
 				$password = $_POST['password'] ;
-
-				validate($username, $password) ;
+				
+				$check=validate($username, $password);
+				if($check==true){
+					load('admin_landing.php', $username);
+				}
+				else{
+					echo 'Login Failed';
+				}
 
 				#if($pid == -1)
 				#	echo '<P style=color:red>Login failed please try again.</P>' ;
 
 				#else
-				load('admin_landing.php', $username);
+				
 			}
 		?>
 		<!-- Get inputs from the user. -->

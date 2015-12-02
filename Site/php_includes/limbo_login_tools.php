@@ -43,5 +43,10 @@ function validate($username,$password)
 
     # Execute the query
     $results = mysqli_query( $dbc, $query ) ;
+	if (mysqli_num_rows( $results ) == 0 ){
+		return false;
+	}else{
+		return true;
+	}
 }
 ?>
