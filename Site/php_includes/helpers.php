@@ -47,7 +47,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	 */
 
 	# Create a base query
-	$query = 'SELECT id, item_name, status, item_category FROM item, locations WHERE status = \'found\' ' ;
+	$query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE status = \'found\' ' ;
 
 	#category not null
 	if (isset($category)) {

@@ -37,22 +37,22 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <form id="lostOptions" method="get" action="lost.php">
+        <form id="lostOptions" method="post" action="lost.php">
             <h4>Item Category</h4>
-            <select class="form-control" name="itemCategory" id="iCat">
+            <select class="form-control" name="iCat">
                 <option>item category</option>
                 <script>makeOptions(itemCategories, "iCat");</script>
             </select>
 
             <h4>How long ago was it lost?</h4>
-            <select class="form-control" name="timeLost" id="tLost">
+            <select class="form-control" name="tLost">
                 <option>time lost</option>
                 <script>makeOptions(timeRanges, "tLost")</script>
                 <option>unknown</option>
             </select>
 
             <h4>What location did you lose it at?</h4>
-            <select class="form-control" name="campusLocations" id="campLoc">
+            <select class="form-control" name="campLoc">
                 <option>location</option>
                 <script>makeOptions(campusLocations, "campLoc")</script>
                 <option>unknown</option>
@@ -77,12 +77,16 @@ if it has been found. If it hasn't, the user can add an entry to the database
             #if GET id in GET request, show the record of that item
             if(isset($_GET['id'])) {
                 show_record($dbc, $_GET['id']) ; }
-            
-            #if the filter submit button was clicked
-            else{
-                show_link_records_lost($dbc, $_GET['iCat'], $_GET['tLost'], $_GET['campLoc']) ;
-            }
         }
+
+        //if($_SERVER[ 'REQUEST_METHOD' ] == '$_POST') {
+            #if the filter submit button was clicked
+            $category = $_POST['iCat'];
+            $time = $_POST['tLost'];
+            $location = $_POST['campLoc'];
+            echo "<script>alert('got here')</script>";
+            show_link_records_lost($dbc, $category, $time, $location) ;
+        //}
 
         # Close the connection
         mysqli_close( $dbc ) ;
