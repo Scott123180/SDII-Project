@@ -25,7 +25,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 
 	#modify default and unspecified arguments from the user input in lost.php
 	#no category specified
-	if ($category === 'item category' || $category === 'other') {
+	if ($category === 'item category') {
 		#unset category argument
 		unset($category);
 	}
@@ -47,8 +47,15 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	 */
 
 	# Create a base query
-	$query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
+	$query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item WHERE item.status = \'found\' ' ;
 
+    #this needs to be first isset check because more tables needed for location check
+    #location not null
+    if (isset($location)) {
+        $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
+        $query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
+        $query = $query . 'AND locations.name = \'' . $location . '\' ' ;
+    }
 	#category not null
 	if (isset($category)) {
 		#add to query
@@ -78,11 +85,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 			$query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
 		}
 	}
-	#location not null
-	if (isset($location)) {
-		$query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
-		$query = $query . 'AND locations.name = \'' . $location . '\' ' ;
-	}
+
 
 	#add final semicolon to query
 	$query = $query . ';' ;
