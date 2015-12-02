@@ -247,16 +247,16 @@ function selectToMySQL($timeAgo) {
 		return $returnDate ;
 	}
 	elseif ($timeAgo === 'yesterday') {
-		$phpDate = (time() + strtotime("-1 day")) ; #subtract 1 day from current time
+		$phpDate = (time() - dayToUnixSecs(1)) ; #subtract 1 day from current time
 		$theDate = date( 'Y-m-d H:i:s', $phpDate) ; #convert to MySQL date
 		$returnDate = array('yesterday', $theDate); #put it in an array for query building
 		return $returnDate ;
 	}
 	elseif ($timeAgo === '2 to 7 days') {
-		$phpDate = (time() + strtotime("-2 days")); #subtract 2 days from current time
+		$phpDate = (time() - dayToUnixSecs(2)); #subtract 2 days from current time
 		$mySQLDate1 = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
 
-		$phpDate = (time() + strtotime("-7 days")); #subtract 7 days from current time
+		$phpDate = (time() - dayToUnixSecs(7)); #subtract 7 days from current time
 		$mySQLDate2 = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
 		#return range of dates
 		$returnDate = array('2 to 7 days',$mySQLDate1, $mySQLDate2); #put in an array for query building
@@ -264,12 +264,18 @@ function selectToMySQL($timeAgo) {
 	}
 	elseif ($timeAgo === 'longer than a week') {
 		#subtract 8 days and convert to SQL date
-		$phpDate = (time() + strtotime("-8 days")); #subtract 8 days
+		$phpDate = (time() - dayToUnixSecs(8)); #subtract 8 days
 		$theDate = date('Y-m-d H:i:s', $phpDate); #convert to MySQL date
 		$returnDate = array('longer than a week', $theDate); #put in an array for query building
 		return $returnDate;
 
 	}
+}
+
+function dayToUnixSecs($days) {
+    $seconds = 86400 * $days ;
+    return $seconds;
+
 }
 /*
  * ================================================
