@@ -30,6 +30,37 @@
 
     <div class="container">
         <h1>Hey Admin! Please login below.</h1>
+		<?php
+			# Connect to MySQL server and the database
+			require( 'php_includes/connect_db.php' ) ;
+
+			# Connect to MySQL server and the database
+			require( 'php_includes/limbo_login_tools.php' ) ;
+
+			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
+
+				$username = $_POST['username'] ;
+				$password = $_POST['password'] ;
+
+				validate($username, $password) ;
+
+				#if($pid == -1)
+				#	echo '<P style=color:red>Login failed please try again.</P>' ;
+
+				#else
+				load('admin_landing.php', $username);
+			}
+		?>
+		<!-- Get inputs from the user. -->
+		<form action="admin_logon.php" method="POST">
+			<table>
+				<tr>
+					<td>Username:</td><td><input type="text" name="username"></td>
+					<td>Password:</td><td><input type="text" name="password"></td>
+				</tr>
+			</table>
+			<p><input type="submit" ></p>
+		</form>
     </div>
 </body>
 </html>
