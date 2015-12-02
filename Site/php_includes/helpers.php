@@ -94,7 +94,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	check_results($results) ;
 
     if($results){
-        echo "<script>alert('there are results');</script>";
+        echo "<script>alert('query succeeded');</script>";
     }
 	# Show results
 	if( $results )
@@ -116,9 +116,9 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 			$alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>" ;
 			echo "<TR>" ;
 			echo "<TD>". $alink . "</TD>" ;
-			echo "<TD>" . $row['item.item_name'] . "</TD>" ;
-			echo "<TD>" . $row['item.status'] . "</TD>" ;
-			echo "<TD>" . $row['item.item_category'] . "</TD>" ;
+			echo "<TD>" . $row['item_name'] . "</TD>" ;
+			echo "<TD>" . $row['status'] . "</TD>" ;
+			echo "<TD>" . $row['item_category'] . "</TD>" ;
 			echo "</TR>" ;
 		}
 
