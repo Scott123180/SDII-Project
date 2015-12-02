@@ -45,14 +45,10 @@
 			$result = mysqli_query( $dbc, $query ) ;
 			
 			while ($row = mysqli_fetch_assoc($result)) {
-				echo $row['username'];
-				echo '<br>';
-				echo $row['first_name'];
-				echo '<br>';
-				echo $row['last_name'];
-				echo '<br>';
-				echo $row['superadmin'];
-				echo '<br>';
+			$username=$row['username'];
+			$firstname=$row['first_name'];
+			$lastname=$row['last_name'];
+			$superadmin=$row['superadmin'];
 			}
 			
 			
@@ -63,11 +59,21 @@
 			#if superadmin= no, echo "admin" under Title:
 			
 		?>
-        <h1>Profile:</h1>
-		<h3>Username:</h3>
-        <h3>First Name:</h3>
-		<h3>Last Name:</h3>
-        <h3>Title:</h3>
+        <h1 align="center">Profile</h1>
+		<table align="center">
+				<tr>
+				<td><h3>Username:</h3></td><td><?php echo $username; ?></td>
+				</tr>
+				<tr>
+				<td><h3>First Name:</h3></td><td><?php echo $firstname; ?></td>
+				</tr>
+				<tr>
+				<td><h3>Last Name:</h3></td><td><?php echo $lastname; ?></td>
+				</tr>
+				<tr>
+				<td><h3>Title:</h3></td><td><?php echo $superadmin; ?></td>
+				</tr>
+			</table>
     </div>
 	
     <!--Button Container-->
