@@ -30,7 +30,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 		unset($category);
 	}
 	#no time specified
-	if ($time === 'time lost' || $time === 'unknown') {
+	if ($time == 'time lost' || $time == 'unknown') {
 		#unset time argument
 		unset($time);
 	}
@@ -47,12 +47,12 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	 */
 
 	# Create a base query
-	$query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE status = \'found\' ' ;
+	$query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
 
 	#category not null
 	if (isset($category)) {
 		#add to query
-		$query = $query . 'AND item_category = ' . $category . ' ' ;
+		$query = $query . 'AND item.item_category = \'' . $category . '\' ' ;
 	}
 
 	#time not null; compare item age
@@ -63,25 +63,25 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 		#build query based on each option
 		#today
 		if($myDate[0] === 'today') {
-			$query = $query . 'AND item.create_date = ' . $myDate[1] . ' ' ;
+			$query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
 		}
 		#yesterday
 		elseif($myDate[0] === 'yesterday') {
-			$query = $query . 'AND item.create_date = ' . $myDate[1] . ' ' ;
+			$query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
 		}
 		#2 to 7 days
 		elseif($myDate[0] === '2 to 7 days') {
-			$query = $query . 'AND item.create_date BETWEEN ' . $myDate[1] . ' AND ' . $myDate[2] . ' ' ;
+			$query = $query . 'AND item.create_date BETWEEN \'' . $myDate[1] . '\' AND \'' . $myDate[2] . '\' ' ;
 		}
 		#longer than a week
 		elseif($myDate[0] === 'longer than a week') {
-			$query = $query . 'AND item.create_date > ' . $myDate[1] . ' ' ;
+			$query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
 		}
 	}
 	#location not null
 	if (isset($location)) {
-		$query = $query . 'AND item.location_id = location.id ' ; #link locations and item
-		$query = $query . 'AND location.name = ' . $location . ' ' ;
+		$query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
+		$query = $query . 'AND locations.name = \'' . $location . '\' ' ;
 	}
 
 	#add final semicolon to query
@@ -93,6 +93,9 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	$results = mysqli_query( $dbc , $query ) ;
 	check_results($results) ;
 
+    if($results){
+        echo "<script>alert('there are results');</script>";
+    }
 	# Show results
 	if( $results )
 	{
@@ -110,18 +113,18 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 		# For each row result, generate a table row
 		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
 		{
-			$alink = '<A HREF=lost.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
-			echo '<TR>' ;
-			echo '<TD>'. $alink . '</TD>' ;
-			echo '<TD>' . $row['item_name'] . '</TD>' ;
-			echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_category'] . '</TD>' ;
-			echo '</TR>' ;
+			//$alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>" ;
+			echo "<TR>" ;
+			//echo "<TD>". $alink . "</TD>" ;
+			echo "<TD>" . $row['item.item_name'] . "</TD>" ;
+			echo "<TD>" . $row['item.status'] . "</TD>" ;
+			echo "<TD>" . $row['item.item_category'] . "</TD>" ;
+			echo "</TR>" ;
 		}
 
 
 		# End the table
-		echo '</TABLE>';
+		echo "</TABLE>";
 
 		# Free up the results in memory
 		mysqli_free_result( $results ) ;
