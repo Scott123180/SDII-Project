@@ -96,49 +96,49 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 	$results = mysqli_query( $dbc , $query ) ;
 	check_results($results) ;
 
-    if($results){
-        echo "<script>alert('query succeeded');</script>";
-    }
+
 	# Show results
-	if( $results )
-	{
-		# But...wait until we know the query succeed before
-		# rendering the table start.
-		echo '<H1>Found Items</H1>' ;
-		echo '<table class="table table-striped">';
-		echo '<TR>';
-		echo '<TH>Item ID</TH>';
-		echo '<TH>Item Name</TH>';
-		echo '<TH>Item Status</TH>';
-		echo '<TH>Item Category</TH>';
-		echo '</TR>';
+	if( $results ) {
+        # But...wait until we know the query succeed before
+        # rendering the table start.
+        echo '<H1>Found Items</H1>';
+        echo '<table class="table table-striped">';
+        echo '<TR>';
+        echo '<TH>Item ID</TH>';
+        echo '<TH>Item Name</TH>';
+        echo '<TH>Item Status</TH>';
+        echo '<TH>Item Category</TH>';
+        echo '</TR>';
 
-		# For each row result, generate a table row
-		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-		{
-			$alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>" ;
-			echo "<TR>" ;
-			echo "<TD>". $alink . "</TD>" ;
-			echo "<TD>" . $row['item_name'] . "</TD>" ;
-			echo "<TD>" . $row['status'] . "</TD>" ;
-			echo "<TD>" . $row['item_category'] . "</TD>" ;
-			echo "</TR>" ;
-		}
+        # For each row result, generate a table row
+        while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
+            $alink = "<A HREF=lost.php?id=" . $row['id'] . ">" . $row['id'] . "</A>";
+            echo "<TR>";
+            echo "<TD>" . $alink . "</TD>";
+            echo "<TD>" . $row['item_name'] . "</TD>";
+            echo "<TD>" . $row['status'] . "</TD>";
+            echo "<TD>" . $row['item_category'] . "</TD>";
+            echo "</TR>";
+        }
 
 
-		# End the table
-		echo "</TABLE>";
+        # End the table
+        echo "</TABLE>";
 
-		# Free up the results in memory
-		mysqli_free_result( $results ) ;
-	}
+        # Free up the results in memory
+        mysqli_free_result($results);
+    }
 }
 
-#show all the details from the selected record
+#get all information for the record and only return the set of desired fields, not including null ones
 function show_record($dbc, $id) {
-	# Create a query to get the name and price sorted by price
 
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE id=' . $id . ';' ;
+    #get all desired fields
+	$query= '' ;
+
+    #check for null fields
+
+    #build table excluding those null fields
 
 
 	# Execute the query

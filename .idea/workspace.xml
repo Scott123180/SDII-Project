@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
     </list>
     <ignored path="SDII-Project.iws" />
@@ -17,6 +18,13 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -37,11 +45,9 @@
       <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.142857">
-              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-              <folding>
-                <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-8.576923">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,31 +55,21 @@
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31911263">
-              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.46896553">
+              <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
               <folding>
-                <marker date="1449079550632" expanded="true" signature="1199:1302" placeholder="SELECT id, i..item..." />
-                <marker date="1449079550632" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
-                <marker date="1449079550632" expanded="true" signature="3427:3484" placeholder="..." />
-                <marker date="1449079550632" expanded="true" signature="3427:3488" placeholder="..." />
-                <marker date="1449079550632" expanded="true" signature="3898:3961" placeholder="SELECT id, i..Item..." />
-                <marker date="1449079550632" expanded="true" signature="4282:4418" placeholder="..." />
-                <marker date="1449079550632" expanded="true" signature="4550:4572" placeholder="..." />
-                <marker date="1449079550632" expanded="true" signature="5082:5462" placeholder="INSERT INTO Item..." />
-                <marker date="1449079550632" expanded="true" signature="5726:5806" placeholder="SELECT id, i..Item..." />
-                <marker date="1449079550632" expanded="true" signature="6059:6195" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/js/helpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
+                <element signature="n#dayToUnixSecs#0;n#!!top" expanded="false" />
+                <element signature="n#valid_number#0;n#!!top" expanded="false" />
+                <element signature="n#valid_name#0;n#!!top" expanded="false" />
+                <element signature="n#show_query#0;n#!!top" expanded="false" />
+                <element signature="n#check_results#0;n#!!top" expanded="false" />
+                <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
+                <element signature="e#9706#10653#0#PHP" expanded="false" />
+                <marker date="1449090058180" expanded="true" signature="1199:1302" placeholder="SELECT item...item..." />
+                <marker date="1449090058180" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
+                <marker date="1449090058180" expanded="true" signature="5173:5553" placeholder="INSERT INTO Item..." />
+                <marker date="1449090058180" expanded="true" signature="5817:5897" placeholder="SELECT id, i..Item..." />
               </folding>
             </state>
           </provider>
@@ -82,9 +78,21 @@
       <file leaf-file-name="create_limbo_db.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.226415">
+            <state vertical-scroll-proportion="-2.0925925">
               <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/js/helpers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,10 +184,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Limbo Root" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="3866" />
-    <option name="height" value="2106" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -206,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,7 +299,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -387,10 +395,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17630209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17569546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -492,16 +500,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449079550632" expanded="true" signature="1199:1302" placeholder="SELECT id, i..item..." />
-            <marker date="1449079550632" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3484" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3488" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3898:3961" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="4282:4418" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="4550:4572" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="5082:5462" placeholder="INSERT INTO Item..." />
-            <marker date="1449079550632" expanded="true" signature="5726:5806" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="6059:6195" placeholder="..." />
+            <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
+            <element signature="n#dayToUnixSecs#0;n#!!top" expanded="false" />
+            <element signature="n#valid_number#0;n#!!top" expanded="false" />
+            <element signature="n#valid_name#0;n#!!top" expanded="false" />
+            <element signature="n#show_query#0;n#!!top" expanded="false" />
+            <element signature="n#check_results#0;n#!!top" expanded="false" />
+            <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
+            <element signature="e#9706#10653#0#PHP" expanded="false" />
+            <marker date="1449090058180" expanded="true" signature="1199:1302" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="5173:5553" placeholder="INSERT INTO Item..." />
+            <marker date="1449090058180" expanded="true" signature="5817:5897" placeholder="SELECT id, i..Item..." />
           </folding>
         </state>
       </provider>
@@ -510,9 +520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -578,16 +586,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding>
-            <marker date="1449079550632" expanded="true" signature="1199:1302" placeholder="SELECT id, i..item..." />
-            <marker date="1449079550632" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3484" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3488" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3898:3961" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="4282:4418" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="4550:4572" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="5082:5462" placeholder="INSERT INTO Item..." />
-            <marker date="1449079550632" expanded="true" signature="5726:5806" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="6059:6195" placeholder="..." />
+            <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
+            <element signature="n#dayToUnixSecs#0;n#!!top" expanded="false" />
+            <element signature="n#valid_number#0;n#!!top" expanded="false" />
+            <element signature="n#valid_name#0;n#!!top" expanded="false" />
+            <element signature="n#show_query#0;n#!!top" expanded="false" />
+            <element signature="n#check_results#0;n#!!top" expanded="false" />
+            <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
+            <element signature="e#9706#10653#0#PHP" expanded="false" />
+            <marker date="1449090058180" expanded="true" signature="1199:1302" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="5173:5553" placeholder="INSERT INTO Item..." />
+            <marker date="1449090058180" expanded="true" signature="5817:5897" placeholder="SELECT id, i..Item..." />
           </folding>
         </state>
       </provider>
@@ -596,9 +606,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -656,9 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-          <folding>
-            <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,16 +694,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449079550632" expanded="true" signature="1199:1302" placeholder="SELECT id, i..item..." />
-            <marker date="1449079550632" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3484" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3488" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3898:3961" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="4282:4418" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="4550:4572" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="5082:5462" placeholder="INSERT INTO Item..." />
-            <marker date="1449079550632" expanded="true" signature="5726:5806" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="6059:6195" placeholder="..." />
+            <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
+            <element signature="n#dayToUnixSecs#0;n#!!top" expanded="false" />
+            <element signature="n#valid_number#0;n#!!top" expanded="false" />
+            <element signature="n#valid_name#0;n#!!top" expanded="false" />
+            <element signature="n#show_query#0;n#!!top" expanded="false" />
+            <element signature="n#check_results#0;n#!!top" expanded="false" />
+            <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
+            <element signature="e#9706#10653#0#PHP" expanded="false" />
+            <marker date="1449090058180" expanded="true" signature="1199:1302" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="5173:5553" placeholder="INSERT INTO Item..." />
+            <marker date="1449090058180" expanded="true" signature="5817:5897" placeholder="SELECT id, i..Item..." />
           </folding>
         </state>
       </provider>
@@ -744,9 +752,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,49 +845,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.142857">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-          <folding>
-            <marker date="1449078631602" expanded="true" signature="2409:2550" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.226415">
-          <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/js/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Site/lost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.576923">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0925925">
+          <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31911263">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.46896553">
+          <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
           <folding>
-            <marker date="1449079550632" expanded="true" signature="1199:1302" placeholder="SELECT id, i..item..." />
-            <marker date="1449079550632" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3484" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3427:3488" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="3898:3961" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="4282:4418" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="4550:4572" placeholder="..." />
-            <marker date="1449079550632" expanded="true" signature="5082:5462" placeholder="INSERT INTO Item..." />
-            <marker date="1449079550632" expanded="true" signature="5726:5806" placeholder="SELECT id, i..Item..." />
-            <marker date="1449079550632" expanded="true" signature="6059:6195" placeholder="..." />
+            <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
+            <element signature="n#dayToUnixSecs#0;n#!!top" expanded="false" />
+            <element signature="n#valid_number#0;n#!!top" expanded="false" />
+            <element signature="n#valid_name#0;n#!!top" expanded="false" />
+            <element signature="n#show_query#0;n#!!top" expanded="false" />
+            <element signature="n#check_results#0;n#!!top" expanded="false" />
+            <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
+            <element signature="e#9706#10653#0#PHP" expanded="false" />
+            <marker date="1449090058180" expanded="true" signature="1199:1302" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="1463:1577" placeholder="SELECT item...item..." />
+            <marker date="1449090058180" expanded="true" signature="5173:5553" placeholder="INSERT INTO Item..." />
+            <marker date="1449090058180" expanded="true" signature="5817:5897" placeholder="SELECT id, i..Item..." />
           </folding>
         </state>
       </provider>
