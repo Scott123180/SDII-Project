@@ -29,34 +29,54 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Hey Admin! Please login below.</h1>
+        <h1>Change Password Below.</h1>
 		<?php
-			# Connect to MySQL server and the database
 			require( 'php_includes/connect_db.php' ) ;
-
-			# Connect to MySQL server and the database
 			require( 'php_includes/limbo_login_tools.php' ) ;
-
+			global $dbc;
+			
+			
+			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
-
-				$username = $_POST['username'] ;
-				$password = $_POST['password'] ;
 				
-				$check=validate($username, $password);
+				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $oldpassword . "'";
+				$results = mysqli_query( $dbc, $query ) ;
+				
+				$username= $_POST['username'];
+				$oldpassword = $_POST['oldpassword'] ;
+				$newpassword = $_POST['newpassword'] ;
+				
+				$check=changePassword($newpassword, $oldpassword, $username);
 				if($check==true){
-					load('admin_landing.php', $username);
+					echo "Change Successful";
 				}
 				else{
-					echo 'Login Failed';
+					echo 'Change Failed';
 				}
 			}
+			function changePassword($newpassword,$oldpassword,$username){
+				global $dbc;
+				$query="UPDATE admin SET password='" . $newpassword . "' WHERE username='" . $_GET['username'] . "'";
+				show_query($query) ;
+				
+				$results = mysqli_query( $dbc, $query ) ;
+				
+				#checks if username and password are found in query
+				if (mysqli_num_rows( $results ) == 0 ){
+					return false;
+				}else{
+					return true;
+				}
+			}
+			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_logon.php" method="POST">
+		<form action="admin_change_password.php" method="POST">
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>Password:</td><td><input type="text" name="password"></td>
+					<td>Old Password:</td><td><input type="text" name="oldpassword"></td>
+					<td>New Password:</td><td><input type="text" name="newpassword"></td>
 				</tr>
 			</table>
 			<p><input type="submit" ></p>

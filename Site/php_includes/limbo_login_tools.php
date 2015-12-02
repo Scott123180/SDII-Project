@@ -13,21 +13,23 @@ RC	 7-Nov-13	Created.
 require( 'php_includes/helpers.php' ) ;
 
 # Loads a specified or default URL.
-function load( $page = 'SDII-Project/Site/admin_landing.php', $username)
+function load( $page="../admin_landing.php", $username)
 {
-  # Begin URL with protocol, domain, and current directory.
-  $url = 'http://' . $_SERVER[ 'HTTP_HOST' ] . dirname( $_SERVER[ 'PHP_SELF' ] ) ;
+	# Begin URL with protocol, domain, and current directory.
+	$url = 'http://' . $_SERVER[ 'HTTP_HOST' ] . dirname( $_SERVER[ 'PHP_SELF' ] ) ;
 
-  # Remove trailing slashes then append page name to URL and the print id.
-  $url = rtrim( $url, '/\\' ) ;
-  $url .= '/' . $page . '?id=' . $username;
+	# Remove trailing slashes then append page name to URL and the print id.
+	$url = rtrim( $url, '/\\' ) ;
+	$url .= '/' . $page . '?id=' . $username;
 
-  # Execute redirect then quit.
-  session_start( );
+	# Execute redirect then quit.
+	session_start( );
+	
+	$_SESSION['username']=$username;
+	
+	header( "Location: $url" ) ;
 
-  header( "Location: $url" ) ;
-
-  exit() ;
+	#exit() ;
 }
 
 function validate($username,$password)

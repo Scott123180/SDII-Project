@@ -52,11 +52,11 @@
 			}
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_logon.php" method="POST">
+		<form action="admin_logon.php" method="POST" class="form">
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>Password:</td><td><input type="text" name="password"></td>
+					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="password"></td>
 				</tr>
 			</table>
 			<p><input type="submit" ></p>

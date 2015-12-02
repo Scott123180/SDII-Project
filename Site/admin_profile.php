@@ -51,12 +51,13 @@
 			$superadmin=$row['superadmin'];
 			}
 			
+			if($superadmin="yes"){
+				$title="Superadmin";
+			}
+			else{
+				$title="Admin";
+			}
 			
-			#echo username under Username:
-			#echo first_name under First name:
-			#echo last_name under Last name:
-			#if superadmin= yes, echo "Superadmin" under Title:
-			#if superadmin= no, echo "admin" under Title:
 			
 		?>
         <h1 align="center">Profile</h1>
@@ -71,7 +72,7 @@
 				<td><h3>Last Name:</h3></td><td><?php echo $lastname; ?></td>
 				</tr>
 				<tr>
-				<td><h3>Title:</h3></td><td><?php echo $superadmin; ?></td>
+				<td><h3>Title:</h3></td><td><?php echo $title; ?></td>
 				</tr>
 			</table>
     </div>
