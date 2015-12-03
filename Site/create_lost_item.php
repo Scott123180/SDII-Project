@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <title>Lost Something</title>
 </head>
@@ -26,6 +28,84 @@
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="found.php" style="color:white;"><h4>Found Something?</h4></a></div>
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php" style="color:white;"><h4>About</h4></a></div>
         </div>
+    </div>
+
+    <!--Begin form-->
+    <div class="container">
+        <form class="form-group">
+            <h4>What location did you lose it at?</h4>
+            <select class="form-control" name="campLoc" id="campLoc">
+                <option>location</option>
+                <script>makeOptions(campusLocations, "campLoc")</script>
+                <option>unknown</option>
+            </select>
+
+            <h4>What room did you lose it in?</h4>
+            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room">
+
+            <h4>When did you lose it?</h4>
+            <input type="date" class="form-control" name="date_lost">
+
+            <h4>What is name of the item?</h4>
+            <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name">
+
+            <h4>Please describe the item:</h4>
+            <textarea class="form-control" rows="3" placeholder="description" name="description"></textarea>
+
+            <h4>Item Category</h4>
+            <select class="form-control" name="iCat" id="iCat">
+                <option>item category</option>
+                <script>makeOptions(itemCategories, "iCat");</script>
+            </select>
+
+            <h4>What is the item's make?</h4>
+            <input type="text" class="form-control" placeholder="example: apple, microsoft, nordstrom, et. cetera" name="make">
+
+            <h4>What is the item's color?</h4>
+            <input type="text" class="form-control" placeholder="item color" name="color">
+
+            <h4>Do you wish to offer a reward for the item?</h4>
+            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="reward" name="reward">
+                <div class="input-group-addon">$</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                <div class="input-group-addon">.00</div>
+            </div>
+
+            <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                <br/>
+            <input type="submit" class="form-control" name = 'submitItem' value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
+
+
+            <?php
+            # Connect to MySQL server and the database
+            require( 'php_includes/connect_db.php' ) ;
+
+            # Includes these helper functions
+            require( 'php_includes/helpers.php' ) ;
+
+            require( 'php_includes/form_validation.php' );
+
+            # filter results
+            if(isset($_POST['submitItem'])) {
+                #if the filter submit button was clicked
+                $location = $_POST['campLoc'];
+                $room = $_POST['room'];
+                $dateLost = $_POST['date_lost'];
+                $name = $_POST['name'];
+                $description = $_POST['description'];
+                $category = $_POST['iCat'];
+                $color = $_POST['color'];
+                $reward = $_POST['reward'];
+
+            }
+
+            # Close the connection
+            mysqli_close( $dbc ) ;
+
+            ?>
+        </form>
     </div>
 </body>
 </html>

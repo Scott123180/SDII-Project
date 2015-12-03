@@ -5,6 +5,7 @@ Title: lost.php
 Description: page for if one has lost an item and wants to check
 if it has been found. If it hasn't, the user can add an entry to the database
 -->
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -36,62 +37,59 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <form id="lostOptions" method="get" action="lost.php">
+        <form id="lostOptions" method="post" action="lost.php">
             <h4>Item Category</h4>
-            <select class="form-control" name="itemCategory" id="itCat">
+            <select class="form-control" name="iCat" id="iCat">
                 <option>item category</option>
-                <script>makeOptions(itemCategories, "itemCategory");</script>
+                <script>makeOptions(itemCategories, "iCat");</script>
             </select>
 
             <h4>How long ago was it lost?</h4>
-            <select class="form-control" name="timeLost" id="tLost">
+            <select class="form-control" name="tLost" id="tLost">
                 <option>time lost</option>
-                <script>makeOptions(timeRanges, "timeLost")</script>
-                <option>don't know</option>
+                <script>makeOptions(timeRanges, "tLost")</script>
+                <option>unknown</option>
             </select>
 
             <h4>What location did you lose it at?</h4>
-            <select class="form-control" name="campusLocations" id="campLoc">
+            <select class="form-control" name="campLoc" id="campLoc">
                 <option>location</option>
-                <script>makeOptions(campusLocations, "campusLocations")</script>
-                <option>don't know</option>
+                <script>makeOptions(campusLocations, "campLoc")</script>
+                <option>unknown</option>
             </select>
 
-            <input type="submit" class="form-control" value="Submit" style="margin-top: 15px" />
+            <input type="submit" class="form-control" name = 'submitFilter' value="Submit" style="margin-top: 15px" />
         </form>
+        <br/>
     </div>
 
     <!--tables-->
     <div class="container">
         <?php
-        
         # Connect to MySQL server and the database
         require( 'php_includes/connect_db.php' ) ;
 
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;
 
-        #if GET request
-        if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
-            #if GET id in GET request, show the record of that item
-            if(isset($_GET['id'])) {
-                show_record($dbc, $_GET['id']) ; }
-            
-            #if the filter submit button was clicked, check form inputs and return corresponding query
-            elseif (isset($_GET['itCat']) && isset($_GET['tLost']) && isset($_GET['campLoc'])) {
-                show_link_records_lost($dbc, $_GET['itCat'], $_GET['tLost'], $_GET['campLoc']) ;
-            }
-            else {
-                echo '<p style="color=red">Error, please try again.</p>' ;
-            }
-        }
+        #if GET id in GET request, show the record of that item
+        if(isset($_GET['id'])) {
+            show_record($dbc, $_GET['id'], 'lost') ; }
 
+        #filter results
+        if(isset($_POST['submitFilter'])) {
+            #if the filter submit button was clicked
+            $category = $_POST['iCat'];
+            $time = $_POST['tLost'];
+            $location = $_POST['campLoc'];
+            show_link_records_lost($dbc, $category, $time, $location) ;
+        }
 
         # Close the connection
         mysqli_close( $dbc ) ;
         
         ?>
-        <button type="button" class="btn btn-primary btn-lg" onclick="grabLostData()" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
+        <button type="button" class="btn btn-primary btn-lg" name="submitLostItem" onclick="window.location='create_lost_item.php'" style="margin-bottom:15px">Submit New Lost Item</button>
     </div>
 </body>
 </html>
