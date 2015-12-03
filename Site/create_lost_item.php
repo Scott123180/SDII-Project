@@ -38,21 +38,18 @@
                 <script>makeOptions(campusLocations, "campLoc")</script>
                 <option>unknown</option>
             </select>
-            <h4>How long ago was it lost?</h4>
-            <select class="form-control" name="tLost" id="tLost">
-                <option>time lost</option>
-                <script>makeOptions(timeRanges, "tLost")</script>
-                <option>unknown</option>
-            </select>
+
+            <h4>When did you lose it?</h4>
+            <input type="date" class="form-control" name="date_lost">
+
             <h4>What is name of the item?</h4>
-            <input type="text" class="form-control" placeholder="Text input">
+            <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name">
 
             <h4>Please describe the item:</h4>
-            <textarea class="form-control" rows="3"></textarea>
+            <textarea class="form-control" rows="3" placeholder="description" name="description"></textarea>
 
             <h4>What room did you lose it in?</h4>
-            <input type="text" class="form-control" placeholder="Text input">
-
+            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room">
 
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
@@ -61,16 +58,14 @@
             </select>
 
             <h4>What is the item's make?</h4>
-            <input type="text" class="form-control" placeholder="Text input">
-
+            <input type="text" class="form-control" placeholder="example: apple, microsoft, nordstrom, et. cetera" name="make">
 
             <h4>What is the item's color?</h4>
-            <input type="text" class="form-control" placeholder="Text input">
-
+            <input type="text" class="form-control" placeholder="item color" name="color">
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group">
+            <div class="input-group" id="reward" name="reward">
                 <div class="input-group-addon">$</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
                 <div class="input-group-addon">.00</div>
