@@ -38,17 +38,24 @@
                 <a href="admin_statistics.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Statistics</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">DB Maintenance</button>
+				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Profile</button>
             </div>
         </div>
 
         <!--Row 2-->
         <div class="row">
             <div class="col-md-6">
-                <a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Profile</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">DB Maintenance</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Backup DB</button>
+                <a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Add an Admin</button>
+            </div>
+        </div>
+		
+		<!--Row 3-->
+        <div class="row">
+            <div class="col-md-6">
+				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Add an Admin</button>
             </div>
         </div>
     </div>
