@@ -32,7 +32,7 @@
 
     <!--Begin form-->
     <div class="container">
-        <form class="form-group">
+        <form class="form-group" method="post">
             <h4>What location did you lose it at?</h4>
             <select class="form-control" name="campLoc" id="campLoc">
                 <option>location</option>
@@ -66,16 +66,15 @@
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="reward" name="reward">
+            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="item reward" name="reward">
                 <div class="input-group-addon">$</div>
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="max: $100">
                 <div class="input-group-addon">.00</div>
             </div>
 
-            <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                 <br/>
-            <input type="submit" class="form-control" name = 'submitItem' value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
+            <input type="submit" class="form-control" name = "submitItem" value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
 
             <?php
@@ -87,18 +86,50 @@
 
             require( 'php_includes/form_validation.php' );
 
-            # filter results
+            #create the variables
+            #$location; $room; $dateLost; $name; $description; $category; $make; $model; $color; $reward; $status;
+            # get all the inputted data
             if(isset($_POST['submitItem'])) {
-                #if the filter submit button was clicked
+                #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
                 $dateLost = $_POST['date_lost'];
                 $name = $_POST['name'];
                 $description = $_POST['description'];
                 $category = $_POST['iCat'];
+                $make = $_POST['make'];
+                $model = $_POST['model'];
                 $color = $_POST['color'];
                 $reward = $_POST['reward'];
+                $status = 'lost' ;
 
+                /*
+                if(isset($_POST['campLoc'])){$location = $_POST['campLoc'];}
+                if(isset($_POST['room'])){$room = $_POST['room'];}
+                if(isset($_POST['date_lost'])){$dateLost = $_POST['date_lost'];}
+                if(isset($_POST['name'])){$name = $_POST['name'];}
+                if(isset($_POST['description'])){$description = $_POST['description'];}
+                if(isset($_POST['iCat'])){$category = $_POST['iCat'];}
+                if(isset($_POST['make'])){$make = $_POST['make'];}
+                if(isset($_POST['model'])){$model = $_POST['model'];}
+                if(isset($_POST['color'])){$color = $_POST['color'];}
+                if(isset($_POST['reward'])){$reward = $_POST['reward'];}
+                 */
+
+                #get error array
+                $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward);
+                #if there are no errors
+                if(empty($errors)){
+                    #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
+                    insert_record($location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
+                }
+                #print errors for user to see
+                else {
+                    $errorStatement = 'Please fix errors in these fields: ' ;
+                    foreach($errors as $value){
+                        $errorStatement .= $errors[$value] . ';';
+                    }
+                }
             }
 
             # Close the connection

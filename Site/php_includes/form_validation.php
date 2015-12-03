@@ -1,14 +1,47 @@
 <?php
 
-$location = $_POST['campLoc'];
-$room = $_POST['room'];
-$dateLost = $_POST['date_lost'];
-$name = $_POST['name'];
-$description = $_POST['description'];
-$category = $_POST['iCat'];
-$color = $_POST['color'];
-$reward = $_POST['reward'];
+/*
+ * ======================================
+ * Multi-field validation functions
+ * ======================================
+ */
 
+function validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward) {
+    #create new array of list of errors, if any error is returned, form submission should be aborted
+    $errorArray = array();
+    #
+    if (validateLocation($location) == false) {
+        array_push($errorArray, 'location');
+    }
+    if (validateString($room, 6)) {
+        array_push($errorArray, 'room');
+        }
+    if(validateDate($dateLost)){
+        array_push($errorArray, 'date');
+    }
+    if(validateString($name, 15)) {
+        array_push($errorArray, 'name');
+    }
+    if(validateString($description, 350)){
+        array_push($errorArray, 'description');
+    }
+    if(validateCategory($category)){
+        array_push($errorArray, 'category');
+    }
+    if(validateString($color, 10)){
+        array_push($errorArray, 'color');
+    }
+    if(validateMonetary($reward,100)){
+        array_push($errorArray, 'reward');
+    }
+    return $errorArray;
+}
+
+/*
+ * ======================================
+ * Individual validation functions
+ * ======================================
+ */
 #checks to see if location is at Marist
 function validateLocation($location) {
 
@@ -20,17 +53,20 @@ function validateDate($date){
 }
 
 #if string is alphanumeric and if it's under desired number of characters
-function validString($string, $length){
+function validateString($string, $length){
     trim($string);
 }
 
-function validCategory($category){
+function validateCategory($category){
 
 }
 
-function validMonetary($amount, $limit) {
+function validateMonetary($amount, $limit) {
     trim($amount);
 }
+
+
+
 
 #NEED TO EDIT Carried over from helpers
 function valid_number($num) {
