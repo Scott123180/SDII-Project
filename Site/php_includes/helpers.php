@@ -194,10 +194,23 @@ function show_record($dbc, $id, $status = 'not specified') {
                 echo '<th>Color</th>';
             }
             if(isset($resArray['reward'])){
-
+                echo '<th>Reward</th>';
             }
             #end table heading
             echo '</TR>';
+            # For each row result, generate a table row
+            while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
+            {
+                echo '<TR>' ;
+                echo '<TD>' . $row['id'] . '</TD>' ;
+                echo '<TD>' . $row['item_name'] . '</TD>' ;
+                echo '<TD>' . $row['status'] . '</TD>' ;
+                echo '<TD>' . $row['item_category'] . '</TD>' ;
+                echo '</TR>' ;
+            }
+
+            # End the table
+            echo '</TABLE>';
         }
     }
 
