@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<script src="http://localhost/SDII-Project/Site/js/helpers.js"></script>
+	<script src="../js/helpers.js"></script>
 </head>
 <body></body>
 

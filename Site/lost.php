@@ -76,6 +76,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
         if(isset($_GET['id'])) {
             show_record($dbc, $_GET['id'], 'lost') ; }
 
+        #filter results
         if(isset($_POST['submitFilter'])) {
             #if the filter submit button was clicked
             $category = $_POST['iCat'];
@@ -88,7 +89,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
         mysqli_close( $dbc ) ;
         
         ?>
-        <button type="button" class="btn btn-primary btn-lg" onclick="grabLostData()" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
+        <button type="button" class="btn btn-primary btn-lg" name="submitLostItem" onclick="window.location='create_lost_item.php'" style="margin-bottom:15px">Continue Submitting New Lost Item</button>
     </div>
 </body>
 </html>

@@ -27,5 +27,33 @@
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php" style="color:white;"><h4>About</h4></a></div>
         </div>
     </div>
+
+    <!--select options-->
+    <div class="container">
+        <form id="createLost" method="post" action="create_lost_item.php">
+            <h4>Item Category</h4>
+            <select class="form-control" name="iCat" id="iCat">
+                <option>item category</option>
+                <script>makeOptions(itemCategories, "iCat");</script>
+            </select>
+
+            <h4>How long ago was it lost?</h4>
+            <select class="form-control" name="tLost" id="tLost">
+                <option>time lost</option>
+                <script>makeOptions(timeRanges, "tLost")</script>
+                <option>unknown</option>
+            </select>
+
+            <h4>What location did you lose it at?</h4>
+            <select class="form-control" name="campLoc" id="campLoc">
+                <option>location</option>
+                <script>makeOptions(campusLocations, "campLoc")</script>
+                <option>unknown</option>
+            </select>
+
+            <input type="submit" class="form-control" name = 'submitFilter' value="Submit" style="margin-top: 15px" />
+        </form>
+        <br/>
+    </div>
 </body>
 </html>
