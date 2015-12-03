@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <!--select options-->
+    <!--Begin form-->
     <div class="container">
         <form class="form-group">
             <h4>What location did you lose it at?</h4>
@@ -40,6 +40,9 @@
                 <option>unknown</option>
             </select>
 
+            <h4>What room did you lose it in?</h4>
+            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room">
+
             <h4>When did you lose it?</h4>
             <input type="date" class="form-control" name="date_lost">
 
@@ -48,9 +51,6 @@
 
             <h4>Please describe the item:</h4>
             <textarea class="form-control" rows="3" placeholder="description" name="description"></textarea>
-
-            <h4>What room did you lose it in?</h4>
-            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room">
 
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
@@ -66,7 +66,7 @@
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group" style="margin-bottom: 15px" id="reward" name="reward">
+            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="reward" name="reward">
                 <div class="input-group-addon">$</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
                 <div class="input-group-addon">.00</div>
@@ -85,10 +85,19 @@
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
+            require( 'php_includes/form_validation.php' );
 
             # filter results
             if(isset($_POST['submitItem'])) {
                 #if the filter submit button was clicked
+                $location = $_POST['campLoc'];
+                $room = $_POST['room'];
+                $dateLost = $_POST['date_lost'];
+                $name = $_POST['name'];
+                $description = $_POST['description'];
+                $category = $_POST['iCat'];
+                $color = $_POST['color'];
+                $reward = $_POST['reward'];
 
             }
 
