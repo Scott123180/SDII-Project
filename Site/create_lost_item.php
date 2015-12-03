@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/helpers.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <title>Lost Something</title>
 </head>
@@ -65,17 +66,37 @@
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group" id="reward" name="reward">
+            <div class="input-group" style="margin-bottom: 15px" id="reward" name="reward">
                 <div class="input-group-addon">$</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
                 <div class="input-group-addon">.00</div>
             </div>
 
+            <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                <br/>
+            <input type="submit" class="form-control" name = 'submitItem' value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
-            <input type="submit" class="form-control" name = 'submitFilter' value="Submit" style="margin-top: 15px" />
-            <br/>
+
+            <?php
+            # Connect to MySQL server and the database
+            require( 'php_includes/connect_db.php' ) ;
+
+            # Includes these helper functions
+            require( 'php_includes/helpers.php' ) ;
+
+
+            # filter results
+            if(isset($_POST['submitItem'])) {
+                #if the filter submit button was clicked
+
+            }
+
+            # Close the connection
+            mysqli_close( $dbc ) ;
+
+            ?>
         </form>
-        <br/>
     </div>
 </body>
 </html>

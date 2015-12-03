@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/create_lost_item.php" afterPath="$PROJECT_DIR$/Site/create_lost_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost_item_ticket.php" afterPath="$PROJECT_DIR$/Site/lost_item_ticket.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,21 +37,19 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lost.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8241379">
-              <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-17.285715">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="90" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,10 +57,9 @@
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.6">
+            <state vertical-scroll-proportion="-0.78571427">
               <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
               <folding>
-                <element signature="n#show_record#0;n#!!top" expanded="false" />
                 <element signature="n#insert_record#0;n#!!top" expanded="false" />
                 <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
                 <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
@@ -70,21 +69,6 @@
                 <element signature="n#show_query#0;n#!!top" expanded="false" />
                 <element signature="n#check_results#0;n#!!top" expanded="false" />
                 <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
-                <element signature="e#13116#14063#0#PHP" expanded="false" />
-                <marker date="1449126423309" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-                <marker date="1449126423309" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-                <marker date="1449126423309" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-                <marker date="1449126423309" expanded="true" signature="4874:4931" placeholder="SELECT locat..locations..." />
-                <marker date="1449126423309" expanded="true" signature="4874:4941" placeholder="SELECT locat..locations..." />
-                <marker date="1449126423309" expanded="true" signature="4874:4942" placeholder="SELECT locat..locations..." />
-                <marker date="1449126423309" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-                <marker date="1449126423309" expanded="true" signature="4874:4980" placeholder="SELECT locat..locations..." />
-                <marker date="1449126423309" expanded="true" signature="5478:5634" placeholder="..." />
-                <marker date="1449126423309" expanded="true" signature="7780:7916" placeholder="..." />
-                <marker date="1449126423309" expanded="true" signature="8048:8070" placeholder="..." />
-                <marker date="1449126423309" expanded="true" signature="8583:8963" placeholder="INSERT INTO Item..." />
-                <marker date="1449126423309" expanded="true" signature="9227:9307" placeholder="SELECT id, i..Item..." />
-                <marker date="1449126423309" expanded="true" signature="9560:9696" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -93,18 +77,22 @@
       <file leaf-file-name="create_lost_item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.576923">
-              <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+            <state vertical-scroll-proportion="-30.642857">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_validation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.018181818">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,8 +100,8 @@
       <file leaf-file-name="lost_item_ticket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state vertical-scroll-proportion="-24.357143">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +110,7 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
               <folding />
             </state>
@@ -132,7 +120,7 @@
       <file leaf-file-name="create_limbo_db.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.574074">
+            <state vertical-scroll-proportion="0.0">
               <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
               <folding />
             </state>
@@ -156,16 +144,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_found_item.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -203,9 +181,10 @@
         <option value="$PROJECT_DIR$/DataBase/create_limbo_db.sql" />
         <option value="$PROJECT_DIR$/Site/js/helpers.js" />
         <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+        <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/lost_item_ticket.php" />
         <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
-        <option value="$PROJECT_DIR$/Site/lost.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
       </list>
     </option>
   </component>
@@ -219,10 +198,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Limbo Root" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1370" />
-    <option name="height" value="744" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
+    <option name="width" value="3866" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -333,8 +312,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,10 +409,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17651403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17630209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -471,23 +450,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -510,7 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +495,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#show_record#0;n#!!top" expanded="false" />
             <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
             <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
@@ -544,21 +504,6 @@
             <element signature="n#show_query#0;n#!!top" expanded="false" />
             <element signature="n#check_results#0;n#!!top" expanded="false" />
             <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
-            <element signature="e#13116#14063#0#PHP" expanded="false" />
-            <marker date="1449126423309" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4931" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4941" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4942" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4980" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="5478:5634" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="7780:7916" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8048:8070" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8583:8963" placeholder="INSERT INTO Item..." />
-            <marker date="1449126423309" expanded="true" signature="9227:9307" placeholder="SELECT id, i..Item..." />
-            <marker date="1449126423309" expanded="true" signature="9560:9696" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -567,9 +512,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -586,14 +529,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -620,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +580,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding>
-            <element signature="n#show_record#0;n#!!top" expanded="false" />
             <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
             <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
@@ -654,21 +589,6 @@
             <element signature="n#show_query#0;n#!!top" expanded="false" />
             <element signature="n#check_results#0;n#!!top" expanded="false" />
             <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
-            <element signature="e#13116#14063#0#PHP" expanded="false" />
-            <marker date="1449126423309" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4931" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4941" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4942" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4980" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="5478:5634" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="7780:7916" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8048:8070" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8583:8963" placeholder="INSERT INTO Item..." />
-            <marker date="1449126423309" expanded="true" signature="9227:9307" placeholder="SELECT id, i..Item..." />
-            <marker date="1449126423309" expanded="true" signature="9560:9696" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -677,9 +597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,14 +614,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -730,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,9 +657,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +687,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#show_record#0;n#!!top" expanded="false" />
             <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
             <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
@@ -788,21 +696,6 @@
             <element signature="n#show_query#0;n#!!top" expanded="false" />
             <element signature="n#check_results#0;n#!!top" expanded="false" />
             <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
-            <element signature="e#13116#14063#0#PHP" expanded="false" />
-            <marker date="1449126423309" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4931" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4941" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4942" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4980" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="5478:5634" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="7780:7916" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8048:8070" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8583:8963" placeholder="INSERT INTO Item..." />
-            <marker date="1449126423309" expanded="true" signature="9227:9307" placeholder="SELECT id, i..Item..." />
-            <marker date="1449126423309" expanded="true" signature="9560:9696" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -819,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,9 +741,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding />
         </state>
@@ -941,23 +830,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.574074">
+        <state vertical-scroll-proportion="0.0">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
           <folding />
         </state>
@@ -965,10 +846,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.6">
+        <state vertical-scroll-proportion="-0.78571427">
           <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
           <folding>
-            <element signature="n#show_record#0;n#!!top" expanded="false" />
             <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
             <element signature="n#selectToMySQL#0;n#!!top" expanded="false" />
@@ -978,49 +858,42 @@
             <element signature="n#show_query#0;n#!!top" expanded="false" />
             <element signature="n#check_results#0;n#!!top" expanded="false" />
             <element signature="n#js_console_debug#0;n#!!top" expanded="false" />
-            <element signature="e#13116#14063#0#PHP" expanded="false" />
-            <marker date="1449126423309" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449126423309" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4931" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4941" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4942" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="4874:4980" placeholder="SELECT locat..locations..." />
-            <marker date="1449126423309" expanded="true" signature="5478:5634" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="7780:7916" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8048:8070" placeholder="..." />
-            <marker date="1449126423309" expanded="true" signature="8583:8963" placeholder="INSERT INTO Item..." />
-            <marker date="1449126423309" expanded="true" signature="9227:9307" placeholder="SELECT id, i..Item..." />
-            <marker date="1449126423309" expanded="true" signature="9560:9696" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
+    <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.576923">
-          <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-24.357143">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/lost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8241379">
-          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+        <state vertical-scroll-proportion="-17.285715">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="90" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.642857">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#button#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.018181818">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
