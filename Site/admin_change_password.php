@@ -39,9 +39,6 @@
 			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
-				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $oldpassword . "'";
-				$results = mysqli_query( $dbc, $query ) ;
-				
 				$username= $_POST['username'];
 				$oldpassword = $_POST['oldpassword'] ;
 				$newpassword = $_POST['newpassword'] ;
@@ -56,15 +53,18 @@
 			}
 			function changePassword($newpassword,$oldpassword,$username){
 				global $dbc;
-				$query="UPDATE admin SET password='" . $newpassword . "' WHERE username='" . $_GET['username'] . "'";
-				show_query($query) ;
-				
-				$results = mysqli_query( $dbc, $query ) ;
 				
 				#checks if username and password are found in query
+				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $oldpassword . "'";
+				$results = mysqli_query( $dbc, $query ) ;
+				
 				if (mysqli_num_rows( $results ) == 0 ){
 					return false;
+					
 				}else{
+					$query2="UPDATE admin SET password='" . $newpassword . "' WHERE username='" . $username . "'";
+				
+					$results2 = mysqli_query( $dbc, $query ) ;
 					return true;
 				}
 			}
