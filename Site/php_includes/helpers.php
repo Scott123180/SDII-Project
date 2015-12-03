@@ -131,7 +131,7 @@ function show_link_records_lost($dbc, $category, $time, $location) {
 }
 
 #get all information for the record and only return the set of desired fields, not including null ones
-function show_record($dbc, $id, $LorF) {
+function show_record($dbc, $id, $status = 'not specified') {
 
     /*
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -157,22 +157,57 @@ function show_record($dbc, $id, $LorF) {
     $query = 'SELECT * FROM item WHERE id=' . $id . ';';
     # Execute the query
     $results = mysqli_query( $dbc , $query ) ;
+    $resArray = mysqli_fetch_array( $results , MYSQLI_ASSOC ) ;
+
     check_results($results) ;
+
+    #if the query succeeded
+    if($results) {
+        #get location information
+        $queryLoc = 'SELECT locations.name FROM locations, item WHERE id=' . $id . ' AND item.location_id = locations.id ; ';
+        $resultLoc = mysqli_query( $dbc , $queryLoc ) ;
+        $resArrayLoc = mysqli_fetch_array( $resultLoc , MYSQLI_ASSOC ) ;
+        $location = $resArrayLoc['name'];
+        if($status == 'lost') {
+            #item.id, location.name, item.create_date, item.item_name, item.item_description, item.item_category, item.room, item.make, item.model, item.color, item.reward
+            echo '<H1>Found Items</H1>' ;
+            echo '<table class ="table table-striped">';
+            echo '<TR>';
+            echo '<th>Item ID</th>';
+            echo '<th>Location</th>';
+            #check certain fields to see if they're set
+            if(isset($resArray['room'])) {
+                echo '<th>Room</th>';
+            }
+            echo '<th>Date Created</th>';
+            echo '<th>Item Name</th>';
+            echo '<th>Item Description</th>';
+            echo '<th>Item Category</th>';
+            #check certain fields to see if they're set
+            if(isset($resArray['make'])){
+                echo '<th>Make</th>';
+            }
+            if(isset($resArray['model'])){
+                echo '<th>Model</th>';
+            }
+            if(isset($resArray['color'])){
+                echo '<th>Color</th>';
+            }
+            if(isset($resArray['reward'])){
+
+            }
+            #end table heading
+            echo '</TR>';
+        }
+    }
+
     #query for the location name
-
-
-
-    $query
-    $query= '' ;
+    $query = '';
 
     #check for null fields
 
     #build table excluding those null fields
 
-
-	# Execute the query
-	$results = mysqli_query( $dbc , $query ) ;
-	check_results($results) ;
 
 	# Show results
 	if( $results )
@@ -205,6 +240,7 @@ function show_record($dbc, $id, $LorF) {
 		# Free up the results in memory
 		mysqli_free_result( $results ) ;
 	}
+
 }
 
 # Inserts a record into the prints table
