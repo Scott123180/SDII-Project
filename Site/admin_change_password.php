@@ -75,8 +75,8 @@
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>Old Password:</td><td><input type="text" name="oldpassword"></td>
-					<td>New Password:</td><td><input type="text" name="newpassword"></td>
+					<td>Old Password:</td><td><input type="password" class="form-control" name="oldpassword" placeholder="Old Password"></td>
+					<td>New Password:</td><td><input type="password" class="form-control" name="newpassword" placeholder="New Password"></td>
 				</tr>
 			</table>
 			<p><input type="submit" ></p>

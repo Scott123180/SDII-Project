@@ -28,62 +28,14 @@
             <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php" style="color:white;"><h4>About</h4></a></div>
         </div>
     </div>
-	<div class="container">
-		<?php
-			require( 'php_includes/helpers.php' ) ;
-			require( 'php_includes/connect_db.php' ) ;
-			global $dbc;
-			
-			$id = $_GET['id'];
-			
-			
-			# Make the query
-			$query = "SELECT username, first_name, last_name, superadmin FROM admin WHERE username='" . $id . "'";
-			#show_query($query) ;
-
-			# Execute the query
-			$result = mysqli_query( $dbc, $query ) ;
-			
-			while ($row = mysqli_fetch_assoc($result)) {
-			$username=$row['username'];
-			$firstname=$row['first_name'];
-			$lastname=$row['last_name'];
-			$superadmin=$row['superadmin'];
-			}
-			
-			if($superadmin="yes"){
-				$title="Superadmin";
-			}
-			else{
-				$title="Admin";
-			}
-			
-			
-		?>
-        <h1 align="center">Profile</h1>
-		<table align="center">
-				<tr>
-				<td><h3>Username:</h3></td><td><?php echo $username; ?></td>
-				</tr>
-				<tr>
-				<td><h3>First Name:</h3></td><td><?php echo $firstname; ?></td>
-				</tr>
-				<tr>
-				<td><h3>Last Name:</h3></td><td><?php echo $lastname; ?></td>
-				</tr>
-				<tr>
-				<td><h3>Title:</h3></td><td><?php echo $title; ?></td>
-				</tr>
-			</table>
-    </div>
-	
-    <!--Button Container-->
     <div class="container">
-        <!--Row 1-->
-        <div class="row">
-            <div class="col-md-6">
-                <a href="admin_change_password.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change Password</button>
-            </div>
-        </div>
+        <h1>Statistics</h1>
+        <h3>Number of Items in Database:</h3>
+        <h3>Number of Items of Each Category</h3>
+        <h3>Number of Lost Items</h3>
+        <h3>Number of Found Items</h3>
+		<h3>Number of Claimed Items</h3>
+		<h3>Number of Items Found in Each Location</h3>
+    </div>
 </body>
 </html>

@@ -35,7 +35,7 @@
         <!--Row 1-->
         <div class="row">
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Statistics</button>
+                <a href="admin_statistics.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Statistics</button>
             </div>
             <div class="col-md-6">
                 <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">DB Maintenance</button>
