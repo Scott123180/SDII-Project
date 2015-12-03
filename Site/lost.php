@@ -74,7 +74,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
         #if GET id in GET request, show the record of that item
         if(isset($_GET['id'])) {
-            show_record($dbc, $_GET['id']) ; }
+            show_record($dbc, $_GET['id'], 'lost') ; }
 
         if(isset($_POST['submitFilter'])) {
             #if the filter submit button was clicked

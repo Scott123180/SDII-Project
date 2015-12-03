@@ -164,7 +164,7 @@ function show_record($dbc, $id, $status = 'not specified') {
     #if the query succeeded
     if($results) {
         #get location information
-        $queryLoc = 'SELECT locations.name FROM locations, item WHERE id=' . $id . ' AND item.location_id = locations.id ; ';
+        $queryLoc = 'SELECT locations.name FROM locations, item WHERE item.id=' . $id . ' AND item.location_id = locations.id ;';
         $resultLoc = mysqli_query( $dbc , $queryLoc ) ;
         $resArrayLoc = mysqli_fetch_array( $resultLoc , MYSQLI_ASSOC ) ;
         $location = $resArrayLoc['name'];
@@ -198,30 +198,38 @@ function show_record($dbc, $id, $status = 'not specified') {
             }
             #end table heading
             echo '</TR>';
-            # For each row result, generate a table row
-            while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-            {
-                echo '<TR>' ;
-                echo '<TD>' . $row['id'] . '</TD>' ;
-                echo '<TD>' . $row['item_name'] . '</TD>' ;
-                echo '<TD>' . $row['status'] . '</TD>' ;
-                echo '<TD>' . $row['item_category'] . '</TD>' ;
-                echo '</TR>' ;
+            # Make result for each row
+            echo '<TR>' ;
+            echo '<TD>' . $resArray['id'] . '</TD>' ;
+            echo '<TD>' . $location . '</TD>' ;
+            if(isset($resArray['room'])) {
+                echo '<TD>' . $resArray['room'] . '</TD>' ;
             }
+            echo '<TD>' . $resArray['create_date'] . '</TD>' ;
+            echo '<TD>' . $resArray['item_name'] . '</TD>' ;
+            echo '<TD>' . $resArray['item_description'] . '</TD>' ;
+            echo '<TD>' . $resArray['item_category'] . '</TD>' ;
+            if (isset($resArray['make'])) {
+                echo '<TD>' . $resArray['make'] . '</TD>' ;
+            }
+            if(isset($resArray['model'])){
+                echo '<TD>' . $resArray['model'] . '</TD>' ;
+            }
+            if(isset($resArray['color'])){
+                echo '<TD>' . $resArray['color'] . '</TD>' ;
+            }
+            if(isset($resArray['reward'])){
+                echo '<TD>' . $resArray['reward'] . '</TD>' ;
+            }
+            echo '</TR>' ;
 
             # End the table
             echo '</TABLE>';
         }
     }
-
-    #query for the location name
-    $query = '';
-
-    #check for null fields
-
-    #build table excluding those null fields
-
-
+    mysqli_free_result( $results ) ;
+    mysqli_free_result( $resultLoc ) ;
+/*
 	# Show results
 	if( $results )
 	{
@@ -253,7 +261,7 @@ function show_record($dbc, $id, $status = 'not specified') {
 		# Free up the results in memory
 		mysqli_free_result( $results ) ;
 	}
-
+*/
 }
 
 # Inserts a record into the prints table
