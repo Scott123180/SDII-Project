@@ -29,7 +29,7 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Delete Admin Below.</h1>
+        <h1>Change Username Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
@@ -38,30 +38,30 @@
 			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
-				$username= $_POST['username'];
+				$oldusername= $_POST['oldusername'];
+				$newusername = $_POST['newusername'] ;
 				$password = $_POST['password'] ;
 				
-				$check=deleteAdmin($username,$password);
+				$check=changeUsername($oldusername, $newusername, $password);
 				if($check==true){
-					echo "Admin Deleted";
+					echo "Change Successful";
 				}
 				else{
-					echo 'Admin Delete Failed';
+					echo 'Change Failed';
 				}
 			}
-			function addAdmin($username, $password){
+			function changeUsername($oldusername, $newusername, $password){
 				global $dbc;
 				
-				#ensures admin does not already exist
-				$query = "SELECT username, password FROM admin WHERE username<>'" . $username . "' AND password<>'" . $password . "'";
+				#checks if username and password are found in query
+				$query = "SELECT username, password FROM admin WHERE username='" . $oldusername . "' AND password='" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
 					return false;
 					
 				}else{
-					$query2="INSERT INTO admin 
-							VALUES('" . $username . "','" . $password . "')";
+					$query2="UPDATE admin SET username='" . $newusername . "' WHERE username='" . $oldusername . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
 					return true;
@@ -70,10 +70,11 @@
 			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_delete.php" method="POST">
+		<form action="admin_change_username.php" method="POST">
 			<table>
 				<tr>
-					<td>Username:</td><td><input type="text" name="username"></td>
+					<td>Old Username:</td><td><input type="text" name="oldusername"></td>
+					<td>New Username:</td><td><input type="text" name="newusername"></td>
 					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
 			</table>

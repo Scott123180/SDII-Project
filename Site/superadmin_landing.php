@@ -23,14 +23,30 @@
 
         <!--Header-->
         <div class="row">
-            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="lost.php" style="color:white;"><h4>Lost Something?</h4></a></div>
-            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="found.php" style="color:white;"><h4>Found Something?</h4></a></div>
-            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php" style="color:white;"><h4>About</h4></a></div>
+            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="lost.php"><h4>Lost Something?</h4></a></div>
+            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="found.php"><h4>Found Something?</h4></a></div>
+            <div class="col-md-4" style="background-color:#cc0000; text-align:center"><a href="about.php"><h4>About</h4></a></div>
         </div>
     </div>
+    <br />
 
+    <!--Button Container-->
     <div class="container">
-
+        <!--Row 1-->
+        <div class="row">
+            <div class="col-md-6">
+				<a href="admin_add.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Add an Admin</button>
+            </div>
+            <div class="col-md-6">
+                <a href="admin_delete.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Delete an Admin</button>
+            </div>
+        </div>
+		<!--Row 2-->
+        <div class="row">
+            <div class="col-md-6">
+				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Profile</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

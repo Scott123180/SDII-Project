@@ -29,7 +29,7 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Delete Admin Below.</h1>
+        <h1>Change First Name Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
@@ -39,29 +39,29 @@
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
+				$newusername = $_POST['newfirstname'] ;
 				$password = $_POST['password'] ;
 				
-				$check=deleteAdmin($username,$password);
+				$check=changeFirstname($username, $newfirstname, $password);
 				if($check==true){
-					echo "Admin Deleted";
+					echo "Change Successful";
 				}
 				else{
-					echo 'Admin Delete Failed';
+					echo 'Change Failed';
 				}
 			}
-			function addAdmin($username, $password){
+			function changeFirstname($username, $newfirstname, $password){
 				global $dbc;
 				
-				#ensures admin does not already exist
-				$query = "SELECT username, password FROM admin WHERE username<>'" . $username . "' AND password<>'" . $password . "'";
+				#checks if username and password are found in query
+				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
 					return false;
 					
 				}else{
-					$query2="INSERT INTO admin 
-							VALUES('" . $username . "','" . $password . "')";
+					$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
 					return true;
@@ -70,10 +70,11 @@
 			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_delete.php" method="POST">
+		<form action="admin_change_firstname.php" method="POST">
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
+					<td>New First Name:</td><td><input type="text" name="newfirstname"></td>
 					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
 			</table>

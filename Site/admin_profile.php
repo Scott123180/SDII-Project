@@ -84,6 +84,18 @@
             <div class="col-md-6">
                 <a href="admin_change_password.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change Password</button>
             </div>
+			<div class="col-md-6">
+                <a href="admin_change_username.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change Username</button>
+            </div>
+        </div>
+		<!--Row 1-->
+        <div class="row">
+            <div class="col-md-6">
+                <a href="admin_change_firstname.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change First Name</button>
+            </div>
+			<div class="col-md-6">
+                <a href="admin_change_lastname.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change Last Name</button>
+            </div>
         </div>
 </body>
 </html>

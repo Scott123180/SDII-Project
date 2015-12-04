@@ -29,10 +29,9 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Change Password Below.</h1>
+        <h1>Add Admin Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
-			require( 'php_includes/limbo_login_tools.php' ) ;
 			global $dbc;
 			
 			
@@ -40,29 +39,31 @@
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
-				$oldpassword = $_POST['oldpassword'] ;
-				$newpassword = $_POST['newpassword'] ;
+				$firstName = $_POST['firstname'] ;
+				$lastName = $_POST['lastname'] ;
+				$password = $_POST['password'] ;
 				
-				$check=changePassword($newpassword, $oldpassword, $username);
+				$check=addAdmin($username,$firstName,$lastName,$password);
 				if($check==true){
-					echo "Change Successful";
+					echo "Admin Added";
 				}
 				else{
-					echo 'Change Failed';
+					echo 'Admin Add Failed';
 				}
 			}
-			function changePassword($newpassword,$oldpassword,$username){
+			function addAdmin($username, $firstname, $lastName, $password){
 				global $dbc;
 				
-				#checks if username and password are found in query
-				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $oldpassword . "'";
+				#ensures admin does not already exist
+				$query = "SELECT username, password FROM admin WHERE username<>'" . $username . "' AND password<>'" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
 					return false;
 					
 				}else{
-					$query2="UPDATE admin SET password='" . $newpassword . "' WHERE username='" . $username . "'";
+					$query2="INSERT INTO admin 
+							VALUES('" . $username . "','" . $firstName . "','" . $lastName . "','" . $password . "')";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
 					return true;
@@ -71,12 +72,13 @@
 			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_change_password.php" method="POST">
+		<form action="admin_add.php" method="POST">
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>Old Password:</td><td><input type="password" class="form-control" name="oldpassword" placeholder="Old Password"></td>
-					<td>New Password:</td><td><input type="password" class="form-control" name="newpassword" placeholder="New Password"></td>
+					<td>First Name:</td><td><input type="text" name="firstName"></td>
+					<td>Last Name:</td><td><input type="text" name="lastName"></td>
+					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
 			</table>
 			<p><input type="submit" ></p>
