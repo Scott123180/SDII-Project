@@ -35,9 +35,7 @@
         <form class="form-group" method="post">
             <h4>What location did you lose it at?</h4>
             <select class="form-control" name="campLoc" id="campLoc">
-                <option>location</option>
                 <script>makeOptions(campusLocations, "campLoc")</script>
-                <option>unknown</option>
             </select>
 
             <h4>What room did you lose it in?</h4>
@@ -50,11 +48,10 @@
             <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>">
 
             <h4>Please describe the item:</h4>
-            <textarea class="form-control" rows="3" placeholder="description" name="description" value="<?php if(isset($_POST['description'])){echo $_POST['description'];} ?>"></textarea>
+            <input type="text" class="form-control" placeholder="description" name="description" value="<?php if(isset($_POST['description'])){echo $_POST['description'];} ?>">
 
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
-                <option>item category</option>
                 <script>makeOptions(itemCategories, "iCat");</script>
             </select>
 
@@ -142,6 +139,7 @@
                 if(empty($errors)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
+                    echo "<script>window.location='lost_item_ticket.php'</script>";
                 }
                 #print errors for user to see
                 else {

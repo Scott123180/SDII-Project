@@ -33,7 +33,7 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
     if(validateString($name, 15) == false) {
         array_push($errorArray, 'name');
     }
-    if(validateString($description, 350) == false){
+    if(validateString($description, 199) == false){
         array_push($errorArray, 'description');
     }
     if(validateCategory($category) == false){
@@ -129,6 +129,7 @@ function validateLocation($location) {
 
 #checks if argument is a valid date format
 function validateDate($date){
+    /*
     #check if the array can be split
     if(preg_split('-', $date) == true){
         #split the string into array
@@ -141,13 +142,18 @@ function validateDate($date){
     else {
         return false;
     }
+    */
+    #solve this later
+    return true;
 }
 
 #if string is alphanumeric and if it's under desired number of characters
 function validateString($string, $length){
     $string = trim($string);
+    #get rid of spaces so can validate
+    $string = str_replace(' ', 'x', $string);
     #check if alphanumeric
-    if((ctype_alnum($string) == true) && (count($string) <= $length )) {
+    if((ctype_alnum($string) == true) && (strlen($string) <= $length )) {
         return true;
     }
     else {return false;}

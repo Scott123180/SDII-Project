@@ -29,7 +29,7 @@
     </div>
 </div>
 <div class="container">
-
+<h1 style="text-align: center">Thanks for your submission!</h1>
 
 </div>
 </body>
