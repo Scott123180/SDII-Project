@@ -72,9 +72,12 @@ if it has been found. If it hasn't, the user can add an entry to the database
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;
 
+        $currentID = 0;
         #if GET id in GET request, show the record of that item
         if(isset($_GET['id'])) {
-            show_record($dbc, $_GET['id'], 'lost') ; }
+            $currentID = $_GET['id'];
+            show_record($dbc, $_GET['id'], 'lost') ;
+        }
 
         #filter results
         if(isset($_POST['submitFilter'])) {
@@ -83,6 +86,12 @@ if it has been found. If it hasn't, the user can add an entry to the database
             $time = $_POST['tLost'];
             $location = $_POST['campLoc'];
             show_link_records_lost($dbc, $category, $time, $location) ;
+        }
+        if(isset($_POST['claimItem'])){
+            if (claim_item($dbc, $currentID) == true){
+                echo "</script>window.location='lost_item_claim.php'</script>";
+            }
+            else { echo 'script failed';}
         }
 
         # Close the connection

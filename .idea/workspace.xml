@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2119c7a4-fee8-4f99-b568-6b221eb4bb44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost_item_ticket.php" afterPath="$PROJECT_DIR$/Site/lost_item_ticket.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/lost.php" afterPath="$PROJECT_DIR$/Site/lost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,69 +32,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/lost.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.230769">
+              <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
+            <state vertical-scroll-proportion="-2.6153846">
               <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/lost.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6153846">
-              <caret line="76" column="28" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.653846">
-              <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.76551723">
+              <caret line="241" column="79" selection-start-line="241" selection-start-column="79" selection-end-line="241" selection-end-column="79" />
               <folding>
-                <element signature="n#show_link_records_lost#0;n#!!top" expanded="false" />
-                <element signature="n#insert_record#0;n#!!top" expanded="false" />
                 <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
-                <marker date="1449224373735" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-                <marker date="1449224373735" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-                <marker date="1449224373735" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-                <marker date="1449224373735" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8635" placeholder="SELECT locat..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8657" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8676" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8710" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8711" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8713" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8733" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8736" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8738" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8739" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="8611:8757" placeholder="SELECT locat..locations..." />
-                <marker date="1449224373735" expanded="true" signature="9016:9017" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="9016:9033" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="9016:9045" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="9016:9046" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="9016:9080" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="9016:10337" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="10339:10720" placeholder="INSERT INTO Item..." />
-                <marker date="1449224373735" expanded="true" signature="11025:11105" placeholder="SELECT id, i..Item..." />
-                <marker date="1449224373735" expanded="true" signature="11358:11494" placeholder="..." />
+                <marker date="1449233333410" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
+                <marker date="1449233333410" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
+                <marker date="1449233333410" expanded="true" signature="3830:3872" placeholder="UPDATE item ..." />
+                <marker date="1449233333410" expanded="true" signature="3830:3876" placeholder="UPDATE item ..." />
+                <marker date="1449233333410" expanded="true" signature="3830:3885" placeholder="UPDATE item ..." />
+                <marker date="1449233333410" expanded="true" signature="4869:4897" placeholder="SELECT * FRO..item..." />
+                <marker date="1449233333410" expanded="true" signature="5181:5285" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="7910:7928" placeholder="..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9108" placeholder="SELECT locat..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9130" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9149" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9183" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9184" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9186" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9206" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9209" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9211" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9212" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9084:9230" placeholder="SELECT locat..locations..." />
+                <marker date="1449233333410" expanded="true" signature="9489:9490" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="9489:9506" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="9489:9518" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="9489:9519" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="9489:9553" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="9489:10810" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="10812:11193" placeholder="INSERT INTO Item..." />
+                <marker date="1449233333410" expanded="true" signature="11498:11578" placeholder="SELECT id, i..Item..." />
+                <marker date="1449233333410" expanded="true" signature="11831:11967" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lost_item_claim.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lost_item_claim.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7948276">
-              <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+            <state vertical-scroll-proportion="-14.461538">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,7 +105,7 @@
       <file leaf-file-name="create_lost_item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6">
+            <state vertical-scroll-proportion="-4.1454544">
               <caret line="141" column="67" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -152,7 +155,7 @@
       <file leaf-file-name="create_limbo_db.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.962963">
+            <state vertical-scroll-proportion="-6.1296296">
               <caret line="93" column="158" selection-start-line="93" selection-start-column="158" selection-end-line="93" selection-end-column="158" />
               <folding />
             </state>
@@ -202,12 +205,12 @@
         <option value="$PROJECT_DIR$/Site/php_includes/miscData.php" />
         <option value="$PROJECT_DIR$/DataBase/create_limbo_db.sql" />
         <option value="$PROJECT_DIR$/Site/js/helpers.js" />
-        <option value="$PROJECT_DIR$/Site/lost.php" />
-        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
         <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
         <option value="$PROJECT_DIR$/Site/lost_item_ticket.php" />
         <option value="$PROJECT_DIR$/Site/lost_item_claim.php" />
+        <option value="$PROJECT_DIR$/Site/lost.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
       </list>
     </option>
   </component>
@@ -433,9 +436,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -468,7 +471,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -510,33 +513,35 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#show_link_records_lost#0;n#!!top" expanded="false" />
-            <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
-            <marker date="1449224373735" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449224373735" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8635" placeholder="SELECT locat..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8657" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8676" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8710" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8711" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8713" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8733" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8736" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8738" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8739" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8757" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9017" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9033" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9045" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9046" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9080" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:10337" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="10339:10720" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="11025:11105" placeholder="SELECT id, i..Item..." />
-            <marker date="1449224373735" expanded="true" signature="11358:11494" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3872" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3876" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3885" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="4869:4897" placeholder="SELECT * FRO..item..." />
+            <marker date="1449233333410" expanded="true" signature="5181:5285" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="7910:7928" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9108" placeholder="SELECT locat..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9130" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9149" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9183" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9184" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9186" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9206" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9209" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9211" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9212" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9230" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9490" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9506" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9518" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9519" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9553" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:10810" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="10812:11193" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="11498:11578" placeholder="SELECT id, i..Item..." />
+            <marker date="1449233333410" expanded="true" signature="11831:11967" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -613,33 +618,35 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding>
-            <element signature="n#show_link_records_lost#0;n#!!top" expanded="false" />
-            <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
-            <marker date="1449224373735" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449224373735" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8635" placeholder="SELECT locat..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8657" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8676" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8710" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8711" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8713" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8733" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8736" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8738" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8739" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8757" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9017" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9033" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9045" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9046" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9080" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:10337" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="10339:10720" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="11025:11105" placeholder="SELECT id, i..Item..." />
-            <marker date="1449224373735" expanded="true" signature="11358:11494" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3872" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3876" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3885" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="4869:4897" placeholder="SELECT * FRO..item..." />
+            <marker date="1449233333410" expanded="true" signature="5181:5285" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="7910:7928" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9108" placeholder="SELECT locat..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9130" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9149" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9183" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9184" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9186" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9206" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9209" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9211" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9212" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9230" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9490" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9506" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9518" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9519" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9553" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:10810" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="10812:11193" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="11498:11578" placeholder="SELECT id, i..Item..." />
+            <marker date="1449233333410" expanded="true" signature="11831:11967" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -738,33 +745,35 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#show_link_records_lost#0;n#!!top" expanded="false" />
-            <element signature="n#insert_record#0;n#!!top" expanded="false" />
             <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
-            <marker date="1449224373735" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449224373735" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8635" placeholder="SELECT locat..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8657" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8676" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8710" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8711" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8713" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8733" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8736" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8738" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8739" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8757" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9017" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9033" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9045" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9046" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9080" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:10337" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="10339:10720" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="11025:11105" placeholder="SELECT id, i..Item..." />
-            <marker date="1449224373735" expanded="true" signature="11358:11494" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3872" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3876" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3885" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="4869:4897" placeholder="SELECT * FRO..item..." />
+            <marker date="1449233333410" expanded="true" signature="5181:5285" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="7910:7928" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9108" placeholder="SELECT locat..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9130" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9149" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9183" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9184" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9186" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9206" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9209" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9211" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9212" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9230" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9490" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9506" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9518" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9519" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9553" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:10810" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="10812:11193" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="11498:11578" placeholder="SELECT id, i..Item..." />
+            <marker date="1449233333410" expanded="true" signature="11831:11967" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -881,26 +890,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/connect_db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43965518">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.962963">
-          <caret line="93" column="158" selection-start-line="93" selection-start-column="158" selection-end-line="93" selection-end-column="158" />
           <folding />
         </state>
       </provider>
@@ -916,67 +909,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.653846">
-          <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
-          <folding>
-            <element signature="n#show_link_records_lost#0;n#!!top" expanded="false" />
-            <element signature="n#insert_record#0;n#!!top" expanded="false" />
-            <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
-            <marker date="1449224373735" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
-            <marker date="1449224373735" expanded="true" signature="4562:4590" placeholder="SELECT * FRO..item..." />
-            <marker date="1449224373735" expanded="true" signature="4874:4978" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8635" placeholder="SELECT locat..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8657" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8676" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8710" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8711" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8713" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8733" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8736" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8738" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8739" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="8611:8757" placeholder="SELECT locat..locations..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9017" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9033" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9045" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9046" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:9080" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="9016:10337" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="10339:10720" placeholder="INSERT INTO Item..." />
-            <marker date="1449224373735" expanded="true" signature="11025:11105" placeholder="SELECT id, i..Item..." />
-            <marker date="1449224373735" expanded="true" signature="11358:11494" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0">
           <caret line="12" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6153846">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6">
-          <caret line="141" column="67" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1449228753644" expanded="true" signature="7685:7694" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -991,11 +928,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1454544">
+          <caret line="141" column="67" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1449228753644" expanded="true" signature="7685:7694" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1296296">
+          <caret line="93" column="158" selection-start-line="93" selection-start-column="158" selection-end-line="93" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/lost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.230769">
+          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7948276">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+        <state vertical-scroll-proportion="-14.461538">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76551723">
+          <caret line="241" column="79" selection-start-line="241" selection-start-column="79" selection-end-line="241" selection-end-column="79" />
+          <folding>
+            <element signature="n#show_link_records_found#0;n#!!top" expanded="false" />
+            <marker date="1449233333410" expanded="true" signature="1167:1270" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="1431:1545" placeholder="SELECT item...item..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3872" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3876" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="3830:3885" placeholder="UPDATE item ..." />
+            <marker date="1449233333410" expanded="true" signature="4869:4897" placeholder="SELECT * FRO..item..." />
+            <marker date="1449233333410" expanded="true" signature="5181:5285" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="7910:7928" placeholder="..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9108" placeholder="SELECT locat..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9130" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9149" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9183" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9184" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9186" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9206" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9209" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9211" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9212" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9084:9230" placeholder="SELECT locat..locations..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9490" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9506" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9518" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9519" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:9553" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="9489:10810" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="10812:11193" placeholder="INSERT INTO Item..." />
+            <marker date="1449233333410" expanded="true" signature="11498:11578" placeholder="SELECT id, i..Item..." />
+            <marker date="1449233333410" expanded="true" signature="11831:11967" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

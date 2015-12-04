@@ -130,6 +130,18 @@ function show_link_records_lost($dbc, $category, $time, $location) {
     }
 }
 
+function claim_item($dbc, $id) {
+    $modReq = "UPDATE item SET status='claimed' WHERE id=" . $id . ";";
+    echo $modReq ;
+    # Execute the query
+    $results = mysqli_query( $dbc , $modReq ) ;
+    check_results($results);
+    if($results == true) {
+        return true;
+    }
+    else {return false;}
+}
+
 #get all information for the record and only return the set of desired fields, not including null ones
 function show_record($dbc, $id, $status = 'not specified') {
 
@@ -226,6 +238,8 @@ function show_record($dbc, $id, $status = 'not specified') {
             # End the table
             echo '</TABLE>';
         }
+        #claim button
+        echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name='claimItem' style=\"margin-bottom:15px\">Claim this item</button>";
     }
     mysqli_free_result( $results ) ;
     mysqli_free_result( $resultLoc ) ;
