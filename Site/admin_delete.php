@@ -60,8 +60,7 @@
 					return false;
 					
 				}else{
-					$query2="INSERT INTO admin 
-							VALUES('" . $username . "','" . $password . "')";
+					$query2="DELETE FROM admin WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
 					return true;
