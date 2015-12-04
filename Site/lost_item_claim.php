@@ -29,8 +29,10 @@
     </div>
 </div>
 <div class="container">
-<h1 style="text-align: center">Thanks for your submission!</h1>
-<h3>You will be contacted if someone finds your item.</h3>
+
+<h1>Thanks for claiming this item!</h1>
+<h3>You will be contacted via email with specifics soon.</h3>
+
 </div>
 </body>
 </html>
