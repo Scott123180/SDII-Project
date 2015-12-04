@@ -280,7 +280,7 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
     #insert base
     $insert = "INSERT INTO Item(location_id, " ;
     #values base
-    $values = "VALUES (' . $location_id . '";
+    $values = "VALUES (" . $location_id . ", ";
 
     #check lost
     if(!empty($item_lost_date)){
@@ -324,6 +324,7 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
     $insert = $insert . "item_category) ";
     $values = $values . "'" . $item_category . "');";
 
+    $insert = $insert . $values ;
     #$insert = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward)
 	#		VALUES ("' . $location_id . '" , "' . $item_lost_date . '" , "' . $item_name . '", "' . $item_description . '", "' . $room . '", "' . $status . '", "' . $item_category . '", "' . $make . '", "' . $model . '", "' . $color . '", "' . $reward . '")' ;
 
