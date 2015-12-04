@@ -34,6 +34,7 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
     if(validateMonetary($reward,100) == false){
         array_push($errorArray, 'reward');
     }
+
     return $errorArray;
 }
 
@@ -54,7 +55,6 @@ function validateDate($date){
 
 #if string is alphanumeric and if it's under desired number of characters
 function validateString($string, $length){
-    trim($string);
     return false;
 }
 

@@ -93,6 +93,21 @@
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
 
+                /*
+                #create the variables
+                $location = '';
+                $room = '';
+                $dateLost = '';
+                $name = '';
+                $description = '';
+                $category = '';
+                $make = '';
+                $model = '';
+                $color = '';
+                $reward = 0;
+                $status = '';
+                */
+
                 #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
@@ -130,10 +145,19 @@
                 #print errors for user to see
                 else {
                     $errorStatement = 'Please fix errors in these fields: ' ;
-                    for($x = 0; $x < count($errorStatement) ; $x++){
-                        $errorStatement .= $errors[$x] . ', ';
+                    for($x = 0; $x < count($errors) ; $x++){
+                        #last
+                        if($x == count($errors) - 1){
+                            $errorStatement .= $errors[$x] . '.';
+                        }
+                        else{
+                            $errorStatement .= $errors[$x] . ', ';
+                        }
+
+                        #last error
+
                     }
-                    echo "<p>" . $errorStatement . "</p>";
+                    echo "<p style='color:red'>" . $errorStatement . "</p>";
                 }
             }
 
