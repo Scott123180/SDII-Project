@@ -265,15 +265,76 @@ function show_record($dbc, $id, $status = 'not specified') {
 }
 
 # Inserts a record into the prints table
-function insert_record($dbc, $location_id, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward) {
-	$query = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward) +
-			VALUES ("' . $location_id . '" , "' . $item_lost_date . '" , "' . $item_name . '", "' . $item_description . '", "' . $room . '", "' . $status . '", "' . $item_category . '", "' . $make . '", "' . $model . '", "' . $color . '", "' . $reward . '")' ;
-	show_query($query);
+function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward) {
+	#query for location id
+    $query = 'SELECT locations.id FROM locations, item WHERE item.location_id = locations.id AND locations.name = \'' . $locationName . '\' ;' ;
+    echo $query ;
 
-	$results = mysqli_query($dbc,$query) ;
+    # Execute the query
+    $results = mysqli_query( $dbc , $query ) ;
+    $row = mysqli_fetch_array($results, MYSQLI_ASSOC);
+    $location_id = $row['id'] ;
+    check_results($results) ;
+    mysqli_free_result($results);
+
+    #insert base
+    $insert = "INSERT INTO Item(location_id, " ;
+    #values base
+    $values = "VALUES (' . $location_id . '";
+
+    #check lost
+    if(!empty($item_lost_date)){
+        #convert to DATETIME
+        $theDate = date( 'Y-m-d H:i:s', strtotime($item_lost_date)) ;
+        $insert = $insert . "item_lost_date, " ;
+        $values = $values . "'" . $theDate . "', ";
+    }
+
+    $insert = $insert . "item_name, item_description, ";
+    $values = $values . "'" . $item_name . "', '" . $item_description . "', " ;
+
+    if(!empty($room)){
+        $insert = $insert . "room, ";
+        $values = $values . "'" . $room . "', ";
+    }
+
+    $insert = $insert . "status, ";
+    $values = $values . "'" . $status . "', ";
+
+    if(!empty($make)){
+        $insert = $insert . "make, ";
+        $values = $values . "'" . $make . "', ";
+    }
+
+    if(!empty($model)){
+        $insert = $insert . "model, ";
+        $values = $values . "'" . $model . "', ";
+    }
+
+    if(!empty($color)){
+        $insert = $insert . "color, ";
+        $values = $values . "'" . $color . "', ";
+    }
+
+    if(!empty($reward)){
+        $insert = $insert . "reward, ";
+        $values = $values . "'" . $reward . "', ";
+    }
+
+    $insert = $insert . "item_category) ";
+    $values = $values . "'" . $item_category . "');";
+
+    #$insert = 'INSERT INTO Item(location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward)
+	#		VALUES ("' . $location_id . '" , "' . $item_lost_date . '" , "' . $item_name . '", "' . $item_description . '", "' . $room . '", "' . $status . '", "' . $item_category . '", "' . $make . '", "' . $model . '", "' . $color . '", "' . $reward . '")' ;
+
+    show_query($insert);
+
+	$results = mysqli_query($dbc,$insert) ;
 	check_results($results) ;
 
 	return $results ;
+
+    mysqli_free_result($results);
 }
 
 #show found short links on found.php

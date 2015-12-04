@@ -6,19 +6,30 @@
  * ======================================
  */
 
-function validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward) {
+function validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model) {
     #create new array of list of errors, if any error is returned, form submission should be aborted
     $errorArray = array();
-    #
+
     if (validateLocation($location) == false) {
         array_push($errorArray, 'location');
     }
-    if (validateString($room, 6) == false ) {
-        array_push($errorArray, 'room');
+
+    #field not required, don't display error if empty
+    if(!empty($room)){
+        #validate non empty string
+        if (validateString($room, 6) == false ) {
+            array_push($errorArray, 'room');
         }
-    if(validateDate($dateLost) == false){
-        array_push($errorArray, 'date');
     }
+
+    #field not required, don't display error if empty
+    if(!empty($dateLost)){
+        #validate non empty string
+        if(validateDate($dateLost) == false){
+            array_push($errorArray, 'date');
+        }
+    }
+
     if(validateString($name, 15) == false) {
         array_push($errorArray, 'name');
     }
@@ -28,12 +39,39 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
     if(validateCategory($category) == false){
         array_push($errorArray, 'category');
     }
-    if(validateString($color, 10) == false){
-        array_push($errorArray, 'color');
+
+    #field not required, don't display error if empty
+    if(!empty($color)){
+        #validate non empty string
+        if(validateString($color, 10) == false){
+            array_push($errorArray, 'color');
+        }
     }
-    if(validateMonetary($reward,100) == false){
-        array_push($errorArray, 'reward');
+
+    #field not required, don't display error if empty
+    if(!empty($reward)){
+        #validate non empty numeric
+        if(validateMonetary($reward,100) == false){
+            array_push($errorArray, 'reward');
+        }
     }
+
+    #field not required, don't display error if empty
+    if(!empty($make)){
+        #validate non empty string
+        if(validateString($make, 15) == false){
+            array_push($errorArray, 'make');
+        }
+    }
+
+    #field not required, don't display error if empty
+    if(!empty($model)){
+        #validate non empty string
+        if(validateString($model, 15) == false){
+            array_push($errorArray, 'model');
+        }
+    }
+
 
     return $errorArray;
 }
@@ -132,28 +170,6 @@ function validateMonetary($amount, $limit) {
         return false;
     }
 
-}
-
-
-
-
-#NEED TO EDIT Carried over from helpers
-function valid_number($num) {
-    if(empty($num) || !is_numeric($num))
-        return false ;
-    else {
-        $num = intval($num) ;
-        if($num <= 0)
-            return false ;
-    }
-    return true ;
-}
-
-#NEED TO EDIT Carried over from helpers
-function valid_name($name) {
-    if (empty($name)) {
-        return false;
-    } else {return true;}
 }
 
 
