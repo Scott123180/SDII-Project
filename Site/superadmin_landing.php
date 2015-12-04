@@ -46,6 +46,9 @@
             <div class="col-md-6">
 				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Profile</button>
             </div>
+			<div class="col-md-6">
+				<a href="admin_landing.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Admin Page</button>
+            </div>
         </div>
     </div>
 </body>

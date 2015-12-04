@@ -29,7 +29,7 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Purge Database Below.</h1>
+        <h1>Confirm Purge of Database Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
@@ -41,9 +41,9 @@
 				$username= $_POST['username'];
 				$password = $_POST['password'] ;
 				
-				purgeCheck($username, $password);
+				purgeDatabase($username, $password);
 			}
-			function purgeCheck($username, $password){
+			function purgeDatabase($username, $password){
 				global $dbc;
 				
 				#checks if username and password are found in query
@@ -52,16 +52,19 @@
 				
 				if (mysqli_num_rows( $results ) == 0 ){
 					echo "Purge Failed";
+					
 				}else{
-					#go to admin purge confirm page
-					header( "Location:admin_purge_confirm.php" ) ;
+					$query2="DELETE FROM item";
+				
+					$results2 = mysqli_query( $dbc, $query2 ) ;
+					echo "Purge Successful";
 				}
 			}
 			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_purge_database.php" method="POST">
-			<p>Input Admin Account Information to Confirm Database Purge.</p>
+		<form action="admin_purge_confirm.php" method="POST">
+			<p>Are You Sure You Wish to Purge all Items From the Database?</p>
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
