@@ -45,6 +45,9 @@
         <!--Row 2-->
         <div class="row">
             <div class="col-md-6">
+				<a href="admin_purge_database.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Purge Database</button>
+            </div>
+			<div class="col-md-6">
 				<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">DB Maintenance</button>
             </div>
         </div>
