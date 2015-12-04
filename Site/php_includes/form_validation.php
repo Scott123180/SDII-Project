@@ -13,25 +13,25 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
     if (validateLocation($location) == false) {
         array_push($errorArray, 'location');
     }
-    if (validateString($room, 6)) {
+    if (validateString($room, 6) == false ) {
         array_push($errorArray, 'room');
         }
-    if(validateDate($dateLost)){
+    if(validateDate($dateLost) == false){
         array_push($errorArray, 'date');
     }
-    if(validateString($name, 15)) {
+    if(validateString($name, 15) == false) {
         array_push($errorArray, 'name');
     }
-    if(validateString($description, 350)){
+    if(validateString($description, 350) == false){
         array_push($errorArray, 'description');
     }
-    if(validateCategory($category)){
+    if(validateCategory($category) == false){
         array_push($errorArray, 'category');
     }
-    if(validateString($color, 10)){
+    if(validateString($color, 10) == false){
         array_push($errorArray, 'color');
     }
-    if(validateMonetary($reward,100)){
+    if(validateMonetary($reward,100) == false){
         array_push($errorArray, 'reward');
     }
     return $errorArray;
@@ -44,25 +44,27 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
  */
 #checks to see if location is at Marist
 function validateLocation($location) {
-
+    return false;
 }
 
 #checks if argument is a valid date format
 function validateDate($date){
-
+    return false;
 }
 
 #if string is alphanumeric and if it's under desired number of characters
 function validateString($string, $length){
     trim($string);
+    return false;
 }
 
 function validateCategory($category){
-
+    return false;
 }
 
 function validateMonetary($amount, $limit) {
     trim($amount);
+    return false;
 }
 
 

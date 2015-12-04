@@ -61,14 +61,17 @@
             <h4>What is the item's make?</h4>
             <input type="text" class="form-control" placeholder="example: apple, microsoft, nordstrom, et. cetera" name="make">
 
+            <h4>What is the item's model?</h4>
+            <input type="text" class="form-control" placeholder="example: 6s, Lumia 920, et. cetera" name="model">
+
             <h4>What is the item's color?</h4>
             <input type="text" class="form-control" placeholder="item color" name="color">
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="item reward" name="reward">
+            <div class="input-group" style="margin-bottom: 15px; max-width: 200px">
                 <div class="input-group-addon">$</div>
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="max: $100">
+                <input type="text" class="form-control" id="reward" name="reward" placeholder="max: $100">
                 <div class="input-group-addon">.00</div>
             </div>
 
@@ -86,10 +89,10 @@
 
             require( 'php_includes/form_validation.php' );
 
-            #create the variables
-            #$location; $room; $dateLost; $name; $description; $category; $make; $model; $color; $reward; $status;
+
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
+
                 #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
@@ -103,7 +106,8 @@
                 $reward = $_POST['reward'];
                 $status = 'lost' ;
 
-                /*
+
+
                 if(isset($_POST['campLoc'])){$location = $_POST['campLoc'];}
                 if(isset($_POST['room'])){$room = $_POST['room'];}
                 if(isset($_POST['date_lost'])){$dateLost = $_POST['date_lost'];}
@@ -114,7 +118,7 @@
                 if(isset($_POST['model'])){$model = $_POST['model'];}
                 if(isset($_POST['color'])){$color = $_POST['color'];}
                 if(isset($_POST['reward'])){$reward = $_POST['reward'];}
-                 */
+
 
                 #get error array
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward);
@@ -126,9 +130,10 @@
                 #print errors for user to see
                 else {
                     $errorStatement = 'Please fix errors in these fields: ' ;
-                    foreach($errors as $value){
-                        $errorStatement .= $errors[$value] . ';';
+                    for($x = 0; $x < count($errorStatement) ; $x++){
+                        $errorStatement .= $errors[$x] . ', ';
                     }
+                    echo "<p>" . $errorStatement . "</p>";
                 }
             }
 
