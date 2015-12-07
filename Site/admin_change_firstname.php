@@ -53,6 +53,11 @@
 			function changeFirstname($username, $newfirstname, $password){
 				global $dbc;
 				
+				session_start( );
+				if (!isset($_SESSION["username"])){
+					header("location: admin_logon.php");
+				}
+				
 				#checks if username and password are found in query
 				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
@@ -81,5 +86,8 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

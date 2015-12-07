@@ -33,6 +33,11 @@
 		require( 'php_includes/connect_db.php' ) ;
 		global $dbc;
 		
+		session_start( );
+		if (!isset($_SESSION["username"])){
+			header("location: admin_logon.php");
+		}
+		
 		#AMOUNT OF ITEMS IN DATABASE
 		$itemCount;
 		$query = "SELECT COUNT(item_name) as total FROM item";
@@ -285,5 +290,8 @@
 				</tr>
 		</table>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

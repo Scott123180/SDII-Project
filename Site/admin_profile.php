@@ -34,21 +34,25 @@
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
 			
-			$id = $_GET['id'];
+			session_start( );
+			if (!isset($_SESSION["username"])){
+				header("location: admin_logon.php");
+			}
+			
 			
 			
 			# Make the query
-			$query = "SELECT username, first_name, last_name, superadmin FROM admin WHERE username='" . $id . "'";
+			$query = "SELECT username, first_name, last_name, superadmin FROM admin WHERE username='" . $_SESSION['username'] . "'";
 			#show_query($query) ;
 
 			# Execute the query
 			$result = mysqli_query( $dbc, $query ) ;
 			
 			while ($row = mysqli_fetch_assoc($result)) {
-			$username=$row['username'];
-			$firstname=$row['first_name'];
-			$lastname=$row['last_name'];
-			$superadmin=$row['superadmin'];
+				$username=$row['username'];
+				$firstname=$row['first_name'];
+				$lastname=$row['last_name'];
+				$superadmin=$row['superadmin'];
 			}
 			
 			if($superadmin="yes"){
@@ -97,5 +101,9 @@
                 <a href="admin_change_lastname.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Change Last Name</button>
             </div>
         </div>
+		<br>
+		<div class="row" align="center">
+			<a href="logout.php">Logout</a>
+		</div>
 </body>
 </html>

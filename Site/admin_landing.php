@@ -29,7 +29,12 @@
         </div>
     </div>
     <br />
-
+	<?php
+		session_start( );
+		if (!isset($_SESSION["username"])){
+			header("location: admin_logon.php");
+		}
+	?>
     <!--Button Container-->
     <div class="container">
         <!--Row 1-->
@@ -49,5 +54,8 @@
             </div>
         </div>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

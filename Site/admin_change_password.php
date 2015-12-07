@@ -35,7 +35,10 @@
 			require( 'php_includes/limbo_login_tools.php' ) ;
 			global $dbc;
 			
-			
+			session_start( );
+			if (!isset($_SESSION["username"])){
+				header("location: admin_logon.php");
+			}
 			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
@@ -82,5 +85,8 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>
