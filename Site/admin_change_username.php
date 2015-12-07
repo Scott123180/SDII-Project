@@ -45,8 +45,8 @@
 				$newusername = $_POST['newusername'] ;
 				$password = $_POST['password'] ;
 				
-				changeUsername($oldusername, $newusername, $password);
-			}
+			 	changeUsername($oldusername, $newusername, $password);
+			} 
 			function changeUsername($oldusername, $newusername, $password){
 				global $dbc;
 				
