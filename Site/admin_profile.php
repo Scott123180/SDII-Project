@@ -30,7 +30,6 @@
     </div>
 	<div class="container">
 		<?php
-			require( 'php_includes/helpers.php' ) ;
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
 			
@@ -55,6 +54,7 @@
 				$superadmin=$row['superadmin'];
 			}
 			
+			#check if user is an admin or superadmin
 			if($superadmin="yes"){
 				$title="Superadmin";
 			}

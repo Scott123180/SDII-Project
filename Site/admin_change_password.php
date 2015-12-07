@@ -32,7 +32,6 @@
         <h1>Change Password Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
-			require( 'php_includes/limbo_login_tools.php' ) ;
 			global $dbc;
 			
 			session_start( );
@@ -46,13 +45,7 @@
 				$oldpassword = $_POST['oldpassword'] ;
 				$newpassword = $_POST['newpassword'] ;
 				
-				$check=changePassword($newpassword, $oldpassword, $username);
-				if($check==true){
-					echo "Change Successful";
-				}
-				else{
-					echo 'Change Failed';
-				}
+				changePassword($newpassword, $oldpassword, $username);
 			}
 			function changePassword($newpassword,$oldpassword,$username){
 				global $dbc;
@@ -62,13 +55,13 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Change Failed';
 					
 				}else{
 					$query2="UPDATE admin SET password='" . $newpassword . "' WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Change Successful';
 				}
 			}
 			

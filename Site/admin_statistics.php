@@ -29,7 +29,6 @@
         </div>
     </div>
 	<?php
-		require( 'php_includes/helpers.php' ) ;
 		require( 'php_includes/connect_db.php' ) ;
 		global $dbc;
 		

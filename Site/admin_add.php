@@ -46,13 +46,7 @@
 				$lastName = $_POST['lastname'] ;
 				$password = $_POST['password'] ;
 				
-				$check=addAdmin($username,$firstName,$lastName,$password);
-				if($check==true){
-					echo "Admin Added";
-				}
-				else{
-					echo 'Admin Add Failed';
-				}
+				addAdmin($username,$firstName,$lastName,$password);
 			}
 			function addAdmin($username, $firstname, $lastName, $password){
 				global $dbc;
@@ -62,14 +56,14 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Admin Add Failed';
 					
 				}else{
 					$query2="INSERT INTO admin 
 							VALUES('" . $username . "','" . $firstName . "','" . $lastName . "','" . $password . "')";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Admin Added';
 				}
 			}
 			

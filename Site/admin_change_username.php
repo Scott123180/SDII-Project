@@ -45,13 +45,7 @@
 				$newusername = $_POST['newusername'] ;
 				$password = $_POST['password'] ;
 				
-				$check=changeUsername($oldusername, $newusername, $password);
-				if($check==true){
-					echo "Change Successful";
-				}
-				else{
-					echo 'Change Failed';
-				}
+				changeUsername($oldusername, $newusername, $password);
 			}
 			function changeUsername($oldusername, $newusername, $password){
 				global $dbc;
@@ -61,13 +55,13 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Change Failed';
 					
 				}else{
 					$query2="UPDATE admin SET username='" . $newusername . "' WHERE username='" . $oldusername . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Change Successful';
 				}
 			}
 			

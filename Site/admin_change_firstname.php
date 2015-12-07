@@ -42,13 +42,7 @@
 				$newusername = $_POST['newfirstname'] ;
 				$password = $_POST['password'] ;
 				
-				$check=changeFirstname($username, $newfirstname, $password);
-				if($check==true){
-					echo "Change Successful";
-				}
-				else{
-					echo 'Change Failed';
-				}
+				changeFirstname($username, $newfirstname, $password);
 			}
 			function changeFirstname($username, $newfirstname, $password){
 				global $dbc;
@@ -63,13 +57,13 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Change Failed';
 					
 				}else{
 					$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Change Successful';
 				}
 			}
 			
@@ -88,6 +82,6 @@
     </div>
 	<div class="row" align="center">
 		<a href="logout.php">Logout</a>
-	</div>
+	</div>   
 </body>
 </html>

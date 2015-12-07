@@ -45,13 +45,7 @@
 				$newlastname = $_POST['newlastname'] ;
 				$password = $_POST['password'] ;
 				
-				$check=changeLastname($username, $newlastname, $password);
-				if($check==true){
-					echo "Change Successful";
-				}
-				else{
-					echo 'Change Failed';
-				}
+				changeLastname($username, $newlastname, $password);
 			}
 			function changeLastname($username, $newlastname, $password){
 				global $dbc;
@@ -61,13 +55,13 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Change Failed';
 					
 				}else{
 					$query2="UPDATE admin SET last_name='" . $newlastname . "' WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Change Successful';
 				}
 			}
 			
