@@ -42,29 +42,28 @@
 				$newusername = $_POST['newfirstname'] ;
 				$password = $_POST['password'] ;
 				
-				$check=changeFirstname($username, $newfirstname, $password);
-				if($check==true){
-					echo "Change Successful";
-				}
-				else{
-					echo 'Change Failed';
-				}
+				changeFirstname($username, $newfirstname, $password);
 			}
 			function changeFirstname($username, $newfirstname, $password){
 				global $dbc;
+				
+				session_start( );
+				if (!isset($_SESSION["username"])){
+					header("location: admin_logon.php");
+				}
 				
 				#checks if username and password are found in query
 				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Change Failed';
 					
 				}else{
 					$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Change Successful';
 				}
 			}
 			
@@ -81,5 +80,8 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>   
 </body>
 </html>

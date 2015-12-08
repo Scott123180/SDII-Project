@@ -34,22 +34,19 @@
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
 			
-			
+			session_start( );
+			if (!isset($_SESSION["username"])){
+				header("location: admin_logon.php");
+			}
 			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
 				$password = $_POST['password'] ;
 				
-				$check=purgeDatabase($username, $password);
-				if($check==true){
-					echo "Purge Successful";
-				}
-				else{
-					echo 'Purge Failed';
-				}
+				purgeCheck($username, $password);
 			}
-			function purgeDatabase($username, $password){
+			function purgeCheck($username, $password){
 				global $dbc;
 				
 				#checks if username and password are found in query
@@ -57,13 +54,10 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
-					
+					echo "Purge Failed";
 				}else{
-					$query2="DELETE * FROM item";
-				
-					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					#go to admin purge confirm page
+					header( "Location:admin_purge_confirm.php" ) ;
 				}
 			}
 			
@@ -80,5 +74,8 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

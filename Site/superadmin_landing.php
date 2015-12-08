@@ -29,7 +29,12 @@
         </div>
     </div>
     <br />
-
+	<?php
+		session_start( );
+		if (!isset($_SESSION["username"])){
+			header("location: admin_logon.php");
+		}
+	?>
     <!--Button Container-->
     <div class="container">
         <!--Row 1-->
@@ -46,7 +51,13 @@
             <div class="col-md-6">
 				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Profile</button>
             </div>
+			<div class="col-md-6">
+				<a href="admin_landing.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Admin Page</button>
+            </div>
         </div>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

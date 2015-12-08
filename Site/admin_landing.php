@@ -29,7 +29,12 @@
         </div>
     </div>
     <br />
-
+	<?php
+		session_start( );
+		if (!isset($_SESSION["username"])){
+			header("location: admin_logon.php");
+		}
+	?>
     <!--Button Container-->
     <div class="container">
         <!--Row 1-->
@@ -47,10 +52,10 @@
             <div class="col-md-6">
 				<a href="admin_purge_database.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Purge Database</button>
             </div>
-			<div class="col-md-6">
-				<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">DB Maintenance</button>
-            </div>
         </div>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

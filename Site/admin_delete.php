@@ -34,20 +34,17 @@
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
 			
-			
+			session_start( );
+			if (!isset($_SESSION["username"])){
+				header("location: admin_logon.php");
+			}
 			
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
 				$password = $_POST['password'] ;
 				
-				$check=deleteAdmin($username,$password);
-				if($check==true){
-					echo "Admin Deleted";
-				}
-				else{
-					echo 'Admin Delete Failed';
-				}
+				deleteAdmin($username,$password);
 			}
 			function addAdmin($username, $password){
 				global $dbc;
@@ -57,13 +54,13 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					return false;
+					echo 'Admin Delete Failed';
 					
 				}else{
 					$query2="DELETE FROM admin WHERE username='" . $username . "'";
 				
 					$results2 = mysqli_query( $dbc, $query ) ;
-					return true;
+					echo 'Admin Deleted';
 				}
 			}
 			
@@ -79,5 +76,8 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
+	<div class="row" align="center">
+		<a href="logout.php">Logout</a>
+	</div>
 </body>
 </html>

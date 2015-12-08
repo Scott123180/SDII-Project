@@ -42,13 +42,8 @@
 				$username = $_POST['username'] ;
 				$password = $_POST['password'] ;
 				
-				$check=validate($username, $password);
-				if($check==true){
-					load('admin_landing.php', $username);
-				}
-				else{
-					echo 'Login Failed';
-				}
+				validate($username, $password);
+				
 			}
 		?>
 		<!-- Get inputs from the user. -->

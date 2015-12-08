@@ -29,7 +29,7 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Change Last Name Below.</h1>
+        <h1>Confirm Purge of Database Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
@@ -42,12 +42,11 @@
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
-				$newlastname = $_POST['newlastname'] ;
 				$password = $_POST['password'] ;
 				
-				changeLastname($username, $newlastname, $password);
+				purgeDatabase($username, $password);
 			}
-			function changeLastname($username, $newlastname, $password){
+			function purgeDatabase($username, $password){
 				global $dbc;
 				
 				#checks if username and password are found in query
@@ -55,23 +54,23 @@
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					echo 'Change Failed';
+					echo "Purge Failed";
 					
 				}else{
-					$query2="UPDATE admin SET last_name='" . $newlastname . "' WHERE username='" . $username . "'";
+					$query2="DELETE FROM item";
 				
-					$results2 = mysqli_query( $dbc, $query ) ;
-					echo 'Change Successful';
+					$results2 = mysqli_query( $dbc, $query2 ) ;
+					echo "Purge Successful";
 				}
 			}
 			
 		?>
 		<!-- Get inputs from the user. -->
-		<form action="admin_change_lastname.php" method="POST">
+		<form action="admin_purge_confirm.php" method="POST">
+			<p>Are You Sure You Wish to Purge all Items From the Database?</p>
 			<table>
 				<tr>
 					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>New Last Name:</td><td><input type="text" name="newlastname"></td>
 					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
 			</table>
