@@ -32,7 +32,7 @@
 
     <!--Begin form-->
     <div class="container">
-        <form class="form-group" method="post">
+        <form class="form-group" method="post" enctype="multipart/form-data">
 
             <h4>What location did you lose it at?<strong style="color: red">*</strong></h4>
             <select class="form-control" name="campLoc" id="campLoc">
@@ -72,10 +72,10 @@
                 <input type="text" class="form-control" id="reward" name="reward" placeholder="max: $100" value="<?php if(isset($_POST['reward'])){echo $_POST['reward'];} ?>">
                 <div class="input-group-addon">.00</div>
             </div>
-            <form action="upload.php" method="post" enctype="multipart/form-data" class="form-control" name="imageUpload">
-                Select image to upload:
-                <input type="submit" value="Upload Image" name="submit">
-            </form>
+
+            <h4>Select image to upload:</h4>
+            <input type="submit" value="Upload Image" name="imageUpload">
+
             <p>* indicates that the field is required.</p>
 
             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
@@ -89,6 +89,13 @@
 
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
+
+            require( 'php_includes/upload.php' ) ;
+
+            # Image upload
+            if(isset($_POST['imageUpload'])){
+                require( 'php_includes/upload.php' ) ;
+            }
 
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
