@@ -32,50 +32,49 @@
 
     <!--Begin form-->
     <div class="container">
-        <form class="form-group">
+        <form class="form-group" method="post">
             <h4>What location did you lose it at?</h4>
             <select class="form-control" name="campLoc" id="campLoc">
-                <option>location</option>
                 <script>makeOptions(campusLocations, "campLoc")</script>
-                <option>unknown</option>
             </select>
 
             <h4>What room did you lose it in?</h4>
-            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room">
+            <input type="text" class="form-control" placeholder="example: 303, 202, et cetera" name="room" value="<?php if(isset($_POST['room'])){echo $_POST['room'];} ?>">
 
             <h4>When did you lose it?</h4>
-            <input type="date" class="form-control" name="date_lost">
+            <input type="date" class="form-control" name="date_lost" value="<?php if(isset($_POST['date_lost'])){echo $_POST['date_lost'];} ?>">
 
             <h4>What is name of the item?</h4>
-            <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name">
+            <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>">
 
             <h4>Please describe the item:</h4>
-            <textarea class="form-control" rows="3" placeholder="description" name="description"></textarea>
+            <input type="text" class="form-control" placeholder="description" name="description" value="<?php if(isset($_POST['description'])){echo $_POST['description'];} ?>">
 
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
-                <option>item category</option>
                 <script>makeOptions(itemCategories, "iCat");</script>
             </select>
 
             <h4>What is the item's make?</h4>
-            <input type="text" class="form-control" placeholder="example: apple, microsoft, nordstrom, et. cetera" name="make">
+            <input type="text" class="form-control" placeholder="example: apple, microsoft, nordstrom, et. cetera" name="make" value="<?php if(isset($_POST['make'])){echo $_POST['make'];} ?>">
+
+            <h4>What is the item's model?</h4>
+            <input type="text" class="form-control" placeholder="example: 6s, Lumia 920, et. cetera" name="model" value="<?php if(isset($_POST['model'])){echo $_POST['model'];} ?>">
 
             <h4>What is the item's color?</h4>
-            <input type="text" class="form-control" placeholder="item color" name="color">
+            <input type="text" class="form-control" placeholder="item color" name="color" value="<?php if(isset($_POST['color'])){echo $_POST['color'];} ?>">
 
             <h4>Do you wish to offer a reward for the item?</h4>
             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-            <div class="input-group" style="margin-bottom: 15px; max-width: 200px" id="reward" name="reward">
+            <div class="input-group" style="margin-bottom: 15px; max-width: 200px">
                 <div class="input-group-addon">$</div>
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                <input type="text" class="form-control" id="reward" name="reward" placeholder="max: $100" value="<?php if(isset($_POST['reward'])){echo $_POST['reward'];} ?>">
                 <div class="input-group-addon">.00</div>
             </div>
 
-            <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                 <br/>
-            <input type="submit" class="form-control" name = 'submitItem' value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
+            <input type="submit" class="form-control" name = "submitItem" value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
 
             <?php
@@ -87,18 +86,78 @@
 
             require( 'php_includes/form_validation.php' );
 
-            # filter results
+
+            # get all the inputted data
             if(isset($_POST['submitItem'])) {
-                #if the filter submit button was clicked
+
+                /*
+                #create the variables
+                $location = '';
+                $room = '';
+                $dateLost = '';
+                $name = '';
+                $description = '';
+                $category = '';
+                $make = '';
+                $model = '';
+                $color = '';
+                $reward = 0;
+                $status = '';
+                */
+
+
+                #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
                 $dateLost = $_POST['date_lost'];
                 $name = $_POST['name'];
                 $description = $_POST['description'];
                 $category = $_POST['iCat'];
+                $make = $_POST['make'];
+                $model = $_POST['model'];
                 $color = $_POST['color'];
                 $reward = $_POST['reward'];
+                $status = 'lost' ;
 
+
+/*
+                if(isset($_POST['campLoc'])){$location = $_POST['campLoc'];}
+                if(isset($_POST['room'])){$room = $_POST['room'];}
+                if(isset($_POST['date_lost'])){$dateLost = $_POST['date_lost'];}
+                if(isset($_POST['name'])){$name = $_POST['name'];}
+                if(isset($_POST['description'])){$description = $_POST['description'];}
+                if(isset($_POST['iCat'])){$category = $_POST['iCat'];}
+                if(isset($_POST['make'])){$make = $_POST['make'];}
+                if(isset($_POST['model'])){$model = $_POST['model'];}
+                if(isset($_POST['color'])){$color = $_POST['color'];}
+                if(isset($_POST['reward'])){$reward = $_POST['reward'];}
+*/
+
+                #get error array
+                $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
+                #if there are no errors
+                if(empty($errors)){
+                    #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
+                    insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
+                    echo "<script>window.location='lost_item_ticket.php'</script>";
+                }
+                #print errors for user to see
+                else {
+                    $errorStatement = 'Please fix errors in these fields: ' ;
+                    for($x = 0; $x < count($errors) ; $x++){
+                        #last
+                        if($x == count($errors) - 1){
+                            $errorStatement .= $errors[$x] . '.';
+                        }
+                        else{
+                            $errorStatement .= $errors[$x] . ', ';
+                        }
+
+                        #last error
+
+                    }
+                    echo "<p style='color:red'>" . $errorStatement . "</p>";
+                }
             }
 
             # Close the connection
