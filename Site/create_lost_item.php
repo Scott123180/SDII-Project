@@ -74,7 +74,7 @@
             </div>
 
             <h4>Select image to upload:</h4>
-            <input type="submit" value="Upload Image" name="imageUpload">
+            <input type="file" name="fileToUpload" id="fileToUpload">
 
             <p>* indicates that the field is required.</p>
 
@@ -90,12 +90,7 @@
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
-            require( 'php_includes/upload.php' ) ;
 
-            # Image upload
-            if(isset($_POST['imageUpload'])){
-                require( 'php_includes/upload.php' ) ;
-            }
 
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
@@ -112,6 +107,10 @@
                 $reward = $_POST['reward'];
                 $status = 'lost' ;
 
+                # Image upload
+                if(isset($_POST['fileToUpload'])){
+                    require( 'php_includes/upload.php' ) ;
+                }
 
                 #get error array
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
