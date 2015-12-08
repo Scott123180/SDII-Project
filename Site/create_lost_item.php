@@ -72,6 +72,10 @@
                 <input type="text" class="form-control" id="reward" name="reward" placeholder="max: $100" value="<?php if(isset($_POST['reward'])){echo $_POST['reward'];} ?>">
                 <div class="input-group-addon">.00</div>
             </div>
+            <form action="upload.php" method="post" enctype="multipart/form-data" class="form-control" name="imageUpload">
+                Select image to upload:
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
             <p>* indicates that the field is required.</p>
 
             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
@@ -86,28 +90,8 @@
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
-            require( 'php_includes/form_validation.php' );
-
-
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
-
-                /*
-                #create the variables
-                $location = '';
-                $room = '';
-                $dateLost = '';
-                $name = '';
-                $description = '';
-                $category = '';
-                $make = '';
-                $model = '';
-                $color = '';
-                $reward = 0;
-                $status = '';
-                */
-
-
                 #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
@@ -121,19 +105,6 @@
                 $reward = $_POST['reward'];
                 $status = 'lost' ;
 
-
-/*
-                if(isset($_POST['campLoc'])){$location = $_POST['campLoc'];}
-                if(isset($_POST['room'])){$room = $_POST['room'];}
-                if(isset($_POST['date_lost'])){$dateLost = $_POST['date_lost'];}
-                if(isset($_POST['name'])){$name = $_POST['name'];}
-                if(isset($_POST['description'])){$description = $_POST['description'];}
-                if(isset($_POST['iCat'])){$category = $_POST['iCat'];}
-                if(isset($_POST['make'])){$make = $_POST['make'];}
-                if(isset($_POST['model'])){$model = $_POST['model'];}
-                if(isset($_POST['color'])){$color = $_POST['color'];}
-                if(isset($_POST['reward'])){$reward = $_POST['reward'];}
-*/
 
                 #get error array
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);

@@ -89,7 +89,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
         }
         if(isset($_POST['claimItem'])){
             if (claim_item($dbc, $currentID) == true){
-                echo "</script>window.location='lost_item_claim.php'</script>";
+                header("Location: lost_item_claim.php");
             }
             else { echo 'script failed';}
         }

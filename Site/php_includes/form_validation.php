@@ -180,6 +180,16 @@ function validateMonetary($amount, $limit) {
 
 }
 
+#checks to see if a number is a positive number
+function validatePosInt($num) {
+    #is a positive int
+    if (is_int($num) && ($num > 0)){
+        return true;
+    }
+    #not a pos num
+    else {return false;}
+}
+
 
 #valid input arrays
 $campusLocations = array(
