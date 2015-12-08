@@ -33,7 +33,8 @@
     <!--Begin form-->
     <div class="container">
         <form class="form-group" method="post">
-            <h4>What location did you lose it at?</h4>
+
+            <h4>What location did you lose it at?<strong style="color: red">*</strong></h4>
             <select class="form-control" name="campLoc" id="campLoc">
                 <script>makeOptions(campusLocations, "campLoc")</script>
             </select>
@@ -44,13 +45,13 @@
             <h4>When did you lose it?</h4>
             <input type="date" class="form-control" name="date_lost" value="<?php if(isset($_POST['date_lost'])){echo $_POST['date_lost'];} ?>">
 
-            <h4>What is name of the item?</h4>
+            <h4>What is name of the item?<strong style="color: red">*</strong></h4>
             <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>">
 
-            <h4>Please describe the item:</h4>
+            <h4>Please describe the item:<strong style="color: red">*</strong></h4>
             <input type="text" class="form-control" placeholder="description" name="description" value="<?php if(isset($_POST['description'])){echo $_POST['description'];} ?>">
 
-            <h4>Item Category</h4>
+            <h4>Item Category<strong style="color: red">*</strong></h4>
             <select class="form-control" name="iCat" id="iCat">
                 <script>makeOptions(itemCategories, "iCat");</script>
             </select>
@@ -71,9 +72,10 @@
                 <input type="text" class="form-control" id="reward" name="reward" placeholder="max: $100" value="<?php if(isset($_POST['reward'])){echo $_POST['reward'];} ?>">
                 <div class="input-group-addon">.00</div>
             </div>
+            <p>* indicates that the field is required.</p>
 
             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                <br/>
+            <br/>
             <input type="submit" class="form-control" name = "submitItem" value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
 
@@ -139,7 +141,6 @@
                 if(empty($errors)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
-                    echo "<script>window.location='lost_item_ticket.php'</script>";
                 }
                 #print errors for user to see
                 else {
