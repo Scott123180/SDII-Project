@@ -55,11 +55,11 @@
 			}
 			
 			#check if user is an admin or superadmin
-			if($superadmin="yes"){
+			if($superadmin=="yes"){
 				$title="Superadmin";
 			}
 			else{
-				$title="Admin";
+				$title=="Admin";
 			}
 			
 			

@@ -31,7 +31,7 @@
     <br />
 	<?php
 		session_start( );
-		if (!isset($_SESSION["username"])){
+		if (!isset($_SESSION["username"])  || $_SESSION["superadmin"]=='no'){
 			header("location: admin_logon.php");
 		}
 	?>

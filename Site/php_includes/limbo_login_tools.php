@@ -26,6 +26,7 @@ function load( $page="../admin_landing.php", $username)
 	session_start( );
 	
 	$_SESSION['username']=$username;
+	$_SESSION['superadmin']='no';
 	
 	header( "Location: $url" ) ;
 
@@ -44,6 +45,7 @@ function loadSuperadmin( $page="../superadmin_landing.php", $username)
 	session_start( );
 	
 	$_SESSION['username']=$username;
+	$_SESSION['superadmin']='yes';
 	
 	header( "Location: $url" ) ;
 
@@ -65,13 +67,13 @@ function validate($username,$password)
 	$row = mysqli_fetch_assoc($results);
 	$superadmin=$row['superadmin'];
 	
-	#checks if username and password are found in query
+	//checks if username and password are found in query
 	if (mysqli_num_rows( $results ) == 0 ){
 		echo "Login Failed";
 	}else{
-		if($superadmin='yes'){
+		if($superadmin=="yes"){
 			loadSuperadmin('superadmin_landing.php', $username);
-		}else if($superadmin='no'){
+		}else if($superadmin=="no"){
 			load('admin_landing.php', $username);
 		}
 	}

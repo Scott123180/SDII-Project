@@ -29,7 +29,7 @@
         </div>
     </div>
 	<div class="container">
-        <h1>Delete Admin Below.</h1>
+        <h1>Remove Admin Below.</h1>
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
 			global $dbc;
@@ -44,23 +44,23 @@
 				$username= $_POST['username'];
 				$password = $_POST['password'] ;
 				
-				deleteAdmin($username,$password);
+				removeAdmin($username,$password);
 			}
-			function addAdmin($username, $password){
+			function removeAdmin($username, $password){
 				global $dbc;
 				
 				#ensures admin does not already exist
-				$query = "SELECT username, password FROM admin WHERE username<>'" . $username . "' AND password<>'" . $password . "'";
+				$query = "SELECT username, password FROM admin WHERE username = '" . $username . "' AND password = '" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) == 0 ){
-					echo 'Admin Delete Failed';
+					echo 'Admin Remove Failed';
 					
 				}else{
 					$query2="DELETE FROM admin WHERE username='" . $username . "'";
 				
-					$results2 = mysqli_query( $dbc, $query ) ;
-					echo 'Admin Deleted';
+					$results2 = mysqli_query( $dbc, $query2 ) ;
+					echo 'Admin Removed';
 				}
 			}
 			

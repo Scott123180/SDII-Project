@@ -42,27 +42,27 @@
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
-				$firstName = $_POST['firstname'] ;
-				$lastName = $_POST['lastname'] ;
+				$firstName = $_POST['firstName'] ;
+				$lastName = $_POST['lastName'] ;
 				$password = $_POST['password'] ;
 				
 				addAdmin($username,$firstName,$lastName,$password);
 			}
-			function addAdmin($username, $firstname, $lastName, $password){
+			function addAdmin($username, $firstName, $lastName, $password){
 				global $dbc;
 				
 				#ensures admin does not already exist
-				$query = "SELECT username, password FROM admin WHERE username<>'" . $username . "' AND password<>'" . $password . "'";
+				$query = "SELECT username, password FROM admin WHERE username = '" . $username . "' AND password = '" . $password . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
-				if (mysqli_num_rows( $results ) == 0 ){
+				if (mysqli_num_rows( $results ) != 0 ){
 					echo 'Admin Add Failed';
 					
 				}else{
-					$query2="INSERT INTO admin 
+					$query2="INSERT INTO admin(username, first_name, last_name, password)
 							VALUES('" . $username . "','" . $firstName . "','" . $lastName . "','" . $password . "')";
 				
-					$results2 = mysqli_query( $dbc, $query ) ;
+					$results2 = mysqli_query( $dbc, $query2 ) ;
 					echo 'Admin Added';
 				}
 			}
