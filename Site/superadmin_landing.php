@@ -55,9 +55,12 @@
 				<a href="admin_landing.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Admin Page</button>
             </div>
         </div>
+		<!--Row 2-->
+		<div class="row">
+			<div class="col-md-6">
+				<a href="logout.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Logout</button>
+            </div>
+        </div>
     </div>
-	<div class="row" align="center">
-		<a href="logout.php">Logout</a>
-	</div>
 </body>
 </html>

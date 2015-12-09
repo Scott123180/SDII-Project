@@ -62,7 +62,7 @@
 				}else{
 					$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
 				
-					$results2 = mysqli_query( $dbc, $query ) ;
+					$results2 = mysqli_query( $dbc, $query2 ) ;
 					echo 'Change Successful';
 				}
 			}
@@ -80,8 +80,16 @@
 			<p><input type="submit" ></p>
 		</form>
     </div>
-	<div class="row" align="center">
-		<a href="logout.php">Logout</a>
-	</div>   
+	<div class="container">
+	<!--Row 2-->
+        <div class="row">
+            <div class="col-md-6">
+				<a href="logout.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Logout</button>
+            </div>
+			<div class="col-md-6">
+				<a href="admin_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:15px">Admin Profile</button>
+            </div>
+        </div>
+	</div>
 </body>
 </html>
