@@ -78,7 +78,7 @@
 
             <p>* indicates that the field is required.</p>
 
-            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            <div class="g-recaptcha" data-sitekey="6LdO6RITAAAAAFuKe988Gx22njo7BhXkgV3BiA_F"></div>
             <br/>
             <input type="submit" class="form-control" name = "submitItem" value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
@@ -112,29 +112,53 @@
                     require( 'php_includes/upload.php' ) ;
                 }
 
+                #captcha result. Implement sessions in future
+                $captchaResult = FALSE;
+                #recaptche
+                if(isset($_POST['g-recaptcha-response']) && ($_POST['g-recaptcha-response'])){ #check for the response and that it's not empty
+                    $secret = '6LdO6RITAAAAAKnfRLq4PBYuyKEIsbjrLQePZWiY'; #secret site key
+                    $ip = $_SERVER['REMOTE_ADDR']; #get server address
+                    $captcha = $_POST['g-recaptcha-response']; #get captcha
+                    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha&remoteip=$ip"); #send captcha to Google to verify
+                    $responseArray = json_decode($response, TRUE); #json to array
+                    #if successful, change variable to true
+                    if($array['success']){
+                        $captchaResult = TRUE;
+                    }
+                }
                 #get error array
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
                 #if there are no errors
-                if(empty($errors)){
+                if(empty($errors) && ($captchaResult == TRUE)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
+                    #reset captchaResult. Implement sessions in future
+                    $captchaResult = FALSE;
                 }
                 #print errors for user to see
                 else {
-                    $errorStatement = 'Please fix errors in these fields: ' ;
-                    for($x = 0; $x < count($errors) ; $x++){
-                        #last
-                        if($x == count($errors) - 1){
-                            $errorStatement .= $errors[$x] . '.';
+                    #no errors in fields
+                    if(!empty($errors)){
+                        $errorStatement = 'Please fix errors in these fields: ' ;
+                        for($x = 0; $x < count($errors) ; $x++){
+                            #last
+                            if($x == count($errors) - 1){
+                                $errorStatement .= $errors[$x] . '.';
+                            }
+                            #last error
+                            else{
+                                $errorStatement .= $errors[$x] . ', ';
+                            }
                         }
-                        else{
-                            $errorStatement .= $errors[$x] . ', ';
-                        }
-
-                        #last error
-
+                        #return the errors
+                        echo "<p style='color:red'>" . $errorStatement . "</p>";
                     }
-                    echo "<p style='color:red'>" . $errorStatement . "</p>";
+                    #didn't submit or is a bot
+                    if($captchaResult == FALSE){
+                        #only message that matters is user authorizing with reCaptcha,
+                        #bots don't care about error messages
+                        echo "<p style='color:red'>Please authorize with reCaptcha</p>";
+                    }
                 }
             }
 
