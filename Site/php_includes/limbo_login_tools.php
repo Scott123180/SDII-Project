@@ -10,7 +10,8 @@ RC	 7-Nov-13	Created.
 -->
 <?php
 # Includes these helper functions
-require( 'php_includes/helpers.php' ) ;
+#require( 'helpers.php' ) ;
+
 
 # Loads a specified or default URL.
 function load( $page="../admin_landing.php", $username)
@@ -53,9 +54,6 @@ function loadSuperadmin( $page="../superadmin_landing.php", $username)
 }
 function validate($username,$password)
 {
-    global $dbc;
-	
-	$superadmin;
     # Make the query
     $query = "SELECT username, password, superadmin FROM admin WHERE username='" . $username . "' AND password='" . $password . "'" ;
     #show_query($query) ;

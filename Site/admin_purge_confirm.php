@@ -59,7 +59,7 @@
 				}else{
 					$query2="DELETE FROM item";
 				
-					$results2 = mysqli_query( $dbc, $query2 ) ;
+					mysqli_query( $dbc, $query2 ) ;
 					echo "Purge Successful";
 				}
 			}

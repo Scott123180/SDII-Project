@@ -31,7 +31,6 @@
 	<div class="container">
 		<?php
 			require( 'php_includes/connect_db.php' ) ;
-			global $dbc;
 			
 			session_start( );
 			if (!isset($_SESSION["username"])){
@@ -53,7 +52,8 @@
 				$lastname=$row['last_name'];
 				$superadmin=$row['superadmin'];
 			}
-			
+            #instantiate title
+			$title = "";
 			#check if user is an admin or superadmin
 			if($superadmin=="yes"){
 				$title="Superadmin";
@@ -61,7 +61,7 @@
 			else{
 				$title=="Admin";
 			}
-			
+			mysqli_close( $dbc ) ;
 			
 		?>
         <h1 align="center">Profile</h1>
