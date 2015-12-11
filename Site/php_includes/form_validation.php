@@ -129,12 +129,15 @@ function validateLocation($location) {
 
 #checks if argument is a valid date format
 function validateDate($date){
-    /*
-    #check if the array can be split
-    if(preg_split('-', $date) == true){
+
+    #check if the date is valid
+    if(true){
         #split the string into array
-        $dateArray = array(preg_split('-',$date));
-        if(checkdate($dateArray[0], $dateArray[1], $dateArray[2])){
+        $dateArray = explode('-',$date, 3);
+        $year = (int)$dateArray[0];
+        $month = (int)$dateArray[1];
+        $day = (int)$dateArray[2];
+        if(checkdate($month, $day, $year)){
             return true;
         }
         else {return false ;}
@@ -142,9 +145,8 @@ function validateDate($date){
     else {
         return false;
     }
-    */
-    #solve this later
-    return true;
+    #if there is an error, it will return false
+    return false;
 }
 
 #if string is alphanumeric and if it's under desired number of characters
@@ -176,6 +178,16 @@ function validateMonetary($amount, $limit) {
         return false;
     }
 
+}
+
+#checks to see if a number is a positive number
+function validatePosInt($num) {
+    #is a positive int
+    if (is_int($num) && ($num > 0)){
+        return true;
+    }
+    #not a pos num
+    else {return false;}
 }
 
 

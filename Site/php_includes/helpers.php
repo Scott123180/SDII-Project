@@ -12,6 +12,9 @@
 #Title: helpers.php
 #Description: contains the back-end functions for the limbo db application
 
+#form validation functions
+require ( 'form_validation.php' ) ;
+
 #shows errors in queries; set to false for final product
 $debug = true;
 
@@ -19,9 +22,6 @@ $debug = true;
 #show lost short links on lost.php
 function show_link_records_lost($dbc, $category, $time, $location) {
 	#need to sterilize inputs
-		#inCategory()
-		#inTime()
-		#inLocation()
 
 	#modify default and unspecified arguments from the user input in lost.php
 	#no category specified
@@ -52,39 +52,48 @@ function show_link_records_lost($dbc, $category, $time, $location) {
     #this needs to be first isset check because more tables needed for location check
     #location not null
     if (isset($location)) {
-        $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
-        $query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
-        $query = $query . 'AND locations.name = \'' . $location . '\' ' ;
+        #sterilize location input
+        if (validateLocation($location)) {
+            $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
+            $query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
+            $query = $query . 'AND locations.name = \'' . $location . '\' ' ;
+        }
     }
 	#category not null
 	if (isset($category)) {
-		#add to query
-		$query = $query . 'AND item.item_category = \'' . $category . '\' ' ;
+		#sterilize category input
+        if(validateCategory($category)){
+            #add to query
+            $query = $query . 'AND item.item_category = \'' . $category . '\' ' ;
+        }
 	}
 
-	#time not null; compare item age
-	if (isset($time)) {
-		#Convert the user shorthand to DATETIME
-		$myDate = selectToMySQL($time) ;
+    #sterilize time input
+    if(validateLocation($location)){
+        #time not null; compare item age
+        if (isset($time)) {
+            #Convert the user shorthand to DATETIME
+            $myDate = selectToMySQL($time) ;
 
-		#build query based on each option
-		#today
-		if($myDate[0] === 'today') {
-			$query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
-		}
-		#yesterday
-		elseif($myDate[0] === 'yesterday') {
-			$query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
-		}
-		#2 to 7 days
-		elseif($myDate[0] === '2 to 7 days') {
-			$query = $query . 'AND item.create_date BETWEEN \'' . $myDate[1] . '\' AND \'' . $myDate[2] . '\' ' ;
-		}
-		#longer than a week
-		elseif($myDate[0] === 'longer than a week') {
-			$query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
-		}
-	}
+            #build query based on each option
+            #today
+            if($myDate[0] === 'today') {
+                $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
+            }
+            #yesterday
+            elseif($myDate[0] === 'yesterday') {
+                $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
+            }
+            #2 to 7 days
+            elseif($myDate[0] === '2 to 7 days') {
+                $query = $query . 'AND item.create_date BETWEEN \'' . $myDate[1] . '\' AND \'' . $myDate[2] . '\' ' ;
+            }
+            #longer than a week
+            elseif($myDate[0] === 'longer than a week') {
+                $query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
+            }
+        }
+    }
 
 
 	#add final semicolon to query
@@ -394,7 +403,6 @@ function show_link_records_found($dbc) {
 		mysqli_free_result( $results ) ;
 	}
 }
-
 
 
 

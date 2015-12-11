@@ -32,8 +32,9 @@
 
     <!--Begin form-->
     <div class="container">
-        <form class="form-group" method="post">
-            <h4>What location did you lose it at?</h4>
+        <form class="form-group" method="post" enctype="multipart/form-data">
+
+            <h4>What location did you lose it at?<strong style="color: red">*</strong></h4>
             <select class="form-control" name="campLoc" id="campLoc">
                 <script>makeOptions(campusLocations, "campLoc")</script>
             </select>
@@ -44,13 +45,13 @@
             <h4>When did you lose it?</h4>
             <input type="date" class="form-control" name="date_lost" value="<?php if(isset($_POST['date_lost'])){echo $_POST['date_lost'];} ?>">
 
-            <h4>What is name of the item?</h4>
+            <h4>What is name of the item?<strong style="color: red">*</strong></h4>
             <input type="text" class="form-control" placeholder="example: scarf, bologna, laptop" name="name" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>">
 
-            <h4>Please describe the item:</h4>
+            <h4>Please describe the item:<strong style="color: red">*</strong></h4>
             <input type="text" class="form-control" placeholder="description" name="description" value="<?php if(isset($_POST['description'])){echo $_POST['description'];} ?>">
 
-            <h4>Item Category</h4>
+            <h4>Item Category<strong style="color: red">*</strong></h4>
             <select class="form-control" name="iCat" id="iCat">
                 <script>makeOptions(itemCategories, "iCat");</script>
             </select>
@@ -72,8 +73,13 @@
                 <div class="input-group-addon">.00</div>
             </div>
 
+            <h4>Select image to upload:</h4>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+
+            <p>* indicates that the field is required.</p>
+
             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                <br/>
+            <br/>
             <input type="submit" class="form-control" name = "submitItem" value="Submit" style="margin-top: 15px;margin-bottom: 15px" />
 
 
@@ -84,28 +90,10 @@
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
-            require( 'php_includes/form_validation.php' );
 
 
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
-
-                /*
-                #create the variables
-                $location = '';
-                $room = '';
-                $dateLost = '';
-                $name = '';
-                $description = '';
-                $category = '';
-                $make = '';
-                $model = '';
-                $color = '';
-                $reward = 0;
-                $status = '';
-                */
-
-
                 #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
@@ -119,19 +107,10 @@
                 $reward = $_POST['reward'];
                 $status = 'lost' ;
 
-
-/*
-                if(isset($_POST['campLoc'])){$location = $_POST['campLoc'];}
-                if(isset($_POST['room'])){$room = $_POST['room'];}
-                if(isset($_POST['date_lost'])){$dateLost = $_POST['date_lost'];}
-                if(isset($_POST['name'])){$name = $_POST['name'];}
-                if(isset($_POST['description'])){$description = $_POST['description'];}
-                if(isset($_POST['iCat'])){$category = $_POST['iCat'];}
-                if(isset($_POST['make'])){$make = $_POST['make'];}
-                if(isset($_POST['model'])){$model = $_POST['model'];}
-                if(isset($_POST['color'])){$color = $_POST['color'];}
-                if(isset($_POST['reward'])){$reward = $_POST['reward'];}
-*/
+                # Image upload
+                if(isset($_POST['fileToUpload'])){
+                    require( 'php_includes/upload.php' ) ;
+                }
 
                 #get error array
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
@@ -139,7 +118,6 @@
                 if(empty($errors)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
-                    echo "<script>window.location='lost_item_ticket.php'</script>";
                 }
                 #print errors for user to see
                 else {
