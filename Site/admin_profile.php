@@ -30,7 +30,7 @@
     </div>
 	<div class="container">
 		<?php
-			require( 'php_includes/connect_db.php' ) ;
+			require( '../connect_db.php' ) ;
 			
 			session_start( );
 			if (!isset($_SESSION["username"])){

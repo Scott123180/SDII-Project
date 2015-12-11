@@ -29,7 +29,7 @@
         </div>
     </div>
 	<?php
-		require( 'php_includes/connect_db.php' ) ;
+		require( '../connect_db.php' ) ;
 		global $dbc;
 		
 		session_start( );

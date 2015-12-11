@@ -67,7 +67,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
     <div class="container">
         <?php
         # Connect to MySQL server and the database
-        require( 'php_includes/connect_db.php' ) ;
+        require( '../connect_db.php' ) ;
 
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;

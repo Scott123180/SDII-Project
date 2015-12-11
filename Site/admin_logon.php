@@ -32,7 +32,7 @@
         <h1>Hey Admin! Please login below.</h1>
 		<?php
 			# Connect to MySQL server and the database
-			require( 'php_includes/connect_db.php' ) ;
+			require( '../connect_db.php' ) ;
 
 			# Connect to MySQL server and the database
 			require( 'php_includes/limbo_login_tools.php' ) ;

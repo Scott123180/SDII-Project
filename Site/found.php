@@ -39,7 +39,7 @@ can add the item to the database.
 	<?php
         
         # Connect to MySQL server and the database
-        require( 'php_includes/connect_db.php' ) ;
+        require( '../connect_db.php' ) ;
 
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;

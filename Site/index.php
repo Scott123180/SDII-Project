@@ -41,7 +41,7 @@ Description: landing page for the web application
 
         <?php
         #connection to database
-        require( 'php_includes/connect_db.php' ) ;
+        require( '../connect_db.php' ) ;
 
         # php table functions
         require( 'php_includes/helpers.php' ) ;

@@ -31,7 +31,7 @@
 	<div class="container">
         <h1>Change Last Name Below.</h1>
 		<?php
-			require( 'php_includes/connect_db.php' ) ;
+			require( '../connect_db.php' ) ;
 			global $dbc;
 			
 			session_start( );
