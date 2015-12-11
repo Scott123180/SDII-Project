@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1c569fa-416b-4846-aa10-2ac0b5b7fe4e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Site/php_includes/hash.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Site/php_includes/passwordValidation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/upload.php" afterPath="$PROJECT_DIR$/Site/php_includes/upload.php" />
-    </list>
+    <list default="true" id="f1c569fa-416b-4846-aa10-2ac0b5b7fe4e" name="Default" comment="" />
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,7 +25,7 @@
       <file leaf-file-name="lost_item_claim.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -40,7 +35,7 @@
       <file leaf-file-name="create_lost_item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.428572">
+            <state vertical-scroll-proportion="0.0">
               <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
               <folding>
                 <marker date="1449798324930" expanded="true" signature="6893:6902" placeholder="..." />
@@ -52,7 +47,7 @@
       <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.142857">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="67" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="67" />
               <folding />
             </state>
@@ -62,7 +57,7 @@
       <file leaf-file-name="hash.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/hash.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.714286">
+            <state vertical-scroll-proportion="0.0">
               <caret line="20" column="2" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
               <folding />
             </state>
@@ -82,7 +77,7 @@
       <file leaf-file-name="superadmin_landing.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/superadmin_landing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -92,7 +87,7 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -102,7 +97,7 @@
       <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/about.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -112,7 +107,7 @@
       <file leaf-file-name="form_validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -122,7 +117,7 @@
       <file leaf-file-name="limbo_login_tools.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/limbo_login_tools.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1449795565112" expanded="true" signature="1508:1624" placeholder="SELECT usern..admin..." />
@@ -155,8 +150,8 @@
         <option value="$PROJECT_DIR$/Site/index.php" />
         <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/upload.php" />
-        <option value="$PROJECT_DIR$/Site/php_includes/passwordValidation.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/hash.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/passwordValidation.php" />
       </list>
     </option>
   </component>
@@ -200,7 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,7 +248,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,7 +307,7 @@
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -347,11 +342,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/limbo_login_tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1449795565112" expanded="true" signature="1508:1624" placeholder="SELECT usern..admin..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/lost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -367,7 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -407,17 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449795565111" expanded="true" signature="1187:1290" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="1532:1646" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="4340:4382" placeholder="UPDATE item ..." />
-            <marker date="1449795565111" expanded="true" signature="5379:5407" placeholder="SELECT * FRO..item..." />
-            <marker date="1449795565111" expanded="true" signature="5691:5795" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="8420:8438" placeholder="..." />
-            <marker date="1449795565111" expanded="true" signature="9594:9719" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="9999:10028" placeholder="INSERT INTO Item..." />
-            <marker date="1449795565111" expanded="true" signature="12008:12088" placeholder="SELECT id, i..Item..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -443,7 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -459,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -499,17 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449795565111" expanded="true" signature="1187:1290" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="1532:1646" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="4340:4382" placeholder="UPDATE item ..." />
-            <marker date="1449795565111" expanded="true" signature="5379:5407" placeholder="SELECT * FRO..item..." />
-            <marker date="1449795565111" expanded="true" signature="5691:5795" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="8420:8438" placeholder="..." />
-            <marker date="1449795565111" expanded="true" signature="9594:9719" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="9999:10028" placeholder="INSERT INTO Item..." />
-            <marker date="1449795565111" expanded="true" signature="12008:12088" placeholder="SELECT id, i..Item..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,17 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449795565111" expanded="true" signature="1187:1290" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="1532:1646" placeholder="SELECT item...item..." />
-            <marker date="1449795565111" expanded="true" signature="4340:4382" placeholder="UPDATE item ..." />
-            <marker date="1449795565111" expanded="true" signature="5379:5407" placeholder="SELECT * FRO..item..." />
-            <marker date="1449795565111" expanded="true" signature="5691:5795" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="8420:8438" placeholder="..." />
-            <marker date="1449795565111" expanded="true" signature="9594:9719" placeholder="SELECT locat..locations..." />
-            <marker date="1449795565111" expanded="true" signature="9999:10028" placeholder="INSERT INTO Item..." />
-            <marker date="1449795565111" expanded="true" signature="12008:12088" placeholder="SELECT id, i..Item..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -665,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.785714">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.428572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
           <folding>
             <marker date="1449798324930" expanded="true" signature="6893:6902" placeholder="..." />
@@ -739,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.714286">
+        <state vertical-scroll-proportion="0.0">
           <caret line="20" column="2" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
@@ -747,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.142857">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="67" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="67" />
           <folding />
         </state>
