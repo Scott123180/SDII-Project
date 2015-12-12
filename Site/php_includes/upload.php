@@ -1,6 +1,9 @@
 <?php
+#php code from http://www.w3schools.com/php/php_file_upload.asp
+#modified by Scott Hansen and Nicholas Burd
+
 $target_dir = "C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/SDII-Project/Site/php_includes/uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . uniqueName() . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -53,12 +56,6 @@ function uniqueName(){
     $hash = $timestamp . $number ;
     $hash = hash('md5', $hash, $raw_output = false);
     return $hash;
-}
-
-#get the name for other files to use
-function returnName(){
-    global $target_file;
-    return $target_file;
 }
 
 ?>

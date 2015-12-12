@@ -90,6 +90,10 @@
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
+            if (isset($_POST['submitItem'])){
+                # Image upload
+                require( 'php_includes/upload.php' ) ;
+            }
 
 
             # get all the inputted data
@@ -108,15 +112,6 @@
                 $status = 'lost' ;
                 $image = '';
 
-                # Image upload
-                require( 'php_includes/upload.php' ) ;
-                #validate upload
-                global $uploadOk;
-                echo $uploadOk;
-                if($uploadOk == 1){
-                    $image = returnName();
-                    echo $image;
-                }
 
                 #set to TRUE for demo purposes
                 $captchaResult = TRUE;
@@ -137,9 +132,11 @@
                 $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
                 #if there are no errors
                 if(empty($errors) && ($captchaResult == TRUE)){
+                    global $target_file;
+                    $image = $target_file;
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
-
+                    echo "<p>This is the target file in image: {$image}</p>";
                 }
                 #print errors for user to see
                 else {

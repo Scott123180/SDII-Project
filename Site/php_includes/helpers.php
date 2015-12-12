@@ -346,7 +346,7 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
 
     if(!empty($image)){
         $insert = $insert . "item_image, ";
-        $values = $values . "'" . $values . "', ";
+        $values = $values . "'" . $image . "', ";
     }
 
     $insert = $insert . "item_category) ";
