@@ -1,9 +1,6 @@
 <?php
-#Created by w3schools: http://www.w3schools.com/php/php_file_upload.asp
-#Modified by Scott Hansen and Nicholas Burd
-$target_dir = "../uploads/";
-#add unique name
-$target_file = $target_dir . uniqueName() . basename($_FILES["fileToUpload"]["name"]);
+$target_dir = "C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/SDII-Project/Site/php_includes/uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -17,14 +14,13 @@ if(isset($_POST["submitItem"])) {
         $uploadOk = 0;
     }
 }
-
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
 }
-// Check file size 1MB
-if ($_FILES["fileToUpload"]["size"] > 1000000) {
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 100000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
@@ -45,6 +41,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
 
 #add a very unique extension to the file
 function uniqueName(){

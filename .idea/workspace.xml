@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1c569fa-416b-4846-aa10-2ac0b5b7fe4e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/create_lost_item.php" afterPath="$PROJECT_DIR$/Site/create_lost_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/upload.php" afterPath="$PROJECT_DIR$/Site/php_includes/upload.php" />
     </list>
     <ignored path="SDII-Project.iws" />
@@ -39,12 +39,12 @@
       <file leaf-file-name="create_lost_item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.428572">
-              <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+            <state vertical-scroll-proportion="-22.785715">
+              <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
               <folding>
-                <marker date="1449948417204" expanded="true" signature="8424:8433" placeholder="..." />
-                <marker date="1449948417204" expanded="true" signature="8662:8671" placeholder="..." />
-                <marker date="1449948417204" expanded="true" signature="8662:8673" placeholder="..." />
+                <marker date="1449949703756" expanded="true" signature="8323:8332" placeholder="..." />
+                <marker date="1449949703756" expanded="true" signature="8561:8570" placeholder="..." />
+                <marker date="1449949703756" expanded="true" signature="8561:8572" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -53,8 +53,8 @@
       <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.054545455">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.018181818">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -293,6 +293,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\SDII-Project\Site\php_includes" />
       <recent name="C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\SDII-Project" />
     </key>
   </component>
@@ -773,20 +774,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.428572">
-          <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+        <state vertical-scroll-proportion="-22.785715">
+          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
           <folding>
-            <marker date="1449948417204" expanded="true" signature="8424:8433" placeholder="..." />
-            <marker date="1449948417204" expanded="true" signature="8662:8671" placeholder="..." />
-            <marker date="1449948417204" expanded="true" signature="8662:8673" placeholder="..." />
+            <marker date="1449949703756" expanded="true" signature="8323:8332" placeholder="..." />
+            <marker date="1449949703756" expanded="true" signature="8561:8570" placeholder="..." />
+            <marker date="1449949703756" expanded="true" signature="8561:8572" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.054545455">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.018181818">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="120" />
           <folding />
         </state>
       </provider>

@@ -109,15 +109,13 @@
                 $image = '';
 
                 # Image upload
-                if(isset($_POST['fileToUpload'])){
-                    require( 'php_includes/upload.php' ) ;
-                    #validate upload
-                    global $uploadOk;
-                    echo $uploadOk;
-                    if($uploadOk == 1){
-                        $image = returnName();
-                        echo $image;
-                    }
+                require( 'php_includes/upload.php' ) ;
+                #validate upload
+                global $uploadOk;
+                echo $uploadOk;
+                if($uploadOk == 1){
+                    $image = returnName();
+                    echo $image;
                 }
 
                 #set to TRUE for demo purposes
