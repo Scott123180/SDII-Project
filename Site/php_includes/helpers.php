@@ -288,7 +288,7 @@ function show_record($dbc, $id, $status = 'not specified') {
 }
 
 # Inserts a record into the prints table
-function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward) {
+function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward, $image) {
 	#query for location id
     $query = 'SELECT locations.id FROM locations, item WHERE item.location_id = locations.id AND locations.name = \'' . $locationName . '\' ;' ;
     echo $query ;
@@ -342,6 +342,11 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
     if(!empty($reward)){
         $insert = $insert . "reward, ";
         $values = $values . "'" . $reward . "', ";
+    }
+
+    if(isset($image)){
+        $insert = $insert . "item_image, ";
+        $values = $values . "'" . $values . "', ";
     }
 
     $insert = $insert . "item_category) ";

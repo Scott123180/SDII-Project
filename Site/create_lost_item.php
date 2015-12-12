@@ -110,6 +110,11 @@
                 # Image upload
                 if(isset($_POST['fileToUpload'])){
                     require( 'php_includes/upload.php' ) ;
+                    #validate upload
+                    global $uploadOk;
+                    if($uploadOk == 1){
+                        $image = returnName();
+                    }
                 }
 
                 #captcha result. Implement sessions in future
@@ -122,7 +127,7 @@
                     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha&remoteip=$ip"); #send captcha to Google to verify
                     $responseArray = json_decode($response, TRUE); #json to array
                     #if successful, change variable to true
-                    if($array['success']){
+                    if($responseArray['success']){
                         $captchaResult = TRUE;
                     }
                 }
@@ -131,9 +136,10 @@
                 #if there are no errors
                 if(empty($errors) && ($captchaResult == TRUE)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
-                    insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward);
+                    insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
                     #reset captchaResult. Implement sessions in future
                     $captchaResult = FALSE;
+
                 }
                 #print errors for user to see
                 else {
@@ -155,8 +161,7 @@
                     }
                     #didn't submit or is a bot
                     if($captchaResult == FALSE){
-                        #only message that matters is user authorizing with reCaptcha,
-                        #bots don't care about error messages
+                        #error message
                         echo "<p style='color:red'>Please authorize with reCaptcha</p>";
                     }
                 }
