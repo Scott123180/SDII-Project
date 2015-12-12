@@ -1,9 +1,9 @@
 <?php
 #Created by w3schools: http://www.w3schools.com/php/php_file_upload.asp
 #Modified by Scott Hansen and Nicholas Burd
-$target_dir = "uploads/";
+$target_dir = "../uploads/";
 #add unique name
-$target_file = $target_dir . uniqueName($target_file) . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . uniqueName() . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image

@@ -106,19 +106,22 @@
                 $color = $_POST['color'];
                 $reward = $_POST['reward'];
                 $status = 'lost' ;
+                $image = '';
 
                 # Image upload
                 if(isset($_POST['fileToUpload'])){
                     require( 'php_includes/upload.php' ) ;
                     #validate upload
                     global $uploadOk;
+                    echo $uploadOk;
                     if($uploadOk == 1){
                         $image = returnName();
+                        echo $image;
                     }
                 }
 
-                #captcha result. Implement sessions in future
-                $captchaResult = FALSE;
+                #set to TRUE for demo purposes
+                $captchaResult = TRUE;
                 #recaptche
                 if(isset($_POST['g-recaptcha-response']) && ($_POST['g-recaptcha-response'])){ #check for the response and that it's not empty
                     $secret = '6LdO6RITAAAAAKnfRLq4PBYuyKEIsbjrLQePZWiY'; #secret site key
@@ -126,8 +129,9 @@
                     $captcha = $_POST['g-recaptcha-response']; #get captcha
                     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha&remoteip=$ip"); #send captcha to Google to verify
                     $responseArray = json_decode($response, TRUE); #json to array
+                    var_dump($responseArray);
                     #if successful, change variable to true
-                    if($responseArray['success']){
+                    if($responseArray['success'] == TRUE){
                         $captchaResult = TRUE;
                     }
                 }
@@ -137,8 +141,6 @@
                 if(empty($errors) && ($captchaResult == TRUE)){
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
-                    #reset captchaResult. Implement sessions in future
-                    $captchaResult = FALSE;
 
                 }
                 #print errors for user to see

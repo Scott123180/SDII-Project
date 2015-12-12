@@ -344,7 +344,7 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
         $values = $values . "'" . $reward . "', ";
     }
 
-    if(isset($image)){
+    if(!empty($image)){
         $insert = $insert . "item_image, ";
         $values = $values . "'" . $values . "', ";
     }
