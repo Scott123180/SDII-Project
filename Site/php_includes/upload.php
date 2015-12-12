@@ -1,12 +1,13 @@
 <?php
-#Created by w3schools: http://www.w3schools.com/php/php_file_upload.asp
-#Modified by Scott Hansen and Nicholas Burd
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+#php code from http://www.w3schools.com/php/php_file_upload.asp
+#modified by Scott Hansen and Nicholas Burd
+
+$target_dir = "C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/SDII-Project/Site/php_includes/uploads/";
+$target_file = $target_dir . uniqueName() . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
+if(isset($_POST["submitItem"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
@@ -21,8 +22,8 @@ if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
 }
-// Check file size 1MB
-if ($_FILES["fileToUpload"]["size"] > 1000000) {
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 100000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
@@ -43,4 +44,18 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+
+#add a very unique extension to the file
+function uniqueName(){
+    #create time stamp for uniqueness
+    $date = date_create();
+    $timestamp = strval(date_timestamp_get($date)); #convert to string for hash
+    $number = strval(rand(0, 1000)); #convert to string for hash
+    #combine for the hash
+    $hash = $timestamp . $number ;
+    $hash = hash('md5', $hash, $raw_output = false);
+    return $hash;
+}
+
 ?>
