@@ -60,7 +60,7 @@ can add the item to the database.
         
         ?>
 
-	<div class="container-fluid">
+	<div class="container">
 
         <div class="row">
 			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>

@@ -246,6 +246,11 @@ function show_record($dbc, $id, $status = 'not specified') {
 
             # End the table
             echo '</TABLE>';
+
+            #if there is an image associated, print it
+            if(!isset($resArray['item_image'])){ #check if any image
+                echo "<img src={$resArray['item_image']} alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
+            }
         }
         #claim button
         echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name='claimItem' style=\"margin-bottom:15px\">Claim this item</button>";
