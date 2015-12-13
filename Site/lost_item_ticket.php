@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$name = $_SESSION['name'];
+$description = $_SESSION['description'];
+$category = $_SESSION['category'];
+$location = $_SESSION['location'];
+
+require ( '../connect_db.php' );
+?>
 <!DOCTYPE html>
 <!--Places that need PHP are designated by NPHP-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -44,27 +54,32 @@
 </div>
 <div class="container">
 <h1 style="text-align: center">Thanks for your submission!</h1>
-<?php
+    <?php
+    #query for location id
+    $query = 'SELECT * FROM locations, item WHERE item.location_id = locations.id AND locations.name = \'' . $location . '\' ;' ;
+    echo $query ;
 
-#grab the info from the recent post
-$name = $_POST['name'];
-$description = $_POST['description'];
-$category = $_POST['iCat'];
-$location = $_POST['campLoc'];
+    # Execute the query
+    $results = mysqli_query( $dbc , $query ) ;
+    $row = mysqli_fetch_array($results, MYSQLI_ASSOC);
+    $latitude = $row['latitude'] ;
+    $longitude = $row['longitude'] ;
+    mysqli_free_result($results);
 
-#print out the info for the item
-echo "<h3>Item Name:{$name}</h3>";
-echo "<h3>Description:{$description}</h3>";
-echo "<h3>Category:{$category}";
-echo "<h3>Location:{$location}</h3>";
-
-?>
+    #print out the info for the item
+    echo "<h3>Item Name: {$name}</h3>";
+    echo "<h3>Description: {$description}</h3>";
+    echo "<h3>Category: {$category}";
+    echo "<h3>Location: {$location}</h3>";
+    ?>
     <div id="map"></div>
+    <br/>
     <!-- Google Map API -->
     <script>
-
+        var buildingLat = <?php echo $latitude ?>;
+        var buildingLng = <?php echo $longitude ?>;
         function initMap() {
-            var myLatLng = {lat: 41.722429, lng: -73.934130};
+            var myLatLng = {lat: buildingLat, lng: buildingLng};
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,

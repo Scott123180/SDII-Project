@@ -19,6 +19,8 @@ require ( 'form_validation.php' ) ;
 $debug = true;
 
 
+
+
 #show lost short links on lost.php
 function show_link_records_lost($dbc, $category, $time, $location) {
 	#need to sterilize inputs
