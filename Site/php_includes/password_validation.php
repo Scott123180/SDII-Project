@@ -7,6 +7,8 @@ require ( '../connect_db.php' ) ;
 
 function validatePassword($username,$password) {
     global $dbc;
+	
+	
     #1. sterilize input
 	if(validateString($password,strlen($password))==true){
 		#2. run input through hash
@@ -19,6 +21,7 @@ function validatePassword($username,$password) {
 		
 		#3. compare hash to password
 		#4. return true or false
+		echo hashPassword($password,$salt);
 		if(hashPassword($password,$salt)==$pass){
 			#password validated
 			

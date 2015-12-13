@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS admin (
 
 /* Need to update this with standard password security */
 INSERT INTO admin (username, salt, password, superadmin)
-VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia', 'gaze11e', 'no'),
-('thecreator', 'wrl27iutoayl4zleS38yoetluho4phoe', 'morganfreeman', 'yes') ;
+VALUE ('jaredfogle', 'phluhIAC22kiuPriasw1uPoath7ab2ia', '78b7dad9d21d7335778fff622d7f1ab324bd7b14f19ee218039647ac0e471559', 'no'),
+('thecreator', 'wrl27iutoayl4zleS38yoetluho4phoe', 'dbc96c5868194400d9d8c35f773353edeb2d601006040fd3164243bef002012b', 'yes') ;
 
 
 /*Default value for lat and long are set to zero as mock values for now */

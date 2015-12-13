@@ -41,6 +41,7 @@
 				header("location: admin_logon.php");
 			}
 			
+			#get user inputs
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 				
 				$username= $_POST['username'];
