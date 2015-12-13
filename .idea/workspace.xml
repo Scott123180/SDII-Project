@@ -4,6 +4,8 @@
     <list default="true" id="f1c569fa-416b-4846-aa10-2ac0b5b7fe4e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/found.php" afterPath="$PROJECT_DIR$/Site/found.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/form_validation.php" afterPath="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/upload.php" afterPath="$PROJECT_DIR$/Site/php_includes/upload.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +30,18 @@
       <file leaf-file-name="lost_item_claim.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.071429">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="found.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/found.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.214285">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -38,23 +50,13 @@
       <file leaf-file-name="create_lost_item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="150" selection-start-line="137" selection-start-column="150" selection-end-line="137" selection-end-column="150" />
+            <state vertical-scroll-proportion="-14.142858">
+              <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
               <folding>
-                <marker date="1449957432127" expanded="true" signature="8315:8324" placeholder="..." />
-                <marker date="1449957432127" expanded="true" signature="8553:8562" placeholder="..." />
-                <marker date="1449957432127" expanded="true" signature="8553:8564" placeholder="..." />
+                <marker date="1449966258196" expanded="true" signature="8315:8324" placeholder="..." />
+                <marker date="1449966258196" expanded="true" signature="8553:8562" placeholder="..." />
+                <marker date="1449966258196" expanded="true" signature="8553:8564" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="found.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Site/found.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38181818">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -62,8 +64,18 @@
       <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
+            <state vertical-scroll-proportion="-2.357143">
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="password_validation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Site/php_includes/password_validation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25454545">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -118,7 +130,7 @@
       <file leaf-file-name="superadmin_landing.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/superadmin_landing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -128,20 +140,12 @@
       <file leaf-file-name="form_validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="limbo_login_tools.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/php_includes/limbo_login_tools.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="32.214287">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
-                <marker date="1449795565112" expanded="true" signature="1508:1624" placeholder="SELECT usern..admin..." />
+                <element signature="e#7#133#0#PHP" expanded="true" />
+                <element signature="n#validateCreateLost#0;n#!!top" expanded="false" />
+                <element signature="e#4088#5035#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -170,10 +174,12 @@
         <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/hash.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/passwordValidation.php" />
-        <option value="$PROJECT_DIR$/Site/php_includes/upload.php" />
-        <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
+        <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
         <option value="$PROJECT_DIR$/Site/found.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/upload.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/password_validation.php" />
       </list>
     </option>
   </component>
@@ -217,6 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,8 +291,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +350,7 @@
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -381,14 +387,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/limbo_login_tools.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -447,7 +445,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#7#133#0#PHP" expanded="true" />
+            <element signature="n#validateCreateLost#0;n#!!top" expanded="false" />
+            <element signature="e#4088#5035#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -524,7 +526,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#7#133#0#PHP" expanded="true" />
+            <element signature="n#validateCreateLost#0;n#!!top" expanded="false" />
+            <element signature="e#4088#5035#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -686,14 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/limbo_login_tools.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -701,22 +699,6 @@
           <folding>
             <marker date="1449795565112" expanded="true" signature="1508:1624" placeholder="SELECT usern..admin..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/superadmin_landing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,30 +742,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
+    <entry file="file://$PROJECT_DIR$/Site/superadmin_landing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
+    <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="150" selection-start-line="137" selection-start-column="150" selection-end-line="137" selection-end-column="150" />
+        <state vertical-scroll-proportion="-7.071429">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="32.214287">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
-            <marker date="1449957432127" expanded="true" signature="8315:8324" placeholder="..." />
-            <marker date="1449957432127" expanded="true" signature="8553:8562" placeholder="..." />
-            <marker date="1449957432127" expanded="true" signature="8553:8564" placeholder="..." />
+            <element signature="e#7#133#0#PHP" expanded="true" />
+            <element signature="n#validateCreateLost#0;n#!!top" expanded="false" />
+            <element signature="e#4088#5035#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/found.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38181818">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state vertical-scroll-proportion="-21.214285">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.142858">
+          <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+          <folding>
+            <marker date="1449966258196" expanded="true" signature="8315:8324" placeholder="..." />
+            <marker date="1449966258196" expanded="true" signature="8553:8562" placeholder="..." />
+            <marker date="1449966258196" expanded="true" signature="8553:8564" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.357143">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/password_validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25454545">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding />
         </state>
       </provider>

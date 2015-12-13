@@ -45,8 +45,6 @@ can add the item to the database.
         # Includes these helper functions
         require( 'php_includes/helpers.php' ) ;
 
-
-
         #get link num and show specific record
         if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
             if(isset($_GET['id']))
@@ -60,8 +58,9 @@ can add the item to the database.
         mysqli_close( $dbc ) ;
         
         ?>
+    </div>
 
-
+    <div class="container">
 
         <div class="row">
 			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
