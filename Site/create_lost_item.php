@@ -95,7 +95,6 @@
                 require( 'php_includes/upload.php' ) ;
             }
 
-
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
                 #only set variables if they are not null
@@ -137,6 +136,7 @@
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
                     echo "<p>This is the target file in image: {$image}</p>";
+                    echo "<a class=\"btn btn-default\" href=\"lost_item_ticket.php\" role=\"button\">Continue To Next Page</a>";
                 }
                 #print errors for user to see
                 else {
@@ -166,6 +166,7 @@
 
             # Close the connection
             mysqli_close( $dbc ) ;
+
 
             ?>
         </form>
