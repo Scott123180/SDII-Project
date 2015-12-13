@@ -30,7 +30,9 @@
     </div>
     <br />
 	<?php
+		#start session in admin account user logged into
 		session_start( );
+		#go to login page if not logged in
 		if (!isset($_SESSION["username"])  || $_SESSION["superadmin"]=='no'){
 			header("location: admin_logon.php");
 		}

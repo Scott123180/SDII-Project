@@ -32,7 +32,9 @@
 		<?php
 			require( '../connect_db.php' ) ;
 			
+			#start session in admin account user logged into
 			session_start( );
+			#go to login page if not logged in
 			if (!isset($_SESSION["username"])){
 				header("location: admin_logon.php");
 			}

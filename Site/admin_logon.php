@@ -33,16 +33,20 @@
 		<?php
 			# Connect to MySQL server and the database
 			require( '../connect_db.php' ) ;
-
+			require('php_includes/password_validation.php');
+			
 			# Connect to MySQL server and the database
-			require( 'php_includes/limbo_login_tools.php' ) ;
+			#require( 'php_includes/limbo_login_tools.php' ) ;
 
 			if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 
+				#get username and password from user
 				$username = $_POST['username'] ;
 				$password = $_POST['password'] ;
 				
-				validate($username, $password);
+				#attempt to validate the user's information and login
+				validatePassword($username,$password);
+				#validate($username, $password);
 				
 			}
 		?>

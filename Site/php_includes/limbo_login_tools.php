@@ -11,7 +11,7 @@ RC	 7-Nov-13	Created.
 <?php
 # Includes these helper functions
 #require( 'helpers.php' ) ;
-
+require ( '../../connect_db.php' ) ;
 
 # Loads a specified or default URL.
 function load( $page="../admin_landing.php", $username)
