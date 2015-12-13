@@ -3,15 +3,13 @@
 #Authors: Scott Hansen and Nicholas Burd
 require ( 'hash.php' ) ;
 require ( 'form_validation.php ' ) ;
-require ( '../../connect_db.php' ) ;
+require ( '../connect_db.php' ) ;
 
 function validatePassword($username,$password) {
+    global $dbc;
     #1. sterilize input
 	if(validateString($password,strlen($password))==true){
 		#2. run input through hash
-		
-		$salt;
-		$pass;
 		$query = "SELECT salt, password FROM admin WHERE username='" . $username . "'";
 		#show_query($query) ;
 		$result = mysqli_query( $dbc, $query ) ;
