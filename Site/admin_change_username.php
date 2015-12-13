@@ -32,6 +32,8 @@
         <h1>Change Username Below.</h1>
 		<?php
 			require( '../connect_db.php' ) ;
+			require ( 'php_includes/hash.php' ) ;
+			require ( 'php_includes/form_validation.php ' ) ;
 			global $dbc;
 			
 			#start session in admin account user logged into

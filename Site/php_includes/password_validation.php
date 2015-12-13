@@ -21,8 +21,10 @@ function validatePassword($username,$password) {
 		
 		#3. compare hash to password
 		#4. return true or false
-		echo hashPassword($password,$salt);
-		if(hashPassword($password,$salt)==$pass){
+		#echo hashPassword($password,$salt);
+		$hashedpass=hashPassword($password,$salt);
+		
+		if($hashedpass==$pass){
 			#password validated
 			
 			$query = "SELECT superadmin FROM admin WHERE username='" . $username . "' AND password='" . $pass . "'" ;

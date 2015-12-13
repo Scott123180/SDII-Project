@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS admin (
 	first_name VARCHAR(30),
 	last_name VARCHAR (30),
 	salt VARCHAR(32) NOT NULL, 
-	password VARCHAR(40) NOT NULL,
+	password VARCHAR(100) NOT NULL,
 	superadmin SET ('no', 'yes')
 ) ;
 
@@ -93,6 +93,4 @@ INSERT INTO item (location_id, item_lost_date, item_name, item_description, room
 VALUE (1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
 (1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
 (1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com') ;
-	
-) ;
 

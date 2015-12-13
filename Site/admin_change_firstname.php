@@ -32,6 +32,8 @@
         <h1>Change First Name Below.</h1>
 		<?php
 			require( '../connect_db.php' ) ;
+			require ( 'php_includes/hash.php' ) ;
+			require ( 'php_includes/form_validation.php ' ) ;
 			global $dbc;
 			
 			
@@ -42,31 +44,38 @@
 				$newusername = $_POST['newfirstname'] ;
 				$password = $_POST['password'] ;
 				
-				changeFirstname($username, $newfirstname, $password);
-			}
-			function changeFirstname($username, $newfirstname, $password){
-				global $dbc;
-				
-				#start session in admin account user logged into
-				session_start( );
-				#go to login page if not logged in
-				if (!isset($_SESSION["username"])){
-					header("location: admin_logon.php");
-				}
-				
-				#checks if username and password are found in query
-				$query = "SELECT username, password FROM admin WHERE username='" . $username . "' AND password='" . $password . "'";
-				$results = mysqli_query( $dbc, $query ) ;
-				
-				if (mysqli_num_rows( $results ) == 0 ){
-					echo 'Change Failed';
+				if(validateString($password,strlen($password))==true){
+					#2. run input through hash
+					$query = "SELECT salt, password FROM admin WHERE username='" . $username . "'";
+					#show_query($query) ;
+					$result = mysqli_query( $dbc, $query ) ;
+					$row = mysqli_fetch_assoc($result);
+					$salt=$row['salt'];
+					$pass=$row['password'];
 					
-				}else{
-					$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
-				
-					$results2 = mysqli_query( $dbc, $query2 ) ;
-					echo 'Change Successful';
+					#3. compare hash to password
+					#4. return true or false
+					
+					$hashedpass=hashPassword($password,$salt);
+					
+					if($hashedpass==$pass){
+						#password validated
+						
+						$query2="UPDATE admin SET first_name='" . $newfirstname . "' WHERE username='" . $username . "'";
+						
+						$results2 = mysqli_query( $dbc, $query2 ) ;
+						echo 'Change Successful';
+						
+					}else{
+						#validation failed
+						echo 'Change Failed';
+					}
+					
+					
+					#5. close sql connection
 				}
+				
+				
 			}
 			
 		?>

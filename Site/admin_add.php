@@ -32,6 +32,8 @@
         <h1>Add Admin Below.</h1>
 		<?php
 			require( '../connect_db.php' ) ;
+			require ( 'php_includes/hash.php' ) ;
+			require ( 'php_includes/form_validation.php ' ) ;
 			global $dbc;
 			
 			#start session in admin account user logged into
@@ -48,21 +50,31 @@
 				$lastName = $_POST['lastName'] ;
 				$password = $_POST['password'] ;
 				
-				addAdmin($username,$firstName,$lastName,$password);
+				if(validateString($password,strlen($password))==true){
+					
+					$length = 32;
+					$salt = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+					echo $salt;
+					$hashPassword=hashPassword($password,$salt);
+					
+				}
+				
+				
+				addAdmin($username,$firstName,$lastName,$salt,$hashPassword);
 			}
-			function addAdmin($username, $firstName, $lastName, $password){
+			function addAdmin($username, $firstName, $lastName, $salt, $hashPassword){
 				global $dbc;
 				
 				#ensures admin does not already exist
-				$query = "SELECT username, password FROM admin WHERE username = '" . $username . "' AND password = '" . $password . "'";
+				$query = "SELECT username FROM admin WHERE username = '" . $username . "'";
 				$results = mysqli_query( $dbc, $query ) ;
 				
 				if (mysqli_num_rows( $results ) != 0 ){
 					echo 'Admin Add Failed';
 					
 				}else{
-					$query2="INSERT INTO admin(username, first_name, last_name, password)
-							VALUES('" . $username . "','" . $firstName . "','" . $lastName . "','" . $password . "')";
+					$query2="INSERT INTO admin(username, first_name, last_name, salt, password)
+							VALUES('" . $username . "','" . $firstName . "','" . $lastName . "','" . $salt . "','" . $hashPassword . "')";
 				
 					$results2 = mysqli_query( $dbc, $query2 ) ;
 					echo 'Admin Added';
