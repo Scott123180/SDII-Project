@@ -52,9 +52,10 @@
 				
 				if(validateString($password,strlen($password))==true){
 					
-					$length = 32;
-					$salt = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
-					echo $salt;
+					$characters="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+					$mixedString=str_shuffle($characters);
+					$salt=substr($mixedString,0,32);
+					
 					$hashPassword=hashPassword($password,$salt);
 					
 				}
