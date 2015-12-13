@@ -73,8 +73,6 @@ VALUE
 /*Lost and found items*/
 CREATE TABLE IF NOT EXISTS item (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	finder_id INT,
-	owner_id INT,
 	location_id INT NOT NULL,
 	create_date DATETIME NOT NULL DEFAULT NOW(),
 	update_date DATETIME NOT NULL DEFAULT NOW(),
@@ -91,28 +89,10 @@ CREATE TABLE IF NOT EXISTS item (
 	item_image VARCHAR(254)
 ) ;
 
-INSERT INTO item (finder_id, owner_id, location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
-VALUE (0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
-(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
-(0, 0, 1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com') ;
-
-
-
-CREATE TABLE IF NOT EXISTS finder (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	email VARCHAR(254) NOT NULL,
-	phone int(10),
-	first_name VARCHAR(30) NOT NULL,
-	last_name VARCHAR(30) NOT NULL
-	
-) ;
-
-CREATE TABLE IF NOT EXISTS owner (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	email VARCHAR(254) NOT NULL,
-	phone int(10),
-	first_name VARCHAR(30) NOT NULL,
-	last_name VARCHAR(30) NOT NULL
+INSERT INTO item (location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
+VALUE (1, '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
+(1, '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
+(1, '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com') ;
 	
 ) ;
 
