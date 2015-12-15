@@ -142,9 +142,9 @@ function claim_item($dbc, $id) {
     # Execute the query
     $results = mysqli_query( $dbc , $modReq ) ;
     check_results($results);
-    if($results == true) {
-        return true;
-    }
+    #successful
+    if($results == true) {return true;}
+    #not successful
     else {return false;}
 }
 
@@ -250,9 +250,7 @@ function show_record($dbc, $id, $status = 'not specified') {
             }
         }
         #claim button
-        echo "<form class=\"form-group\" method='post'>";
-        echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name='claimItem' style=\"margin-bottom:15px\">Claim this item</button>";
-        echo "</form>";
+        echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='lost_item_claim.php'\">Claim this item</button>";
     }
     mysqli_free_result( $results ) ;
     mysqli_free_result( $resultLoc ) ;

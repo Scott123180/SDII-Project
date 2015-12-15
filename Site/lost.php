@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start(); #start session for item claim
+?>
+<!DOCTYPE html>
 <!--
 Authors: Scott Hansen and Nicholas Burd
 Title: lost.php
@@ -77,6 +80,8 @@ if it has been found. If it hasn't, the user can add an entry to the database
         if(isset($_GET['id'])) {
             $currentID = $_GET['id'];
             show_record($dbc, $_GET['id'], 'lost') ;
+            #save the id in session for the next page
+            $_SESSION['itemClaimNumber'] = $_GET['id'];
         }
 
         #filter results
@@ -86,12 +91,6 @@ if it has been found. If it hasn't, the user can add an entry to the database
             $time = $_POST['tLost'];
             $location = $_POST['campLoc'];
             show_link_records_lost($dbc, $category, $time, $location) ;
-        }
-        if(isset($_POST['claimItem'])){
-            if (claim_item($dbc, $currentID) == true){
-                header("Location: lost_item_claim.php");
-            }
-            else { echo 'script failed';}
         }
 
         # Close the connection

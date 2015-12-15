@@ -1,5 +1,8 @@
+<?php session_start(); #start session to get itemClaimNumber
+#Authors: Scott Hansen and Nicholas Burd
+#File Description: claim a lost item
+?>
 <!DOCTYPE html>
-<!--Places that need PHP are designated by NPHP-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -29,10 +32,37 @@
     </div>
 </div>
 <div class="container">
+    <h1>Thanks for claiming this item!</h1>
+    <p>The finder's contact information is below. Please email them in order to retrieve your item. Thanks for using Marist's Limbo DB!</p>
+    <?php
+    require ( '../connect_db.php' );
+    require ( 'php_includes/helpers.php' );
+    #get the id of the item from the session
+    $id = $_SESSION['itemClaimNumber'];
+    #get the contact_name and contact_email
+    $query = 'SELECT contact_name, contact_email FROM item WHERE id=' . $id . ';';
+    # Execute the query
+    $results = mysqli_query( $dbc , $query ) ;
+    $resArray = mysqli_fetch_array( $results , MYSQLI_ASSOC ) ;
+    check_results($results) ;
 
-<h1>Thanks for claiming this item!</h1>
-<h3>You will be contacted via email with specifics soon.</h3>
+    $contact_name = $resArray['contact_name'];
+    $contact_email = $resArray['contact_email'];
 
+    #claim the item
+    if(claim_item($dbc, $id)){ #success
+        echo "<p style='color: blue'>Item claimed successfully.</p>";
+    }
+    else { #not claimed successfully
+        echo "<p style='color: red'>Error. Please try again.</p>";
+    }
+
+    mysqli_free_result($results);
+    mysqli_close($dbc);
+
+    echo "<h3>Contact Name: {$contact_name}";
+    echo "<h3>Contact Email: <a href=\"mailto:{$contact_email}\">{$contact_email}</a></h3>"
+    ?>
 </div>
 </body>
 </html>
