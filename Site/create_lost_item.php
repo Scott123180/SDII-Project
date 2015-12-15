@@ -76,6 +76,12 @@ session_start();
                 <div class="input-group-addon">.00</div>
             </div>
 
+            <h4>What is your name?<strong style="color:red">*</strong></h4>
+            <input type="text" class="form-control" placeholder="Your name here" name="contact_name" value="<?php if(isset($_POST['contact_name'])){echo $_POST['contact_name'];} ?>">
+
+            <h4>What is your email?<strong style="color:red">*</strong></h4>
+            <input type="text" class="form-control" placeholder="email@example.com" name="contact_email" value="<?php if(isset($_POST['contact_name'])){echo $_POST['contact_name'];} ?>">
+
             <h4>Select image to upload:</h4>
             <input type="file" name="fileToUpload" id="fileToUpload">
 
@@ -95,11 +101,15 @@ session_start();
 
             if (isset($_POST['submitItem'])){
                 # Image upload
-                require( 'php_includes/upload.php' ) ;
+
             }
 
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
+
+                #image upload
+                require( 'php_includes/upload.php' ) ;
+
                 #only set variables if they are not null
                 $location = $_POST['campLoc'];
                 $room = $_POST['room'];
@@ -111,6 +121,9 @@ session_start();
                 $model = $_POST['model'];
                 $color = $_POST['color'];
                 $reward = $_POST['reward'];
+                $contact_name = $_POST['contact_name'];
+                $contact_email = $_POST['contact_email'];
+
                 $status = 'lost' ;
                 $image = '';
 
@@ -131,15 +144,17 @@ session_start();
                     }
                 }
                 #get error array
-                $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model);
+                $errors = validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model, $contact_name, $contact_email);
                 #if there are no errors
                 if(empty($errors) && ($captchaResult == TRUE)){
                     global $target_file;
                     $image = $target_file;
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
-                    insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
+                    insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image, $contact_name, $contact_email);
                     echo "<p>This is the target file in image: {$image}</p>";
 
+                    $_SESSION['contact_name'] = $contact_name;
+                    $_SESSION['contact_email'] = $contact_email;
                     $_SESSION['name'] = $name;
                     $_SESSION['description'] = $description;
                     $_SESSION['category'] = $category;

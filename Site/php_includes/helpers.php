@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<script src="../js/helpers.js"></script>
-</head>
-<body></body>
-
 <?php
 #get this for use in functions below
 
@@ -295,7 +288,7 @@ function show_record($dbc, $id, $status = 'not specified') {
 }
 
 # Inserts a record into the prints table
-function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward, $image) {
+function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_description, $room, $status, $item_category, $make, $model, $color, $reward, $image, $contact_name, $contact_email) {
 	#query for location id
     $query = 'SELECT locations.id FROM locations, item WHERE item.location_id = locations.id AND locations.name = \'' . $locationName . '\' ;' ;
     echo $query ;
@@ -355,6 +348,14 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
         $insert = $insert . "item_image, ";
         $values = $values . "'" . $image . "', ";
     }
+
+    #contact name
+    $insert = $insert . "contact_name, ";
+    $values = $values . "'" . $contact_name . "', ";
+
+    #contact email
+    $insert = $insert . "contact_email, ";
+    $values = $values . "'" . $contact_email . "', ";
 
     $insert = $insert . "item_category) ";
     $values = $values . "'" . $item_category . "');";

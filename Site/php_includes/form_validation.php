@@ -6,7 +6,7 @@
  * ======================================
  */
 
-function validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model) {
+function validateCreateLost($location, $room, $dateLost, $name, $description, $category, $color, $reward, $make, $model, $contact_name, $contact_email) {
     #create new array of list of errors, if any error is returned, form submission should be aborted
     $errorArray = array();
 
@@ -72,6 +72,15 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
         }
     }
 
+    #valid contact name
+    if(validateString($contact_name, 30) == false){
+        array_push($errorArray, 'contact name');
+    }
+
+    #validate email input
+    if(validateEmail($contact_email) == false){
+        array_push($errorArray, 'contact email');
+    }
 
     return $errorArray;
 }
@@ -152,6 +161,16 @@ function validatePosInt($num) {
         return true;
     }
     #not a pos num
+    else {return false;}
+}
+
+#check for valid email
+function validateEmail($email){
+    #email valid
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return true;
+    }
+    #invalid email
     else {return false;}
 }
 

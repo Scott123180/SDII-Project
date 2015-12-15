@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$contact_name = $_SESSION['contact_name'];
+$contact_email = $_SESSION['contact_email'];
 $name = $_SESSION['name'];
 $description = $_SESSION['description'];
 $category = $_SESSION['category'];
@@ -67,6 +69,8 @@ require ( '../connect_db.php' );
     mysqli_free_result($results);
 
     #print out the info for the item
+    echo "<h3>Contact Name: {$contact_name}</h3>";
+    echo "<h3>Contact Email: {$contact_email}</h3>";
     echo "<h3>Item Name: {$name}</h3>";
     echo "<h3>Description: {$description}</h3>";
     echo "<h3>Category: {$category}";
