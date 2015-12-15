@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS item (
 ) ;
 
 INSERT INTO item (location_id, contact_name, contact_email, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward, item_image)
-VALUE (1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
-(1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com'),
-(1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, 'google.com') ;
+VALUE (1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone', '111', 'lost', 'phone or computer', 'apple', '6', 'gold', 100, ''),
+(1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone 2', '111', 'found', 'phone or computer', 'apple', '6', 'gold', 100, ''),
+(1, 'jeff', 'jeff@example.com', '2015-11-22', 'iphone 6', 'its my iphone 3', '111', 'claimed', 'phone or computer', 'apple', '6', 'gold', 100, '') ;
 

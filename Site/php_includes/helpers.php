@@ -161,26 +161,6 @@ function found_item($dbc, $id) {
 #get all information for the record and only return the set of desired fields, not including null ones
 function show_record($dbc, $id, $status = 'not specified') {
 
-    /*
-    id INT PRIMARY KEY AUTO_INCREMENT,
-	finder_id INT,
-	owner_id INT,
-	location_id INT NOT NULL,
-	create_date DATETIME NOT NULL DEFAULT NOW(),
-	update_date DATETIME NOT NULL DEFAULT NOW(),
-	item_lost_date DATETIME,
-	item_name VARCHAR(30) NOT NULL,
-	item_description VARCHAR(200) NOT NULL,
-	room TEXT,
-	status SET('found', 'lost', 'claimed') NOT NULL,
-	item_category SET('phone or computer', 'audio or headphones', 'clothing', 'notebook or books', 'bag or backpack', 'other'),
-	make TEXT,
-	model TEXT,
-	color TEXT,
-	reward INT,
-	item_image VARCHAR(254)
-    */
-
     #return everything about item
     $query = 'SELECT * FROM item WHERE id=' . $id . ';';
     # Execute the query
@@ -258,9 +238,14 @@ function show_record($dbc, $id, $status = 'not specified') {
         # End the table
         echo '</TABLE>';
 
+
         #if there is an image associated, print it
-        if(!isset($resArray['item_image'])){ #check if any image
-            echo "<img src={$resArray['item_image']} alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
+        if(isset($resArray['item_image'])){ #check if any image
+            #separate filepath for image
+            $newPath = 'php_includes/uploads/' . basename($resArray['item_image']);
+            echo "<img src='{$newPath}' alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
+            echo "<br/>";
+            echo "<br/>";
         }
         #claim button for people who lose items
         if($status == 'lost'){

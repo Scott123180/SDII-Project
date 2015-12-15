@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09364353-74fa-45ba-aeba-ce6025523f41" name="Default" comment="" />
+    <list default="true" id="09364353-74fa-45ba-aeba-ce6025523f41" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/create_limbo_db.sql" afterPath="$PROJECT_DIR$/DataBase/create_limbo_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/helpers.php" afterPath="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+    </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -46,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -72,21 +75,22 @@
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0">
-              <caret line="278" column="35" selection-start-line="278" selection-start-column="35" selection-end-line="278" selection-end-column="35" />
+            <state vertical-scroll-proportion="-7.3454547">
+              <caret line="244" column="36" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="36" />
               <folding>
-                <marker date="1450160264429" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
-                <marker date="1450160264429" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
-                <marker date="1450160264429" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
-                <marker date="1450160264429" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
-                <marker date="1450160264429" expanded="true" signature="5705:5733" placeholder="SELECT * FRO... item" />
-                <marker date="1450160264429" expanded="true" signature="6017:6121" placeholder="SELECT locat... locations" />
-                <marker date="1450160264429" expanded="true" signature="9062:9080" placeholder="..." />
-                <marker date="1450160264429" expanded="true" signature="9372:9390" placeholder="..." />
-                <marker date="1450160264429" expanded="true" signature="9847:9972" placeholder="SELECT locat... locations" />
-                <marker date="1450160264429" expanded="true" signature="10252:10281" placeholder="INSERT INTO Item... " />
-                <marker date="1450160264429" expanded="true" signature="13114:13216" placeholder="SELECT item.... item" />
-                <marker date="1450160264429" expanded="true" signature="13458:13572" placeholder="SELECT item.... item" />
+                <marker date="1450163096110" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
+                <marker date="1450163096110" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
+                <marker date="1450163096110" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
+                <marker date="1450163096110" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
+                <marker date="1450163096110" expanded="true" signature="5138:5166" placeholder="SELECT * FRO... item" />
+                <marker date="1450163096110" expanded="true" signature="5450:5554" placeholder="SELECT locat... locations" />
+                <marker date="1450163096110" expanded="true" signature="8659:8677" placeholder="..." />
+                <marker date="1450163096110" expanded="true" signature="8969:8987" placeholder="..." />
+                <marker date="1450163096110" expanded="true" signature="9444:9569" placeholder="SELECT locat... locations" />
+                <marker date="1450163096110" expanded="true" signature="9849:9878" placeholder="INSERT INTO Item... " />
+                <marker date="1450163096110" expanded="true" signature="12711:12813" placeholder="SELECT item.... item" />
+                <marker date="1450163096110" expanded="true" signature="13055:13169" placeholder="SELECT item.... item" />
+                <marker date="1450163096110" expanded="true" signature="14042:14208" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -104,16 +108,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lost_item_claim.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/lost_item_claim.php">
+      <file leaf-file-name="create_limbo_db.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6538463">
-              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-              <folding>
-                <marker date="1450158687765" expanded="true" signature="1922:1976" placeholder="SELECT conta... item" />
-                <marker date="1450158687765" expanded="true" signature="2338:2349" placeholder="..." />
-                <marker date="1450158687765" expanded="true" signature="2451:2461" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.6304348">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +121,7 @@
       <file leaf-file-name="found.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/found.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.153846">
+            <state vertical-scroll-proportion="-15.115385">
               <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
               <folding />
             </state>
@@ -164,17 +164,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Site/php_includes/ticketHelper.php" />
-        <option value="$PROJECT_DIR$/DataBase/create_limbo_db.sql" />
         <option value="$PROJECT_DIR$/Site/lost_item_claim.php" />
         <option value="$PROJECT_DIR$/Site/lost_item_ticket.php" />
         <option value="$PROJECT_DIR$/Site/found.php" />
         <option value="$PROJECT_DIR$/Site/lost.php" />
-        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
         <option value="$PROJECT_DIR$/Site/found_item_claim.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
         <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
         <option value="$PROJECT_DIR$/Site/create_found_item.php" />
         <option value="$PROJECT_DIR$/Site/found_item_ticket.php" />
+        <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
+        <option value="$PROJECT_DIR$/DataBase/create_limbo_db.sql" />
       </list>
     </option>
   </component>
@@ -337,9 +337,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -389,18 +389,19 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1450160264429" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="5705:5733" placeholder="SELECT * FRO... item" />
-            <marker date="1450160264429" expanded="true" signature="6017:6121" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="9062:9080" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9372:9390" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9847:9972" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="10252:10281" placeholder="INSERT INTO Item... " />
-            <marker date="1450160264429" expanded="true" signature="13114:13216" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="13458:13572" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="5138:5166" placeholder="SELECT * FRO... item" />
+            <marker date="1450163096110" expanded="true" signature="5450:5554" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="8659:8677" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="8969:8987" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="9444:9569" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="9849:9878" placeholder="INSERT INTO Item... " />
+            <marker date="1450163096110" expanded="true" signature="12711:12813" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="13055:13169" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="14042:14208" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -484,18 +485,19 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
           <folding>
-            <marker date="1450160264429" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="5705:5733" placeholder="SELECT * FRO... item" />
-            <marker date="1450160264429" expanded="true" signature="6017:6121" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="9062:9080" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9372:9390" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9847:9972" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="10252:10281" placeholder="INSERT INTO Item... " />
-            <marker date="1450160264429" expanded="true" signature="13114:13216" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="13458:13572" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="5138:5166" placeholder="SELECT * FRO... item" />
+            <marker date="1450163096110" expanded="true" signature="5450:5554" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="8659:8677" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="8969:8987" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="9444:9569" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="9849:9878" placeholder="INSERT INTO Item... " />
+            <marker date="1450163096110" expanded="true" signature="12711:12813" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="13055:13169" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="14042:14208" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -511,14 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -550,41 +544,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/found.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.153846">
-          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/form_validation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3090909">
           <caret line="88" column="47" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="47" />
           <folding>
             <element signature="n#validateCreateLost#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
-          <caret line="278" column="35" selection-start-line="278" selection-start-column="35" selection-end-line="278" selection-end-column="35" />
-          <folding>
-            <marker date="1450160264429" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
-            <marker date="1450160264429" expanded="true" signature="5705:5733" placeholder="SELECT * FRO... item" />
-            <marker date="1450160264429" expanded="true" signature="6017:6121" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="9062:9080" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9372:9390" placeholder="..." />
-            <marker date="1450160264429" expanded="true" signature="9847:9972" placeholder="SELECT locat... locations" />
-            <marker date="1450160264429" expanded="true" signature="10252:10281" placeholder="INSERT INTO Item... " />
-            <marker date="1450160264429" expanded="true" signature="13114:13216" placeholder="SELECT item.... item" />
-            <marker date="1450160264429" expanded="true" signature="13458:13572" placeholder="SELECT item.... item" />
           </folding>
         </state>
       </provider>
@@ -622,6 +587,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+          <folding>
+            <marker date="1450162078319" expanded="true" signature="2160:2270" placeholder="SELECT * FRO... locations" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.090909">
@@ -633,20 +608,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
+    <entry file="file://$PROJECT_DIR$/Site/found.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+        <state vertical-scroll-proportion="-15.115385">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3454547">
+          <caret line="244" column="36" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="36" />
           <folding>
-            <marker date="1450162078319" expanded="true" signature="2160:2270" placeholder="SELECT * FRO... locations" />
+            <marker date="1450163096110" expanded="true" signature="1020:1123" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="1365:1479" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="4318:4360" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="4646:4686" placeholder="UPDATE item " />
+            <marker date="1450163096110" expanded="true" signature="5138:5166" placeholder="SELECT * FRO... item" />
+            <marker date="1450163096110" expanded="true" signature="5450:5554" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="8659:8677" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="8969:8987" placeholder="..." />
+            <marker date="1450163096110" expanded="true" signature="9444:9569" placeholder="SELECT locat... locations" />
+            <marker date="1450163096110" expanded="true" signature="9849:9878" placeholder="INSERT INTO Item... " />
+            <marker date="1450163096110" expanded="true" signature="12711:12813" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="13055:13169" placeholder="SELECT item.... item" />
+            <marker date="1450163096110" expanded="true" signature="14042:14208" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Site/php_includes/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/create_limbo_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6304348">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding />
         </state>
       </provider>
