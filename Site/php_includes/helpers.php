@@ -1,4 +1,5 @@
 <?php
+
 #get this for use in functions below
 
 #Authors: Scott Hansen and Nicholas Burd
@@ -146,17 +147,6 @@ function claim_item($dbc, $id) {
     #not successful
     else {return false;}
 }
-function found_item($dbc, $id) {
-    $modReq = "UPDATE item SET status='found' WHERE id=" . $id . ";";
-    echo $modReq ;
-    # Execute the query
-    $results = mysqli_query( $dbc , $modReq ) ;
-    check_results($results);
-    #successful
-    if($results == true) {return true;}
-    #not successful
-    else {return false;}
-}
 
 #get all information for the record and only return the set of desired fields, not including null ones
 function show_record($dbc, $id, $status = 'not specified') {
@@ -240,7 +230,7 @@ function show_record($dbc, $id, $status = 'not specified') {
 
 
         #if there is an image associated, print it
-        if(isset($resArray['item_image'])){ #check if any image
+        if(isset($resArray['item_image']) && !empty($resArray['item_image'])){ #check if any image and not empty
             #separate filepath for image
             $newPath = 'php_includes/uploads/' . basename($resArray['item_image']);
             echo "<img src='{$newPath}' alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
@@ -248,11 +238,11 @@ function show_record($dbc, $id, $status = 'not specified') {
             echo "<br/>";
         }
         #claim button for people who lose items
-        if($status == 'lost'){
+        if($status === 'lost'){
             echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='lost_item_claim.php'\">Claim this item</button>";
         }
         #found item button for people who have found items
-        elseif($status == 'found'){
+        elseif($status === 'found'){
             echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='found_item_claim.php'\">Claim this item</button>";
         }
     }
@@ -376,7 +366,7 @@ function show_link_records_found($dbc, $category, $location) {
     if (isset($location)) {
         #sterilize location input
         if (validateLocation($location)) {
-            $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
+            $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'lost\' ' ;
             $query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
             $query = $query . 'AND locations.name = \'' . $location . '\' ' ;
         }

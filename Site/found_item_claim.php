@@ -1,6 +1,6 @@
 <?php session_start(); #start session to get itemClaimNumber
 #Authors: Scott Hansen and Nicholas Burd
-#File Description: claim that you found an item
+#File Description: claim a lost item
 ?>
 <!DOCTYPE html>
 <!--Places that need PHP are designated by NPHP-->
@@ -40,6 +40,8 @@
     require ( 'php_includes/helpers.php' );
     #get the id of the item from the session
     $id = $_SESSION['itemClaimNumber'];
+    #get rid of session
+    session_unset();
     #get the contact_name and contact_email
     $query = 'SELECT contact_name, contact_email FROM item WHERE id=' . $id . ';';
     # Execute the query
@@ -51,8 +53,8 @@
     $contact_email = $resArray['contact_email'];
 
     #claim the item
-    if(found_item($dbc, $id)){ #success
-        echo "<p style='color: blue'>Item claimed as found successfully.</p>";
+    if(claim_item($dbc, $id)){ #success
+        echo "<p style='color: blue'>Item accounted for successfully.</p>";
     }
     else { #not claimed successfully
         echo "<p style='color: red'>Error. Please try again.</p>";

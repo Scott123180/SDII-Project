@@ -56,6 +56,7 @@ require ( '../connect_db.php' );
 </div>
 <div class="container">
 <h1 style="text-align: center">Thanks for your submission!</h1>
+<p>If someone finds your item, they will email you.</p>
     <?php
     #query for location id
     $query = 'SELECT * FROM locations, item WHERE item.location_id = locations.id AND locations.name = \'' . $location . '\' ;' ;

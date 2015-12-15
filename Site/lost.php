@@ -40,7 +40,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <form id="lostOptions" method="post">
+        <form id="lostOptions" method="post" action="lost.php">
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
                 <option>item category</option>
@@ -79,9 +79,9 @@ if it has been found. If it hasn't, the user can add an entry to the database
         #if GET id in GET request, show the record of that item
         if(isset($_GET['id'])) {
             $currentID = $_GET['id'];
-            show_record($dbc, $_GET['id'], 'lost') ;
             #save the id in session for the next page
-            $_SESSION['itemClaimNumber'] = $_GET['id'];
+            $_SESSION['itemClaimNumber'] = $currentID;
+            show_record($dbc, $currentID, 'lost') ;
         }
 
         #filter results

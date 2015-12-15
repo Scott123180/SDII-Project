@@ -39,6 +39,8 @@
     require ( 'php_includes/helpers.php' );
     #get the id of the item from the session
     $id = $_SESSION['itemClaimNumber'];
+    #get rid of session
+    session_unset();
     #get the contact_name and contact_email
     $query = 'SELECT contact_name, contact_email FROM item WHERE id=' . $id . ';';
     # Execute the query

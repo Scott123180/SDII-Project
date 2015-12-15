@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<?php session_start() #start a new session
+?>
+<!DOCTYPE html>
 <!--
 Authors: Scott Hansen and Nicholas Burd
 Title: found.php
@@ -39,7 +41,7 @@ can add the item to the database.
 
     <!--select options-->
     <div class="container">
-        <form id="lostOptions" method="post">
+        <form id="lostOptions" method="post" action="found.php">
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
                 <option>item category</option>
@@ -72,9 +74,11 @@ can add the item to the database.
     #if GET id in GET request, show the record of that item
     if(isset($_GET['id'])) {
         $currentID = $_GET['id'];
-        show_record($dbc, $_GET['id'], 'found') ;
+        echo $currentID;
         #save the id in session for the next page
-        $_SESSION['itemClaimNumber'] = $_GET['id'];
+        $_SESSION['itemClaimNumber'] = $currentID;
+        echo $currentID;
+        show_record($dbc, $currentID, 'found') ;
     }
 
     #filter results
@@ -90,7 +94,7 @@ can add the item to the database.
         
     ?>
 
-        <button type="button" class="btn btn-primary btn-lg" name="submitLostItem" onclick="window.location='create_found_item.php'" style="margin-bottom:15px">Submit New Found Item</button>
+        <button type="button" class="btn btn-primary btn-lg" name="submitFoundItem" onclick="window.location='create_found_item.php'" style="margin-bottom:15px">Submit New Found Item</button>
     </div>
 
 
