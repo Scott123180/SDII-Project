@@ -146,6 +146,17 @@ function claim_item($dbc, $id) {
     #not successful
     else {return false;}
 }
+function found_item($dbc, $id) {
+    $modReq = "UPDATE item SET status='found' WHERE id=" . $id . ";";
+    echo $modReq ;
+    # Execute the query
+    $results = mysqli_query( $dbc , $modReq ) ;
+    check_results($results);
+    #successful
+    if($results == true) {return true;}
+    #not successful
+    else {return false;}
+}
 
 #get all information for the record and only return the set of desired fields, not including null ones
 function show_record($dbc, $id, $status = 'not specified') {
@@ -200,9 +211,7 @@ function show_record($dbc, $id, $status = 'not specified') {
         if(isset($resArray['room'])) {
             echo '<th>Room</th>';
         }
-        if(isset($resArray['create_date'])) {
-            echo '<th>Date Created</th>';
-        }
+        echo '<th>Date Created</th>';
         echo '<th>Item Name</th>';
         echo '<th>Item Description</th>';
         echo '<th>Item Category</th>';
@@ -253,44 +262,17 @@ function show_record($dbc, $id, $status = 'not specified') {
         if(!isset($resArray['item_image'])){ #check if any image
             echo "<img src={$resArray['item_image']} alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
         }
-        #claim button
-        echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='lost_item_claim.php'\">Claim this item</button>";
+        #claim button for people who lose items
+        if($status == 'lost'){
+            echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='lost_item_claim.php'\">Claim this item</button>";
+        }
+        #found item button for people who have found items
+        elseif($status == 'found'){
+            echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='found_item_claim.php'\">Claim this item</button>";
+        }
     }
     mysqli_free_result( $results ) ;
     mysqli_free_result( $resultLoc ) ;
-/*
-	# Show results
-	if( $results )
-	{
-		# But...wait until we know the query succeed before
-		# rendering the table start.
-		echo '<H1>Found Items</H1>' ;
-		echo '<table class ="table table-striped">';
-		echo '<TR>';
-		echo '<TH>Item ID</TH>';
-		echo '<TH>Item Name</TH>';
-		echo '<TH>Item Status</TH>';
-		echo '<TH>Item Category</TH>';
-		echo '</TR>';
-
-		# For each row result, generate a table row
-		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-		{
-			echo '<TR>' ;
-			echo '<TD>' . $row['id'] . '</TD>' ;
-			echo '<TD>' . $row['item_name'] . '</TD>' ;
-			echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_category'] . '</TD>' ;
-			echo '</TR>' ;
-		}
-
-		# End the table
-		echo '</TABLE>';
-
-		# Free up the results in memory
-		mysqli_free_result( $results ) ;
-	}
-*/
 }
 
 # Inserts a record into the prints table
@@ -437,7 +419,7 @@ function show_link_records_found($dbc, $category, $location) {
     if( $results ) {
         # But...wait until we know the query succeed before
         # rendering the table start.
-        echo '<H1>Found Items</H1>';
+        echo '<H1>Lost Items</H1>';
         echo '<table class="table table-striped">';
         echo '<TR>';
         echo '<TH>Item ID</TH>';
