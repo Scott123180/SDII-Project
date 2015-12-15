@@ -63,33 +63,35 @@ function show_link_records_lost($dbc, $category, $time, $location) {
         }
 	}
 
-    #sterilize time input
-    if(validateLocation($location)){
-        #time not null; compare item age
-        if (isset($time)) {
-            #Convert the user shorthand to DATETIME
-            $myDate = selectToMySQL($time) ;
+    #time not null
+    if (isset($time)){
+        #sterilize time input
+        if(validateString($time, 10)){
+            #time not null; compare item age
+            if (isset($time)) {
+                #Convert the user shorthand to DATETIME
+                $myDate = selectToMySQL($time) ;
 
-            #build query based on each option
-            #today
-            if($myDate[0] === 'today') {
-                $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
-            }
-            #yesterday
-            elseif($myDate[0] === 'yesterday') {
-                $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
-            }
-            #2 to 7 days
-            elseif($myDate[0] === '2 to 7 days') {
-                $query = $query . 'AND item.create_date BETWEEN \'' . $myDate[1] . '\' AND \'' . $myDate[2] . '\' ' ;
-            }
-            #longer than a week
-            elseif($myDate[0] === 'longer than a week') {
-                $query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
+                #build query based on each option
+                #today
+                if($myDate[0] === 'today') {
+                    $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
+                }
+                #yesterday
+                elseif($myDate[0] === 'yesterday') {
+                    $query = $query . 'AND item.create_date = \'' . $myDate[1] . '\' ' ;
+                }
+                #2 to 7 days
+                elseif($myDate[0] === '2 to 7 days') {
+                    $query = $query . 'AND item.create_date BETWEEN \'' . $myDate[1] . '\' AND \'' . $myDate[2] . '\' ' ;
+                }
+                #longer than a week
+                elseif($myDate[0] === 'longer than a week') {
+                    $query = $query . 'AND item.create_date > \'' . $myDate[1] . '\' ' ;
+                }
             }
         }
     }
-
 
 	#add final semicolon to query
 	$query = $query . ';' ;
@@ -248,7 +250,9 @@ function show_record($dbc, $id, $status = 'not specified') {
             }
         }
         #claim button
+        echo "<form class=\"form-group\" method='post'>";
         echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name='claimItem' style=\"margin-bottom:15px\">Claim this item</button>";
+        echo "</form>";
     }
     mysqli_free_result( $results ) ;
     mysqli_free_result( $resultLoc ) ;

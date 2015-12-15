@@ -99,11 +99,6 @@ session_start();
             # Includes these helper functions
             require( 'php_includes/helpers.php' ) ;
 
-            if (isset($_POST['submitItem'])){
-                # Image upload
-
-            }
-
             # get all the inputted data
             if(isset($_POST['submitItem'])) {
 
