@@ -10,6 +10,7 @@ mysqldump limbo_db > limbo_db_backup.sql
 ```
 - More information about database backups can be found at: http://www.liquidweb.com/kb/how-to-back-up-mysql-databases-from-the-command-line/
 
+###Project Configuration
 To configure this project correctly, you will need to make a few changes to your local machine:
 
 1. Change the path that images save to in Site/php_includes/upload.php
