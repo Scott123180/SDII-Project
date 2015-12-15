@@ -14,5 +14,6 @@ mysqldump limbo_db > limbo_db_backup.sql
 To configure this project correctly, you will need to make a few changes to your local machine:
 
 1. Change the path that images save to in Site/php_includes/upload.php
+- $target_dir = "C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/SDII-Project/Site/php_includes/uploads/";
 
-$target_dir = "C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/SDII-Project/Site/php_includes/uploads/";
+2. Source the file "DataBase/create_limbo_db.sql" for use in your local environment
