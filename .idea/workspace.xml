@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09364353-74fa-45ba-aeba-ce6025523f41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Site/found_item_ticket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/create_found_item.php" afterPath="$PROJECT_DIR$/Site/create_found_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/create_lost_item.php" afterPath="$PROJECT_DIR$/Site/create_lost_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/php_includes/form_validation.php" afterPath="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/found_item_ticket.php" afterPath="$PROJECT_DIR$/Site/found_item_ticket.php" />
     </list>
     <ignored path="SDII-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,6 +24,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="lost_item_ticket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.9615383">
+              <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+              <folding>
+                <marker date="1450158687765" expanded="true" signature="2156:2266" placeholder="SELECT * FRO... locations" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="found_item_ticket.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17586207">
+              <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+              <folding>
+                <marker date="1450162078319" expanded="true" signature="2160:2270" placeholder="SELECT * FRO... locations" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_found_item.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.090909">
+              <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
+              <folding>
+                <marker date="1450161914677" expanded="true" signature="8320:8329" placeholder="..." />
+                <marker date="1450161914677" expanded="true" signature="8538:8547" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/php_includes/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,19 +79,6 @@
                 <marker date="1450160264429" expanded="true" signature="10252:10281" placeholder="INSERT INTO Item... " />
                 <marker date="1450160264429" expanded="true" signature="13114:13216" placeholder="SELECT item.... item" />
                 <marker date="1450160264429" expanded="true" signature="13458:13572" placeholder="SELECT item.... item" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_found_item.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73321235">
-              <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
-              <folding>
-                <marker date="1450161914677" expanded="true" signature="8320:8329" placeholder="..." />
-                <marker date="1450161914677" expanded="true" signature="8538:8547" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -100,16 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="found_item_ticket.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="found_item_claim.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Site/found_item_claim.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,16 +139,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.6153846">
               <caret line="16" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lost.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/lost.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.807693">
-              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -173,10 +173,10 @@
         <option value="$PROJECT_DIR$/Site/lost.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/helpers.php" />
         <option value="$PROJECT_DIR$/Site/found_item_claim.php" />
-        <option value="$PROJECT_DIR$/Site/found_item_ticket.php" />
         <option value="$PROJECT_DIR$/Site/php_includes/form_validation.php" />
         <option value="$PROJECT_DIR$/Site/create_lost_item.php" />
         <option value="$PROJECT_DIR$/Site/create_found_item.php" />
+        <option value="$PROJECT_DIR$/Site/found_item_ticket.php" />
       </list>
     </option>
   </component>
@@ -380,7 +380,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1450158687765" expanded="true" signature="2156:2266" placeholder="SELECT * FRO... locations" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -454,7 +456,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1450158687765" expanded="true" signature="2156:2266" placeholder="SELECT * FRO... locations" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -516,14 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-49.03846">
-          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -607,14 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_lost_item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -626,13 +614,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Site/lost_item_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9615383">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+          <folding>
+            <marker date="1450158687765" expanded="true" signature="2156:2266" placeholder="SELECT * FRO... locations" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Site/create_found_item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73321235">
-          <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
+        <state vertical-scroll-proportion="-2.090909">
+          <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
           <folding>
             <marker date="1450161914677" expanded="true" signature="8320:8329" placeholder="..." />
             <marker date="1450161914677" expanded="true" signature="8538:8547" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/found_item_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17586207">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+          <folding>
+            <marker date="1450162078319" expanded="true" signature="2160:2270" placeholder="SELECT * FRO... locations" />
           </folding>
         </state>
       </provider>
