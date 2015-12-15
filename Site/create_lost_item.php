@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
 <!--Places that need PHP are designated by NPHP-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -136,7 +139,12 @@
                     #location_id, item_lost_date, item_name, item_description, room, status, item_category, make, model, color, reward
                     insert_record($dbc, $location, $dateLost, $name, $description, $room, $status, $category, $make, $model, $color, $reward, $image);
                     echo "<p>This is the target file in image: {$image}</p>";
-                    echo "<a class=\"btn btn-default\" href=\"lost_item_ticket.php\" role=\"button\">Continue To Next Page</a>";
+
+                    $_SESSION['name'] = $name;
+                    $_SESSION['description'] = $description;
+                    $_SESSION['category'] = $category;
+                    $_SESSION['location'] = $location;
+                    echo "<a class='btn btn-default' href='lost_item_ticket.php' role='button'>Continue To Next Page</a>";
                 }
                 #print errors for user to see
                 else {
