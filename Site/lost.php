@@ -40,7 +40,7 @@ if it has been found. If it hasn't, the user can add an entry to the database
 
     <!--select options-->
     <div class="container">
-        <form id="lostOptions" method="post" action="lost.php">
+        <form id="lostOptions" method="post">
             <h4>Item Category</h4>
             <select class="form-control" name="iCat" id="iCat">
                 <option>item category</option>

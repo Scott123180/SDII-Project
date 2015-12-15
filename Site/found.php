@@ -14,6 +14,7 @@ can add the item to the database.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/helpers.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/helpers.js"></script>
 
     <title>Found Something</title>
 </head>
@@ -36,41 +37,62 @@ can add the item to the database.
         </div>
     </div>
 
+    <!--select options-->
+    <div class="container">
+        <form id="lostOptions" method="post">
+            <h4>Item Category</h4>
+            <select class="form-control" name="iCat" id="iCat">
+                <option>item category</option>
+                <script>makeOptions(itemCategories, "iCat");</script>
+            </select>
+
+            <h4>What location did you lose it at?</h4>
+            <select class="form-control" name="campLoc" id="campLoc">
+                <option>location</option>
+                <script>makeOptions(campusLocations, "campLoc")</script>
+                <option>unknown</option>
+            </select>
+
+            <input type="submit" class="form-control" name = 'submitFilter' value="Submit" style="margin-top: 15px" />
+        </form>
+        <br/>
+    </div>
+
+    <!-- tables -->
     <div class="container">
 	<?php
         
-        # Connect to MySQL server and the database
-        require( '../connect_db.php' ) ;
+    # Connect to MySQL server and the database
+    require( '../connect_db.php' ) ;
 
-        # Includes these helper functions
-        require( 'php_includes/helpers.php' ) ;
+    # Includes these helper functions
+    require( 'php_includes/helpers.php' ) ;
 
-        #get link num and show specific record
-        if($_SERVER[ 'REQUEST_METHOD' ] == 'GET') {
-            if(isset($_GET['id']))
-                show_record($dbc, $_GET['id']) ;
-        }
+    $currentID = 0;
+    #if GET id in GET request, show the record of that item
+    if(isset($_GET['id'])) {
+        $currentID = $_GET['id'];
+        show_record($dbc, $_GET['id'], 'found') ;
+        #save the id in session for the next page
+        $_SESSION['itemClaimNumber'] = $_GET['id'];
+    }
 
-        # Show the records
-        show_link_records_found($dbc);
+    #filter results
+    if(isset($_POST['submitFilter'])) {
+        #if the filter submit button was clicked
+        $category = $_POST['iCat'];
+        $location = $_POST['campLoc'];
+        show_link_records_found($dbc, $category, $location) ;
+    }
 
-        # Close the connection
-        mysqli_close( $dbc ) ;
+    # Close the connection
+    mysqli_close( $dbc ) ;
         
-        ?>
+    ?>
+
+        <button type="button" class="btn btn-primary btn-lg" name="submitLostItem" onclick="window.location='create_found_item.php'" style="margin-bottom:15px">Submit New Found Item</button>
     </div>
 
-    <div class="container">
-
-        <div class="row">
-			<div class="col-md-4" style="background-color:#cc0000; text-align:center"></div>
-			
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-lg btn-block" onClick="grabFoundData()" style="margin-bottom:15px">Continue Submitting New Found Item</button>
-
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>

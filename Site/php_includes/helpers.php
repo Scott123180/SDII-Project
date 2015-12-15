@@ -16,7 +16,6 @@ $debug = true;
 
 #show lost short links on lost.php
 function show_link_records_lost($dbc, $category, $time, $location) {
-	#need to sterilize inputs
 
 	#modify default and unspecified arguments from the user input in lost.php
 	#no category specified
@@ -377,46 +376,88 @@ function insert_record($dbc, $locationName, $item_lost_date ,$item_name, $item_d
 }
 
 #show found short links on found.php
-function show_link_records_found($dbc) {
-	# Create a query to get the name and price sorted by price
-	$query= 'SELECT id, item_name, status, item_category FROM Item WHERE status LIKE \'lost\';' ;
+function show_link_records_found($dbc, $category, $location) {
+#modify default and unspecified arguments from the user input in found.php
+    #no category specified
+    if ($category === 'item category') {
+        #unset category argument
+        unset($category);
+    }
 
-	# Execute the query
-	$results = mysqli_query( $dbc , $query ) ;
-	check_results($results) ;
+    #no location specified
+    if ($location === 'location' || $location === 'unknown') {
+        #unset location argument
+        unset($location);
+    }
 
-	# Show results
-	if( $results )
-	{
-		# rendering the table start.
-		echo '<H1>Lost Items</H1>' ;
-		echo '<table class="table table-striped">';
-		echo '<TR>';
-		echo '<TH>Item ID</TH>';
-		echo '<TH>Item Name</TH>';
-		echo '<TH>Item Status</TH>';
-		echo '<TH>Item Category</TH>';
-		echo '</TR>';
+    /*
+     * =======================================
+     * Query Building Section
+     * =======================================
+     */
 
-		# For each row result, generate a table row
-		while ( $row = mysqli_fetch_array( $results , MYSQLI_ASSOC ) )
-		{
-			$alink = '<A HREF=found.php?id=' . $row['id'] . '>' . $row['id'] . '</A>' ;
-			echo '<TR>' ;
-			echo '<TD>'. $alink . '</TD>' ;
-			echo '<TD>' . $row['item_name'] . '</TD>' ;
-			echo '<TD>' . $row['status'] . '</TD>' ;
-			echo '<TD>' . $row['item_category'] . '</TD>' ;
-			echo '</TR>' ;
-		}
+    # Create a base query
+    $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item WHERE item.status = \'lost\' ' ;
+
+    #this needs to be first isset check because more tables needed for location check
+    #location not null
+    if (isset($location)) {
+        #sterilize location input
+        if (validateLocation($location)) {
+            $query = 'SELECT item.id, item.item_name, item.status, item.item_category FROM item, locations WHERE item.status = \'found\' ' ;
+            $query = $query . 'AND item.location_id = locations.id ' ; #link locations and item
+            $query = $query . 'AND locations.name = \'' . $location . '\' ' ;
+        }
+    }
+    #category not null
+    if (isset($category)) {
+        #sterilize category input
+        if(validateCategory($category)){
+            #add to query
+            $query = $query . 'AND item.item_category = \'' . $category . '\' ' ;
+        }
+    }
+
+    #add final semicolon to query
+    $query = $query . ';' ;
+
+    echo $query ;
+
+    # Execute the query
+    $results = mysqli_query( $dbc , $query ) ;
+    check_results($results) ;
 
 
-		# End the table
-		echo '</TABLE>';
+    # Show results
+    if( $results ) {
+        # But...wait until we know the query succeed before
+        # rendering the table start.
+        echo '<H1>Found Items</H1>';
+        echo '<table class="table table-striped">';
+        echo '<TR>';
+        echo '<TH>Item ID</TH>';
+        echo '<TH>Item Name</TH>';
+        echo '<TH>Item Status</TH>';
+        echo '<TH>Item Category</TH>';
+        echo '</TR>';
 
-		# Free up the results in memory
-		mysqli_free_result( $results ) ;
-	}
+        # For each row result, generate a table row
+        while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
+            $alink = "<A HREF=found.php?id=" . $row['id'] . ">" . $row['id'] . "</A>";
+            echo "<TR>";
+            echo "<TD>" . $alink . "</TD>";
+            echo "<TD>" . $row['item_name'] . "</TD>";
+            echo "<TD>" . $row['status'] . "</TD>";
+            echo "<TD>" . $row['item_category'] . "</TD>";
+            echo "</TR>";
+        }
+
+        # End the table
+        echo "</TABLE>";
+
+        # Free up the results in memory
+        mysqli_free_result($results);
+    }
 }
 
 

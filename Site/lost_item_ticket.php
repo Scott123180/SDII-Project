@@ -73,7 +73,7 @@ require ( '../connect_db.php' );
     echo "<h3>Contact Email: {$contact_email}</h3>";
     echo "<h3>Item Name: {$name}</h3>";
     echo "<h3>Description: {$description}</h3>";
-    echo "<h3>Category: {$category}";
+    echo "<h3>Category: {$category}</h3>";
     echo "<h3>Location: {$location}</h3>";
     ?>
     <div id="map"></div>
