@@ -185,68 +185,73 @@ function show_record($dbc, $id, $status = 'not specified') {
         $resultLoc = mysqli_query( $dbc , $queryLoc ) ;
         $resArrayLoc = mysqli_fetch_array( $resultLoc , MYSQLI_ASSOC ) ;
         $location = $resArrayLoc['name'];
+        #status of lost pertains to if you lost something (file that you called from) - not to lost items
         if($status == 'lost') {
             #item.id, location.name, item.create_date, item.item_name, item.item_description, item.item_category, item.room, item.make, item.model, item.color, item.reward
-            echo '<H1>Found Items</H1>' ;
-            echo '<table class ="table table-striped">';
-            echo '<TR>';
-            echo '<th>Item ID</th>';
-            echo '<th>Location</th>';
-            #check certain fields to see if they're set
-            if(isset($resArray['room'])) {
-                echo '<th>Room</th>';
-            }
+            echo '<H1>Found Items</H1>';
+        } elseif($status == 'found') { #coming from the found page
+            echo "<h1>Lost Items</h1>";
+        }
+        echo '<table class ="table table-striped">';
+        echo '<TR>';
+        echo '<th>Item ID</th>';
+        echo '<th>Location</th>';
+        #check certain fields to see if they're set
+        if(isset($resArray['room'])) {
+            echo '<th>Room</th>';
+        }
+        if(isset($resArray['create_date'])) {
             echo '<th>Date Created</th>';
-            echo '<th>Item Name</th>';
-            echo '<th>Item Description</th>';
-            echo '<th>Item Category</th>';
-            #check certain fields to see if they're set
-            if(isset($resArray['make'])){
-                echo '<th>Make</th>';
-            }
-            if(isset($resArray['model'])){
-                echo '<th>Model</th>';
-            }
-            if(isset($resArray['color'])){
-                echo '<th>Color</th>';
-            }
-            if(isset($resArray['reward'])){
-                echo '<th>Reward</th>';
-            }
-            #end table heading
-            echo '</TR>';
-            # Make result for each row
-            echo '<TR>' ;
-            echo '<TD>' . $resArray['id'] . '</TD>' ;
-            echo '<TD>' . $location . '</TD>' ;
-            if(isset($resArray['room'])) {
-                echo '<TD>' . $resArray['room'] . '</TD>' ;
-            }
-            echo '<TD>' . $resArray['create_date'] . '</TD>' ;
-            echo '<TD>' . $resArray['item_name'] . '</TD>' ;
-            echo '<TD>' . $resArray['item_description'] . '</TD>' ;
-            echo '<TD>' . $resArray['item_category'] . '</TD>' ;
-            if (isset($resArray['make'])) {
-                echo '<TD>' . $resArray['make'] . '</TD>' ;
-            }
-            if(isset($resArray['model'])){
-                echo '<TD>' . $resArray['model'] . '</TD>' ;
-            }
-            if(isset($resArray['color'])){
-                echo '<TD>' . $resArray['color'] . '</TD>' ;
-            }
-            if(isset($resArray['reward'])){
-                echo '<TD>' . $resArray['reward'] . '</TD>' ;
-            }
-            echo '</TR>' ;
+        }
+        echo '<th>Item Name</th>';
+        echo '<th>Item Description</th>';
+        echo '<th>Item Category</th>';
+        #check certain fields to see if they're set
+        if(isset($resArray['make'])){
+            echo '<th>Make</th>';
+        }
+        if(isset($resArray['model'])){
+            echo '<th>Model</th>';
+        }
+        if(isset($resArray['color'])){
+            echo '<th>Color</th>';
+        }
+        if(isset($resArray['reward'])){
+            echo '<th>Reward</th>';
+        }
+        #end table heading
+        echo '</TR>';
+        # Make result for each row
+        echo '<TR>' ;
+        echo '<TD>' . $resArray['id'] . '</TD>' ;
+        echo '<TD>' . $location . '</TD>' ;
+        if(isset($resArray['room'])) {
+            echo '<TD>' . $resArray['room'] . '</TD>' ;
+        }
+        echo '<TD>' . $resArray['create_date'] . '</TD>' ;
+        echo '<TD>' . $resArray['item_name'] . '</TD>' ;
+        echo '<TD>' . $resArray['item_description'] . '</TD>' ;
+        echo '<TD>' . $resArray['item_category'] . '</TD>' ;
+        if (isset($resArray['make'])) {
+            echo '<TD>' . $resArray['make'] . '</TD>' ;
+        }
+        if(isset($resArray['model'])){
+            echo '<TD>' . $resArray['model'] . '</TD>' ;
+        }
+        if(isset($resArray['color'])){
+            echo '<TD>' . $resArray['color'] . '</TD>' ;
+        }
+        if(isset($resArray['reward'])){
+            echo '<TD>' . $resArray['reward'] . '</TD>' ;
+        }
+        echo '</TR>' ;
 
-            # End the table
-            echo '</TABLE>';
+        # End the table
+        echo '</TABLE>';
 
-            #if there is an image associated, print it
-            if(!isset($resArray['item_image'])){ #check if any image
-                echo "<img src={$resArray['item_image']} alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
-            }
+        #if there is an image associated, print it
+        if(!isset($resArray['item_image'])){ #check if any image
+            echo "<img src={$resArray['item_image']} alt=\"Sorry. Image not displayed correctly.\" class=\"img-thumbnail\">";
         }
         #claim button
         echo "<button type=\"button\" class=\"btn btn-primary btn-lg\" name=\"claimItem\" style=\"margin-bottom:15px\" onclick=\"window.location.href='lost_item_claim.php'\">Claim this item</button>";
