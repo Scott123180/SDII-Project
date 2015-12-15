@@ -34,19 +34,21 @@ Description: landing page for the web application
     </div>
     <div class="container">
         <!--Welcome Message-->
-        <h1>Welcome to Limbo Lost and Found</h1>
-        <p>If you have lost or found something, you're in luck; this is the place to report it.</p>
-        <!--Quick Lost and Found Table-->
-        <h3>Recent Activity</h3> <!--Insert option menu here-->
+        <h1 style="text-align: center">Welcome to Limbo Lost and Found</h1>
+        <p style="text-align: center">If you have lost or found something, you're in luck; this is the place to report it.</p>
 
-        <?php
-        #connection to database
-        require( '../connect_db.php' ) ;
+    </div>
+    <div class="container-fluid">
+        <h3 style="text-align: center">Tweet At Us!</h3>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/LimboDB" data-widget-id="676697294381694976">Tweets by @LimboDB</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
 
-        # php table functions
-        require( 'php_includes/helpers.php' ) ;
-
-        ?>
     </div>
 </body>
 </html>

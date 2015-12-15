@@ -85,15 +85,21 @@
 		?>
 		<!-- Get inputs from the user. -->
 		<form action="admin_add.php" method="POST">
-			<table>
+			<table style="margin-left: auto; margin-right: auto">
 				<tr>
-					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>First Name:</td><td><input type="text" name="firstName"></td>
-					<td>Last Name:</td><td><input type="text" name="lastName"></td>
-					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
+					<td><p>Username:</p><input type="text" class="form-control" name="username"></td>
+                    <td><p style="color: white">...</p></td>
+					<td><p>First Name:</p><input type="text" class="form-control" name="firstName"> </td>
+                </tr>
+                <br/>
+                <tr>
+					<td><p>Last Name:</p><input type="text" class="form-control" name="lastName"></td>
+                    <td><p style="color: white">...</p></td>
+					<td><p>Password:</p><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
+
 			</table>
-			<p><input type="submit" ></p>
+			<input type="submit" class="btn btn-default">
 		</form>
     </div>
 	<div class="container">

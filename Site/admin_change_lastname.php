@@ -87,12 +87,14 @@
 		<form action="admin_change_lastname.php" method="POST">
 			<table>
 				<tr>
-					<td>Username:</td><td><input type="text" name="username"></td>
-					<td>New Last Name:</td><td><input type="text" name="newlastname"></td>
+					<td>Username:</td><td><input type="text" class="form-control" name="username"></td>
+					<td>New Last Name:</td><td><input type="text" class="form-control" name="newlastname"></td>
 					<td>Password:</td><td><input type="password" class="form-control" name="password" placeholder="Password"></td>
 				</tr>
+                <tr>
+                    <td><input type="submit" class="btn btn-default"></td>
+                </tr>
 			</table>
-			<p><input type="submit" ></p>
 		</form>
     </div>
 	<div class="container">

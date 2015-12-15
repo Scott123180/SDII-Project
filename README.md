@@ -4,6 +4,9 @@ Administrator Paswords:
 - Superadmin username: thecreator; password: morganfreeman
 - Admin username: jaredfogle; password: gaze11e
 
+###Admin Pages
+- Admin page URLs are hidden from normal users for security. Here is the logon link: http://localhost/SDII-Project/Site/admin_logon.php
+
 ###To backup the database, run this command:
 ```
 mysqldump limbo_db > limbo_db_backup.sql
