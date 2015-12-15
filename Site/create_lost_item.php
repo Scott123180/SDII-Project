@@ -80,7 +80,7 @@ session_start();
             <input type="text" class="form-control" placeholder="Your name here" name="contact_name" value="<?php if(isset($_POST['contact_name'])){echo $_POST['contact_name'];} ?>">
 
             <h4>What is your email?<strong style="color:red">*</strong></h4>
-            <input type="text" class="form-control" placeholder="email@example.com" name="contact_email" value="<?php if(isset($_POST['contact_name'])){echo $_POST['contact_name'];} ?>">
+            <input type="text" class="form-control" placeholder="email@example.com" name="contact_email" value="<?php if(isset($_POST['contact_name'])){echo $_POST['contact_email'];} ?>">
 
             <h4>Select image to upload:</h4>
             <input type="file" name="fileToUpload" id="fileToUpload">

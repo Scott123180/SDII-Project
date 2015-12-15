@@ -85,6 +85,68 @@ function validateCreateLost($location, $room, $dateLost, $name, $description, $c
     return $errorArray;
 }
 
+function validateCreateFound($location, $room, $name, $description, $category, $color, $make, $model, $contact_name, $contact_email) {
+    #create new array of list of errors, if any error is returned, form submission should be aborted
+    $errorArray = array();
+
+    if (validateLocation($location) == false) {
+        array_push($errorArray, 'location');
+    }
+
+    #field not required, don't display error if empty
+    if(!empty($room)){
+        #validate non empty string
+        if (validateString($room, 6) == false ) {
+            array_push($errorArray, 'room');
+        }
+    }
+
+    if(validateString($name, 15) == false) {
+        array_push($errorArray, 'name');
+    }
+    if(validateString($description, 199) == false){
+        array_push($errorArray, 'description');
+    }
+    if(validateCategory($category) == false){
+        array_push($errorArray, 'category');
+    }
+
+    #field not required, don't display error if empty
+    if(!empty($color)){
+        #validate non empty string
+        if(validateString($color, 10) == false){
+            array_push($errorArray, 'color');
+        }
+    }
+
+    #field not required, don't display error if empty
+    if(!empty($make)){
+        #validate non empty string
+        if(validateString($make, 15) == false){
+            array_push($errorArray, 'make');
+        }
+    }
+
+    #field not required, don't display error if empty
+    if(!empty($model)){
+        #validate non empty string
+        if(validateString($model, 15) == false){
+            array_push($errorArray, 'model');
+        }
+    }
+
+    #valid contact name
+    if(validateString($contact_name, 30) == false){
+        array_push($errorArray, 'contact name');
+    }
+
+    #validate email input
+    if(validateEmail($contact_email) == false){
+        array_push($errorArray, 'contact email');
+    }
+
+    return $errorArray;
+}
 /*
  * ======================================
  * Individual validation functions
